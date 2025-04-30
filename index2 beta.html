@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="هامووی - کاوش در جهان بی‌کران سرگرمی. آخرین اخبار، تحلیل‌های عمیق و تریلرهای داغ فیلم، سریال و گیم.">
+    <meta name="theme-color" content="#080808">
+    <meta name="keywords" content="فیلم, سریال, گیم, اخبار فیلم, اخبار سریال, اخبار گیم, نقد فیلم, تریلر">
+    <meta name="author" content="هامووی">
+    <meta property="og:title" content="هامووی 🎬 | کاوش در جهان سرگرمی">
+    <meta property="og:description" content="هامووی - کاوش در جهان بی‌کران سرگرمی. آخرین اخبار، تحلیل‌های عمیق و تریلرهای داغ فیلم، سریال و گیم.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:url" content="https://hamovie.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>هامووی 🎬 | کاوش در جهان سرگرمی</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="logo.png" as="image">
+    <link rel="preload" href="hero-background-cinematic.jpg" as="image">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
+    
+    <style>
+        /* ========================= Root Variables ========================= */
+        :root {
+            --primary-color: #e50914;
+            --primary-color-rgb: 229, 9, 20;
+            --primary-gradient: linear-gradient(45deg, #e50914, #ff4b4f);
+            --secondary-color: #f05053;
+            --secondary-color-rgb: 240, 80, 83;
+            --dark-background: #080808;
+            --light-background: #fefefe;
+            --card-bg-dark: rgba(255, 255, 255, 0.03);
+            --card-bg-light: #ffffff;
+            --text-color-dark: #ededed;
+            --text-color-light: #121212;
+            --text-muted-dark: rgba(237, 237, 237, 0.55);
+            --text-muted-light: rgba(18, 18, 18, 0.55);
+            --accent-color: #ffc300;
+            --accent-color-rgb: 255, 195, 0;
+            --accent-gradient: linear-gradient(45deg, #ffc300, #ffd65c);
+            --border-color-dark: rgba(255, 255, 255, 0.08);
+            --border-color-light: rgba(0, 0, 0, 0.06);
+            --glass-bg-dark: rgba(18, 18, 18, 0.6);
+            --glass-bg-light: rgba(255, 255, 255, 0.6);
+            --glass-border-dark: rgba(255, 255, 255, 0.15);
+            --glass-border-light: rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.4s;
+            --transition-fast: 0.25s;
+            --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+            --border-radius-lg: 18px;
+            --border-radius-md: 14px;
+            --border-radius-sm: 10px;
+            --border-radius-pill: 50px;
+            --box-shadow-light: 0 6px 25px rgba(0, 0, 0, 0.08);
+            --box-shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.4);
+            --box-shadow-hover-dark: 0 12px 35px rgba(0, 0, 0, 0.45);
+            --box-shadow-hover-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --header-height-desktop: 75px;
+            --header-height-mobile: 65px;
+            --header-shrink-height: 65px;
+            --content-padding-desktop: 35px;
+            --content-padding-mobile: 15px;
+            --container-width: 1400px;
+            --font-sans: 'Vazirmatn', 'Montserrat', system-ui, -apple-system, sans-serif;
+            --font-display: 'Bebas Neue', var(--font-sans);
+            
+            /* New variables for enhanced features */
+            --scrollbar-width: 8px;
+            --scrollbar-track: rgba(255, 255, 255, 0.1);
+            --scrollbar-thumb: rgba(255, 255, 255, 0.3);
+            --selection-bg: rgba(229, 9, 20, 0.2);
+            --selection-color: #e50914;
+            --focus-ring: 0 0 0 3px rgba(229, 9, 20, 0.4);
+        }
+
+        /* ========================= Global Styles ========================= */
+        *, *::before, *::after { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        ::selection {
+            background: var(--selection-bg);
+            color: var(--selection-color);
+        }
+
+        :focus-visible {
+            outline: none;
+            box-shadow: var(--focus-ring);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: var(--scrollbar-width);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: var(--scrollbar-width);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @keyframes auroraBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            background-color: var(--dark-background);
+            color: var(--text-color-dark);
+            font-family: var(--font-sans);
+            transition: background-color var(--transition-speed) var(--transition-smooth),
+                      color var(--transition-speed) var(--transition-smooth);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Aurora Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, 
+                rgba(var(--primary-color-rgb), 0.05),
+                rgba(var(--accent-color-rgb), 0.03),
+                rgba(108, 92, 231, 0.05));
+            background-size: 400% 400%;
+            animation: auroraBackground 30s ease infinite;
+            z-index: -1;
+            opacity: 0.5;
+            transition: opacity var(--transition-speed) var(--transition-smooth);
+        }
+
+        body.dark-mode::before {
+             /* Different gradient or just opacity for light mode */
+             background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.04), rgba(var(--accent-color-rgb), 0.05), rgba(0, 184, 148, 0.04));
+             opacity: 0.4;
+        }
+
+        body.dark-mode { /* Light Mode Styles */
+            background-color: var(--light-background); color: var(--text-color-light);
+            /* Other light mode variables */
+             --card-bg-dark: var(--card-bg-light); --border-color-dark: var(--border-color-light);
+             --box-shadow-dark: var(--box-shadow-light); --box-shadow-hover-dark: var(--box-shadow-hover-light);
+             --footer-bg-dark: var(--footer-bg-light); --text-color-dark: var(--text-color-light);
+             --text-muted-dark: var(--text-muted-light); --glass-bg-dark: var(--glass-bg-light);
+             --glass-border-dark: var(--glass-border-light);
+        }
+
+        a { color: var(--primary-color); text-decoration: none; transition: color var(--transition-fast) ease, opacity var(--transition-fast) ease; }
+        a:hover { color: var(--accent-color); opacity: 0.85; }
+        body.dark-mode a:hover { color: var(--secondary-color); }
+        img, svg { max-width: 100%; height: auto; vertical-align: middle; }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 var(--content-padding-desktop); width: 100%; }
+        main { padding-top: calc(var(--header-height-desktop) + 2rem); padding-bottom: 4rem; flex-grow: 1; }
+        main > section { margin-bottom: 5rem; }
+        main > section:last-of-type { margin-bottom: 0; }
+
+        .reading-progress-bar {
+            position: fixed; top: 0; left: 0; right: auto; width: 0%; height: 5px;
+            background-image: var(--accent-gradient); /* Accent color for progress */
+            z-index: 1001; transition: width 0.1s linear; border-radius: 0 3px 3px 0;
+            box-shadow: 0 0 10px rgba(var(--accent-color-rgb), 0.5); /* Glow effect */
+        }
+
+
+        /* ========================= Header Styles (Redesigned Layout) ========================= */
+        header {
+            background-color: var(--glass-bg-dark); /* Glass effect base */
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.2); /* Softer shadow */
+            height: var(--header-height-desktop);
+            transition: height var(--transition-speed) var(--transition-smooth), background-color var(--transition-speed) var(--transition-smooth), box-shadow var(--transition-speed) var(--transition-smooth);
+            border-bottom: 1px solid var(--glass-border-dark);
+        }
+        header.shrink {
+            height: var(--header-shrink-height); background-color: var(--glass-bg-dark); /* Keep glass effect */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); /* Increase blur */
+        }
+        body.dark-mode header { background-color: var(--glass-bg-light); border-bottom: 1px solid var(--glass-border-light); box-shadow: 0 3px 20px rgba(0,0,0,0.06); }
+        body.dark-mode header.shrink { background-color: var(--glass-bg-light); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 100%; gap: 1.5rem; }
+        .logo-container { display: flex; align-items: center; gap: 0.8rem; flex-shrink: 0; /* Prevent shrinking */}
+        .logo { width: 80px; /* Slightly larger logo */ transition: transform 0.4s var(--transition-smooth); }
+        .logo:hover { transform: scale(1.1) rotate(-8deg); }
+        .site-title {
+            color: var(--text-color-dark); font-family: var(--font-display); font-size: 1.4rem;
+            letter-spacing: 1.5px; transition: color var(--transition-speed) var(--transition-smooth);
+            opacity: 1; font-weight: 400; white-space: nowrap;
+        }
+        body.dark-mode .site-title { color: var(--text-color-light); }
+        .site-title:hover { color: var(--primary-color); }
+
+        /* Centered Navigation */
+        nav { flex-grow: 1; display: flex; justify-content: center; }
+        nav ul { list-style: none; display: flex; gap: 1rem; align-items: center;}
+        nav li a {
+            display: block; font-weight: 500; font-size: 1.05rem; /* Slightly larger */
+            padding: 0.6rem 1.2rem; border-radius: var(--border-radius-sm);
+            color: var(--text-muted-dark); transition: all var(--transition-fast) ease;
+            position: relative; overflow: visible; /* Allow pseudo-element */
+        }
+         body.dark-mode nav li a { color: var(--text-muted-light); }
+         /* Underline animation */
+         nav li a::after {
+              content: ''; position: absolute; bottom: -2px; left: 10%; right: 10%; /* Centered */
+              height: 2px; background-color: var(--accent-color);
+              transform: scaleX(0); transform-origin: center;
+              transition: transform var(--transition-speed) var(--transition-smooth);
+          }
+         nav li a:hover::after, nav li a.active::after { transform: scaleX(1); }
+         nav li a:hover { color: var(--text-color-dark); /* Full color on hover */ background-color: transparent; transform: none; } /* Remove other hover effects */
+         body.dark-mode nav li a:hover { color: var(--text-color-light); }
+         nav li a.active { color: var(--text-color-dark); font-weight: 600; background-color: transparent; }
+         body.dark-mode nav li a.active { color: var(--text-color-light); }
+
+
+        /* Header Actions (Left side in RTL) */
+        .header-actions { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+
+        /* Search */
+        .search-form { display: flex; align-items: center; position: relative; }
+        .search-input {
+            padding: 0.7rem 1.2rem; padding-right: 3rem; border-radius: var(--border-radius-pill);
+            border: 1px solid var(--glass-border-dark); /* Use glass border */
+            background-color: rgba(255, 255, 255, 0.05); /* Slightly visible background */
+            color: var(--text-color-dark); font-family: inherit; font-size: 0.9rem;
+            transition: all var(--transition-speed) var(--transition-smooth);
+            width: 48px; cursor: pointer; text-align: right; opacity: 0.8;
+        }
+        body.dark-mode .search-input { background-color: rgba(0, 0, 0, 0.03); border: 1px solid var(--glass-border-light); color: var(--text-color-light); }
+        .search-input:focus, .search-form:hover .search-input {
+            outline: none; border-color: var(--primary-color); width: 280px; cursor: text; opacity: 1;
+            background-color: rgba(255, 255, 255, 0.08); box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.1);
+        }
+        body.dark-mode .search-input:focus, body.dark-mode .search-form:hover .search-input { background-color: rgba(0, 0, 0, 0.04); border-color: var(--primary-color); box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.1);}
+        .search-form::before {
+            /* Icon styling remains similar */
+             content: '\f002'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute;
+             right: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted-dark);
+             transition: all var(--transition-speed) var(--transition-smooth); pointer-events: none;
+             font-size: 1rem; opacity: 0.8;
+        }
+        body.dark-mode .search-form::before { color: var(--text-muted-light); }
+        .search-form:hover::before, .search-input:focus ~ .search-form::before /* Still won't work */ { color: var(--primary-color); opacity: 1; }
+
+        .search-results-list {
+            /* Styling largely the same, maybe adjust background */
+            position: absolute; top: calc(100% + 12px); left: auto; right: 0;
+            background-color: var(--glass-bg-dark); /* Glass effect */
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border-dark); color: var(--text-color-dark);
+            border-radius: var(--border-radius-md); box-shadow: var(--box-shadow-dark);
+            list-style: none; padding: 0.8rem 0; margin: 0; z-index: 1001; width: 320px; /* Wider */
+            max-height: 400px; overflow-y: auto; display: none; opacity: 0;
+            transform: translateY(15px) scale(0.97); transition: all var(--transition-speed) var(--transition-smooth);
+            transform-origin: top right;
+        }
+         body.dark-mode .search-results-list { background-color: var(--glass-bg-light); border: 1px solid var(--glass-border-light); color: var(--text-color-light); box-shadow: var(--box-shadow-light); }
+         /* Result items */
+         .search-results-list li a {
+              display: flex; align-items: center; gap: 0.8rem; /* Icon and text */
+              padding: 0.8rem 1.4rem; text-align: right; transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease;
+              font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+              color: var(--text-muted-dark); border-bottom: 1px solid var(--glass-border-dark);
+              body.dark-mode & { color: var(--text-muted-light); border-bottom: 1px solid var(--glass-border-light); }
+          }
+          .search-results-list li a strong { font-weight: 600; color: var(--accent-color); } /* Highlight */
+          .search-results-list li a:hover { background-color: rgba(var(--primary-color-rgb), 0.15); color: var(--primary-color); }
+          body.dark-mode .search-results-list li a:hover { background-color: rgba(var(--primary-color-rgb), 0.1); }
+          .search-results-list li:last-child a { border-bottom: none; }
+          .search-results-list.active { display: block; opacity: 1; transform: translateY(0) scale(1); }
+
+
+        /* Login / User */
+        .login-button {
+            /* Style mostly the same, ensure magnetic works */
+            display: inline-flex; align-items: center; gap: 0.6rem; color: #fff; font-weight: 600;
+            font-size: 0.95rem; padding: 0.75rem 1.6rem; border-radius: var(--border-radius-pill);
+            transition: all var(--transition-speed) var(--transition-smooth); background-image: var(--primary-gradient);
+            border: none; white-space: nowrap; box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.4); cursor: pointer;
+        }
+        .login-button:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 7px 18px rgba(var(--primary-color-rgb), 0.5); filter: brightness(1.15); }
+        .login-button i { font-size: 1.1rem; }
+
+        .user-menu { display: none; &.active { display: flex; align-items: center; gap: 0.8rem; position: relative; } }
+        .user-avatar { position: relative; cursor: pointer; }
+        .user-avatar img {
+            width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--accent-color);
+            object-fit: cover; transition: all var(--transition-speed) var(--transition-smooth);
+        }
+        .user-avatar:hover img { transform: scale(1.15) rotate(12deg); box-shadow: 0 0 25px rgba(var(--accent-color-rgb), 0.7); }
+        .user-dropdown {
+            /* Use glass effect from header */
+            position: absolute; top: calc(100% + 18px); /* More space */ left: 0;
+            background-color: var(--glass-bg-dark); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border-dark); border-radius: var(--border-radius-md);
+            box-shadow: var(--box-shadow-dark); padding: 0.9rem 0; z-index: 1001;
+            min-width: 170px; display: none; opacity: 0; transform: translateY(15px) scale(0.95);
+            transform-origin: top left; transition: all var(--transition-speed) var(--transition-smooth);
+        }
+        .user-dropdown.show { display: block; opacity: 1; transform: translateY(0) scale(1); }
+        body.dark-mode .user-dropdown { background-color: var(--glass-bg-light); border: 1px solid var(--glass-border-light); box-shadow: var(--box-shadow-light); }
+        .user-dropdown a, .user-dropdown button {
+            display: flex; align-items: center; gap: 0.9rem; width: 100%; padding: 0.9rem 1.4rem;
+            text-align: right; font-size: 1rem; color: var(--text-color-dark);
+            body.dark-mode & { color: var(--text-color-light); } background: none; border: none; cursor: pointer;
+            transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease, padding-right var(--transition-fast) ease;
+        }
+        .user-dropdown a i, .user-dropdown button i { font-size: 0.9em; opacity: 0.75; width: 18px; text-align: center; }
+        .user-dropdown a:hover, .user-dropdown button:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.18); color: var(--primary-color); padding-right: 1.7rem;
+        }
+         body.dark-mode .user-dropdown a:hover, body.dark-mode .user-dropdown button:hover { background-color: rgba(var(--primary-color-rgb), 0.12); color: var(--primary-color); }
+
+
+        /* --- Hamburger Menu --- */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1002;
+            transition: transform var(--transition-speed) var(--transition-smooth);
+            will-change: transform;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-color-dark);
+            border-radius: var(--border-radius-pill);
+            transition: transform var(--transition-speed) var(--transition-smooth),
+                        opacity var(--transition-speed) var(--transition-smooth),
+                        background-color var(--transition-speed) var(--transition-smooth);
+            transform-origin: center;
+            will-change: transform, opacity;
+        }
+
+        body.dark-mode .hamburger span {
+            background-color: var(--text-color-light);
+        }
+
+        .hamburger.active {
+            transform: rotate(180deg);
+        }
+
+        .hamburger.active span:first-child {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .hamburger.active span:last-child {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Enhanced Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--glass-bg-dark);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            z-index: 1001;
+            padding: calc(var(--header-height-desktop) + 2rem) 2rem 2rem;
+            display: none;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: transform var(--transition-speed) var(--transition-smooth),
+                        opacity var(--transition-speed) var(--transition-smooth);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+        }
+
+        body.dark-mode .mobile-nav {
+            background-color: var(--glass-bg-light);
+        }
+
+        .mobile-nav.active {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav li a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-color-dark);
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-speed) var(--transition-smooth);
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border-dark);
+        }
+
+        body.dark-mode .mobile-nav li a {
+            color: var(--text-color-light);
+            background-color: rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .mobile-nav li a i {
+            font-size: 1.4rem;
+            opacity: 0.8;
+            transition: transform var(--transition-speed) var(--transition-smooth);
+        }
+
+        .mobile-nav li a:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.15);
+            color: var(--primary-color);
+            transform: translateX(8px);
+        }
+
+        body.dark-mode .mobile-nav li a:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+        }
+
+        .mobile-nav li a:hover i {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        .mobile-nav li a.active {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .mobile-nav li a.active i {
+            opacity: 1;
+        }
+
+        /* Mobile Search */
+        .mobile-search {
+            margin: 2rem 0;
+        }
+
+        .mobile-search .search-form {
+            width: 100%;
+        }
+
+        .mobile-search .search-input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.2rem;
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        body.dark-mode .mobile-search .search-input {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .mobile-search .search-input:focus {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        body.dark-mode .mobile-search .search-input:focus {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .mobile-search .search-results-list {
+            position: static;
+            width: 100%;
+            margin-top: 1rem;
+            max-height: none;
+            transform: none;
+            transition: opacity var(--transition-speed) var(--transition-smooth);
+        }
+
+        /* Mobile User Actions */
+        .mobile-user-actions {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-user-actions .login-button {
+            width: 100%;
+            justify-content: center;
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            :root {
+                --header-height-desktop: 70px;
+                --header-shrink-height: 60px;
+            }
+
+            .site-title {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .header-actions {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --header-height-desktop: 60px;
+                --header-shrink-height: 50px;
+            }
+
+            .logo {
+                width: 60px;
+            }
+
+            .site-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .site-title {
+                display: none;
+            }
+        }
+
+        /* Prevent scrolling when mobile nav is open */
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        /* Enhanced focus styles for accessibility */
+        .hamburger:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .mobile-nav a:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: -2px;
+        }
+
+        /* Add smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height-desktop);
+        }
+
+
+        /* ========================= Hero Section Styles ========================= */
+        @keyframes gradientPulse { /* More subtle gradient animation */
+          0% { background-position: 10% 0%; }
+          50% { background-position: 91% 100%; }
+          100% { background-position: 10% 0%; }
+        }
+        .hero-section {
+            position: relative; height: 80vh; min-height: 500px; max-height: 850px;
+            display: flex; align-items: flex-end; justify-content: center; text-align: center;
+            color: #fff; overflow: hidden; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+            margin-bottom: 0;
+        }
+        .hero-background {
+             position: absolute; top: 0; left: 0; width: 100%; height: 110%; /* Extra for parallax */
+             background-size: cover; background-position: center center; z-index: 0;
+             transition: transform 0.1s linear, filter 1s ease-out; filter: brightness(0.9); /* Slightly dim */
+        }
+        .hero-section:hover .hero-background { filter: brightness(1); } /* Brighten on hover */
+
+        .hero-section::before { /* Animated Overlay */
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(165deg, rgba(var(--primary-color-rgb), 0.1), rgba(10, 10, 10, 0.7) 60%, rgba(8, 8, 8, 0.9) 90%);
+            background-size: 150% 150%; /* Smaller size for pulse */
+            /* animation: gradientPulse 20s ease infinite alternate; */ /* Optional pulse */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative; z-index: 2; padding: 3.5rem 1.5rem; max-width: 950px;
+            margin-bottom: 4rem;
+        }
+        .hero-content h1 {
+            font-family: var(--font-display); font-size: clamp(3.2rem, 8vw, 6rem); margin-bottom: 1.2rem;
+            color: #fff; text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); letter-spacing: 2.5px;
+            line-height: 1.1; font-weight: 400;
+        }
+        .hero-content p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem); color: rgba(255, 255, 255, 0.95); margin-bottom: 3rem;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); max-width: 750px; margin-left: auto; margin-right: auto;
+        }
+        .hero-cta-button {
+            display: inline-block; color: #111; font-weight: 700; font-size: 1.15rem;
+            padding: 1rem 3rem; border-radius: var(--border-radius-pill); transition: all var(--transition-speed) var(--transition-smooth);
+            background-image: var(--accent-gradient); border: none; box-shadow: 0 6px 18px rgba(var(--accent-color-rgb), 0.45);
+            cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
+        }
+         .hero-cta-button:hover { transform: translateY(-6px) scale(1.1); box-shadow: 0 9px 25px rgba(var(--accent-color-rgb), 0.55); filter: brightness(1.1); }
+         .hero-cta-button i { transition: transform 0.25s ease-out; display: inline-block; }
+         .hero-cta-button:hover i { transform: translateX(-5px) rotate(-15deg); }
+
+        /* Shape Divider */
+        .shape-divider { position: relative; width: 100%; overflow: hidden; line-height: 0; transform: translateY(-1px); margin-bottom: 5rem; }
+        .shape-divider svg { position: relative; display: block; width: calc(100% + 1.3px); height: 100px; } /* Taller divider */
+        .shape-divider .shape-fill { fill: var(--dark-background); transition: fill var(--transition-speed) var(--transition-smooth); }
+        body.dark-mode .shape-divider .shape-fill { fill: var(--light-background); }
+
+
+        /* ========================= Featured News Banner ========================= */
+        .featured-news-banner {
+             display: flex;
+             align-items: center;
+             background-color: var(--card-bg-dark);
+             border-radius: var(--border-radius-lg);
+             overflow: hidden;
+             margin-bottom: 3.5rem; /* Space before grid */
+             box-shadow: var(--box-shadow-dark);
+             border: 1px solid var(--border-color-dark);
+             min-height: 350px; /* Ensure min height */
+             opacity: 0; transform: translateY(40px); /* Scroll reveal */
+        }
+         body.dark-mode .featured-news-banner { background-color: var(--card-bg-light); border: 1px solid var(--border-color-light); box-shadow: var(--box-shadow-light); }
+
+         .featured-news-image {
+             width: 50%; /* Image takes half */
+             flex-shrink: 0;
+             align-self: stretch; /* Stretch to full height */
+             overflow: hidden;
+         }
+         .featured-news-image img {
+             width: 100%; height: 100%;
+             object-fit: cover;
+             transition: transform 0.6s var(--transition-smooth);
+         }
+          .featured-news-banner:hover .featured-news-image img { transform: scale(1.08); }
+
+         .featured-news-content {
+             padding: 2.5rem 3rem;
+             flex-grow: 1;
+         }
+          .featured-news-content .news-card-category { margin-bottom: 1.2rem; /* More space */}
+          .featured-news-content .news-card-title { font-size: 1.8rem; line-height: 1.3; margin-bottom: 1rem; }
+          .featured-news-content .news-card-excerpt { font-size: 1.05rem; margin-bottom: 1.8rem; }
+          .featured-news-content .news-card-meta { border-top: none; padding-top: 0; opacity: 0.8; }
+
+
+        /* ========================= Latest News & Filters ========================= */
+        .latest-news { margin-top: 0; }
+        .category-filters {
+            display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;
+        }
+        .filter-button {
+            padding: 0.7rem 1.8rem; border-radius: var(--border-radius-pill);
+            border: 1px solid var(--border-color-dark); background-color: transparent;
+            color: var(--text-muted-dark); font-size: 0.95rem; font-weight: 500; cursor: pointer;
+            transition: all var(--transition-fast) ease; backdrop-filter: blur(5px);
+        }
+        body.dark-mode .filter-button { border: 1px solid var(--border-color-light); color: var(--text-muted-light); }
+        .filter-button:hover, .filter-button.active {
+            background-color: var(--primary-color); color: #fff; border-color: var(--primary-color);
+            transform: translateY(-3px) scale(1.03); box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.25);
+        }
+        body.dark-mode .filter-button:hover, body.dark-mode .filter-button.active { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+
+        .section-title {
+            font-family: var(--font-display); font-size: 3rem; margin-bottom: 3rem; font-weight: 400;
+            color: var(--text-color-dark); position: relative; display: block; text-align: center;
+            padding-bottom: 1.2rem; letter-spacing: 1.8px;
+        }
+        body.dark-mode .section-title { color: var(--text-color-light); }
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 120px; height: 5px; background-image: var(--primary-gradient); border-radius: 3px;
+        }
+
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 2.5rem; }
+
+        .news-card { /* Standard Cards */
+            background-color: var(--card-bg-dark); border-radius: var(--border-radius-lg); overflow: hidden;
+            box-shadow: var(--box-shadow-dark); transition: all var(--transition-speed) var(--transition-smooth);
+            display: flex; flex-direction: column; border: 1px solid var(--border-color-dark);
+            height: 100%; opacity: 0; transform: translateY(40px) rotateX(-5deg); /* 3D reveal */
+            position: relative;
+        }
+         .news-card::before { /* Hover overlay */
+            content: ""; position: absolute; inset: 0;
+             background: linear-gradient(170deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+             body.dark-mode & { background: linear-gradient(170deg, rgba(0,0,0,0.04), rgba(0,0,0,0)); }
+             opacity: 0; border-radius: inherit; pointer-events: none;
+             transition: opacity var(--transition-speed) var(--transition-smooth); z-index: 1;
+          }
+        body.dark-mode .news-card { box-shadow: var(--box-shadow-light); border: 1px solid var(--border-color-light); }
+        .news-card:hover {
+            transform: translateY(-12px) scale(1.035) rotateX(0deg); box-shadow: var(--box-shadow-hover-dark);
+            background-color: rgba(255, 255, 255, 0.05);
+             body.dark-mode & { background-color: #fff; }
+        }
+         .news-card:hover::before { opacity: 1; }
+
+
+        .news-card-image-link { display: block; overflow: hidden; height: 220px; position: relative; z-index: 0; }
+        .news-card-image {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s var(--transition-smooth), filter 0.4s ease;
+        }
+         .news-card:hover .news-card-image { transform: scale(1.15); filter: saturate(1.15) brightness(1.05); }
+
+        .news-card-content { padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 2; }
+        .news-card-category {
+            display: inline-block; color: white; font-size: 0.8rem; padding: 0.4rem 1.1rem;
+            border-radius: var(--border-radius-pill); margin-bottom: 1.1rem; font-weight: 600;
+            align-self: flex-start; text-transform: uppercase; letter-spacing: 0.8px; backdrop-filter: blur(3px);
+        }
+        .news-card-category.gaming { background: rgba(108, 92, 231, 0.85); }
+        .news-card-category.movie { background: rgba(229, 9, 20, 0.85); }
+        .news-card-category.tv { background: rgba(0, 184, 148, 0.85); }
+
+        .news-card-title {
+            font-size: 1.3rem; margin-bottom: 0.9rem; line-height: 1.5; font-weight: 600;
+            color: var(--text-color-dark); transition: color var(--transition-fast) ease;
+        }
+        .news-card-title a { color: inherit; text-decoration: none; }
+        .news-card-title a:hover { color: var(--primary-color); }
+        body.dark-mode .news-card-title { color: var(--text-color-light); }
+        body.dark-mode .news-card-title a:hover { color: var(--primary-color); }
+
+        .news-card-excerpt { color: var(--text-muted-dark); font-size: 0.98rem; margin-bottom: 1.6rem; line-height: 1.75; flex-grow: 1; }
+        body.dark-mode .news-card-excerpt { color: var(--text-muted-light); }
+
+        .news-card-meta {
+            display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
+            color: var(--text-muted-dark); margin-top: auto; padding-top: 1.1rem;
+            border-top: 1px solid var(--border-color-dark); opacity: 0.85;
+        }
+        body.dark-mode .news-card-meta { color: var(--text-muted-light); border-top: 1px solid var(--border-color-light); }
+        .news-card-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
+        .news-card-meta i { font-size: 0.95em; opacity: 0.8; }
+
+
+        .view-all-button {
+            display: block; text-align: center; margin: 4rem auto 0; padding: 1rem 3rem; color: #fff;
+            border: none; border-radius: var(--border-radius-pill); font-weight: 600;
+            transition: all var(--transition-speed) var(--transition-smooth); max-width: 260px;
+            background-image: var(--primary-gradient); box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
+            font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.8px;
+        }
+        .view-all-button:hover { transform: translateY(-6px) scale(1.08); box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.5); filter: brightness(1.15); color: white; }
+
+        /* ========================= Latest Trailers Section ========================= */
+        .latest-trailers {
+             background-color: transparent; /* Blend with main bg */
+             border-radius: var(--border-radius-lg); padding: 0; /* Remove section padding */
+             border: none; /* Remove border */
+         }
+         .trailer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; }
+         .trailer-card {
+             background-color: var(--card-bg-dark); border-radius: var(--border-radius-md); overflow: hidden;
+             box-shadow: var(--box-shadow-dark); transition: all var(--transition-speed) var(--transition-smooth);
+             position: relative; border: 1px solid var(--border-color-dark); opacity: 0; transform: translateY(40px);
+         }
+          body.dark-mode .trailer-card { background-color: var(--card-bg-light); border: 1px solid var(--border-color-light); box-shadow: var(--box-shadow-light); }
+          .trailer-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: var(--box-shadow-hover-dark); }
+          .trailer-card-thumbnail { display: block; position: relative; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0; }
+          .trailer-card-thumbnail img { width: 100%; height: 190px; object-fit: cover; transition: transform 0.5s var(--transition-smooth); }
+          .trailer-card:hover .trailer-card-thumbnail img { transform: scale(1.12); }
+          .play-icon-overlay {
+               position: absolute; inset: 0; display: flex; justify-content: center; align-items: center;
+               background-image: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+               opacity: 0; transition: opacity var(--transition-speed) var(--transition-smooth);
+           }
+          .trailer-card:hover .play-icon-overlay { opacity: 1; }
+          .play-icon-overlay i {
+               font-size: 3.5rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.6);
+               transform: scale(0.8); transition: transform 0.3s ease-out;
+           }
+          .trailer-card:hover .play-icon-overlay i { transform: scale(1); }
+          .trailer-card-title {
+               padding: 1.2rem 1.3rem; font-size: 1.05rem; font-weight: 600;
+               color: var(--text-color-dark); text-align: right; white-space: nowrap;
+               overflow: hidden; text-overflow: ellipsis;
+           }
+           body.dark-mode .trailer-card-title { color: var(--text-color-light); }
+
+
+        /* ========================= Footer Styles ========================= */
+        footer {
+            background-color: #050505; /* Darker footer */
+             color: var(--text-muted-dark); padding: 6rem 0 3rem 0; margin-top: 6rem;
+            font-size: 0.98rem; border-top: 1px solid rgba(255, 255, 255, 0.05); /* Very faint top border */
+            position: relative; overflow: hidden;
+        }
+         body.dark-mode footer { background-color: #f5f5f5; color: var(--text-muted-light); border-top: 1px solid rgba(0, 0, 0, 0.05); }
+        footer::before { display: none; /* Remove old gradient */}
+
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 3.5rem; position: relative; z-index: 1; }
+        .footer-section { padding: 0 1.2rem; }
+        .footer-section h3 {
+            color: var(--accent-color); body.dark-mode & { color: var(--primary-color); }
+            font-size: 1.5rem; margin-bottom: 1.8rem; font-family: var(--font-display);
+            letter-spacing: 1.5px; text-transform: uppercase; font-weight: 400;
+        }
+        .footer-section p, .footer-section ul { margin-bottom: 1.8rem; line-height: 2; } /* Increased line height */
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 1rem; }
+        .footer-section a {
+            color: var(--text-muted-dark); body.dark-mode & { color: var(--text-muted-light); }
+            opacity: 0.85; transition: all var(--transition-fast) ease; display: inline-flex;
+            align-items: center; gap: 0.8rem;
+        }
+        .footer-section a:hover { opacity: 1; color: var(--accent-color); padding-right: 8px; transform: translateX(-4px); }
+         body.dark-mode .footer-section a:hover { color: var(--primary-color); }
+        .footer-section a i { font-size: 1em; opacity: 0.8; width: 18px; text-align: center;}
+
+        .footer-social-icons { display: flex; gap: 1.3rem; justify-content: start; margin-top: 2rem;}
+        .footer-social-icons a {
+            display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px;
+            border-radius: 50%; background-color: rgba(255, 255, 255, 0.08);
+             body.dark-mode & { background-color: rgba(0, 0, 0, 0.07); }
+            color: var(--text-muted-dark); body.dark-mode & { color: var(--text-muted-light); }
+            font-size: 1.3rem; transition: all var(--transition-speed) var(--transition-smooth);
+        }
+        .footer-social-icons a:hover { background-color: var(--primary-color); color: #fff; transform: scale(1.2) translateY(-5px) rotate(-15deg); box-shadow: 0 6px 15px rgba(var(--primary-color-rgb), 0.4); }
+
+        .footer-bottom { text-align: center; padding-top: 3.5rem; border-top: 1px solid var(--border-color-dark); margin-top: 3.5rem; font-size: 0.9rem; opacity: 0.6; }
+         body.dark-mode .footer-bottom { border-top-color: var(--border-color-light); }
+        .footer-bottom i.fa-heart { color: var(--primary-color); font-size: 0.85em; vertical-align: baseline; margin: 0 3px;}
+
+        /* Newsletter Form */
+        .newsletter-form { display: flex; gap: 0.5rem; position: relative; }
+        .newsletter-form input[type="email"] {
+            padding: 0.9rem 1.3rem; padding-left: 120px; border-radius: var(--border-radius-pill);
+            border: 1px solid var(--border-color-dark); background-color: rgba(255, 255, 255, 0.08);
+             body.dark-mode & { background-color: rgba(0, 0, 0, 0.06); border-color: var(--border-color-light); color: var(--text-color-light); }
+            color: var(--text-color-dark); font-size: 1rem; font-family: inherit; flex-grow: 1;
+            outline: none; transition: all var(--transition-speed) var(--transition-smooth);
+        }
+        .newsletter-form input[type="email"]:focus {
+            background-color: rgba(255, 255, 255, 0.1); border-color: var(--primary-color);
+             body.dark-mode & { background-color: rgba(0, 0, 0, 0.07); border-color: var(--primary-color); }
+            box-shadow: 0 0 18px rgba(var(--primary-color-rgb), 0.25);
+        }
+        .newsletter-form button[type="submit"] {
+            position: absolute; left: 7px; top: 50%; transform: translateY(-50%);
+            padding: 0.7rem 1.5rem; border-radius: var(--border-radius-pill); border: none;
+            background-image: var(--primary-gradient); color: #fff; font-size: 0.9rem; font-family: var(--font-sans);
+            font-weight: 600; cursor: pointer; transition: all var(--transition-speed) var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.35); white-space: nowrap;
+        }
+        .newsletter-form button[type="submit"]:hover { filter: brightness(1.1); transform: translateY(-50%) scale(1.05); box-shadow: 0 6px 14px rgba(var(--primary-color-rgb), 0.45); }
+         #newsletter-feedback { font-size: 0.9rem; margin-top: 1rem; opacity: 0.9; transition: opacity 0.5s ease; font-weight: 500;}
+
+
+        /* ========================= Controls Styles ========================= */
+        .controls { position: fixed; bottom: 2.2rem; left: 2.2rem; display: flex; flex-direction: column; gap: 1.2rem; z-index: 1000; }
+        .control-button {
+            width: 48px; height: 48px; border-radius: 50%; border: none; background: var(--primary-gradient);
+            color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: all var(--transition-speed) var(--transition-smooth); opacity: 0;
+            transform: scale(0.6) translateY(25px) rotate(90deg); font-size: 1.3rem;
+            box-shadow: var(--box-shadow-dark); visibility: hidden;
+        }
+        .control-button.visible { opacity: 0.95; transform: scale(1) translateY(0) rotate(0deg); visibility: visible; }
+        .control-button:hover {
+            opacity: 1; transform: scale(1.2) rotate(-20deg); background: var(--accent-gradient);
+            color: var(--dark-background); box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.5);
+        }
+         body.dark-mode .control-button { box-shadow: var(--box-shadow-light); background: var(--primary-gradient); color: #fff; }
+         body.dark-mode .control-button:hover { color: var(--text-color-light); background: var(--accent-gradient); box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.4); }
+
+
+        /* ========================= Scroll Reveal & Magnetic ========================= */
+        [data-scroll-reveal] { opacity: 0; transform: translateY(50px) rotateX(-10deg); transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth); transform-origin: bottom; }
+        [data-scroll-reveal].revealed { opacity: 1; transform: translateY(0) rotateX(0deg); }
+        .news-card, .trailer-card { transition-delay: calc(0.1s * var(--card-index, 0)); }
+
+        [data-magnetic] { transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy magnetic */ }
+
+
+        /* ========================= Media Queries ========================= */
+         @media (max-width: 1200px) {
+              .container { max-width: 1140px; }
+              nav ul { gap: 0.8rem; } /* Reduce nav gap */
+              nav li a { font-size: 1rem; padding: 0.6rem 1rem;}
+              .featured-news-content { padding: 2rem 2.5rem; }
+              .featured-news-content .news-card-title { font-size: 1.6rem; }
+          }
+
+        @media (max-width: 992px) {
+            .container { max-width: 960px; }
+            nav { display: none; } /* Hide desktop nav */
+            .hamburger-menu { display: flex; } /* Show hamburger */
+            .header-actions .search-form#search-form { display: none; }
+            .header-content { gap: 1rem; } /* Reduce header gap */
+             main { padding-top: calc(var(--header-height-mobile) + 1.5rem); }
+
+            .featured-news-banner { flex-direction: column; min-height: unset; }
+            .featured-news-image { width: 100%; height: 280px; } /* Image takes full width */
+            .featured-news-content { padding: 2rem; }
+
+             .news-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;}
+         }
+
+        @media (max-width: 768px) {
+            html { font-size: 15px; }
+            .container { padding: 0 var(--content-padding-mobile); }
+             main { padding-top: calc(var(--header-height-mobile) + 1rem); padding-bottom: 2rem; }
+             main > section { margin-bottom: 3.5rem; }
+            .logo { width: 70px; } /* Adjust mobile logo size */
+            .site-title { font-size: 1.5rem; }
+            .header-actions { gap: 1rem; }
+            .login-button { padding: 0.7rem 1.2rem; font-size: 0.9rem;}
+            .user-avatar img { width: 40px; height: 40px; }
+
+            .hero-section { height: 70vh; min-height: 450px; }
+            .hero-content { padding: 2.5rem 1rem; margin-bottom: 3rem; }
+            .hero-content h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); }
+            .hero-content p { font-size: clamp(1.05rem, 3vw, 1.2rem); margin-bottom: 2.5rem;}
+            .hero-cta-button { font-size: 1.05rem; padding: 0.9rem 2.5rem; }
+
+            .shape-divider svg { height: 70px; }
+            .shape-divider { margin-bottom: 3.5rem; }
+
+            .featured-news-banner { margin-bottom: 2.5rem; }
+            .featured-news-image { height: 240px; }
+            .featured-news-content { padding: 1.5rem; }
+             .featured-news-content .news-card-title { font-size: 1.5rem; }
+             .featured-news-content .news-card-excerpt { font-size: 1rem; }
+
+
+            .category-filters { gap: 0.7rem; margin-bottom: 2.5rem; }
+            .filter-button { padding: 0.6rem 1.4rem; font-size: 0.9rem; }
+
+            .section-title { font-size: 2.4rem; margin-bottom: 2.5rem;}
+            .news-grid { gap: 1.8rem;}
+            .news-card-image-link { height: 210px; }
+
+            .trailer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+            .footer-container { grid-template-columns: 1fr; text-align: center; gap: 3rem;}
+            .footer-section { padding: 0; }
+            .footer-social-icons { justify-content: center; }
+             .newsletter-form input[type="email"] { padding-left: 1.3rem; }
+             .newsletter-form button[type="submit"] { position: static; transform: none; width: 100%; max-width: 320px; padding: 0.9rem 1rem; margin-top: 0.8rem;}
+            .footer-bottom { padding-top: 3rem; margin-top: 3rem; font-size: 0.88rem;}
+
+            .controls { bottom: 1.5rem; left: 1.5rem; gap: 1rem;}
+            .control-button { width: 45px; height: 45px; font-size: 1.2rem;}
+        }
+
+    </style>
+</head>
+<body class=""> <div class="reading-progress-bar" id="reading-progress-bar"></div>
+
+<header id="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="لوگو هامووی" class="logo">
+                </a>
+                <a href="index.html" class="site-title">هامووی</a>
+            </div>
+
+            <nav>
+                <ul>
+                     <li><a href="index.html" class="nav-link">صفحه اصلی</a></li>
+                     <li><a href="movies-news.html" class="nav-link">فیلم</a></li>
+                     <li><a href="series-news.html" class="nav-link">سریال</a></li>
+                     <li><a href="gaming-news.html" class="nav-link">گیم</a></li>
+                     <li><a href="reviews.html" class="nav-link">نقد و بررسی</a></li>
+                     <li><a href="trailers.html" class="nav-link">تریلرها</a></li>
+                     <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                     <li><a href="contact.html" class="nav-link">تماس</a></li>
+                 </ul>
+            </nav>
+
+            <div class="header-actions">
+                 <form class="search-form" id="search-form" role="search">
+                      <input type="search" class="search-input" placeholder="" aria-label="جستجو" id="search-input">
+                      <ul class="search-results-list" id="search-results-list"></ul>
+                  </form>
+                  <a href="login.html" class="login-button" id="login-button-header" data-magnetic>
+                      <i class="fas fa-user-circle"></i> ورود/ثبت نام
+                  </a>
+                  <div class="user-menu" id="user-menu-header">
+                      <div class="user-avatar" id="user-avatar-container" aria-haspopup="true" aria-expanded="false" aria-controls="user-dropdown-menu">
+                          <img src="default-avatar.png" alt="آواتار کاربر" id="user-avatar-header">
+                      </div>
+                      <div class="user-dropdown" id="user-dropdown-menu" role="menu">
+                          <a href="profile.html" role="menuitem"><i class="fas fa-user-edit fa-fw"></i>پروفایل</a>
+                          <button id="logout-button" role="menuitem"><i class="fas fa-sign-out-alt fa-fw"></i>خروج</button>
+                      </div>
+                  </div>
+             </div>
+
+            <button class="hamburger" id="hamburger-menu" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="mobile-menu">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </button>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-nav" id="mobile-menu" role="dialog" aria-modal="true">
+     <div class="mobile-search">
+        <form class="search-form" id="mobile-search-form" role="search">
+            <input type="search" class="search-input" placeholder="جستجو در هامووی..." aria-label="جستجو موبایل" id="mobile-search-input">
+            <ul class="search-results-list" id="mobile-search-results-list"></ul>
+        </form>
+    </div>
+    <ul>
+         <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home fa-fw"></i>صفحه اصلی</a></li>
+         <li><a href="movies-news.html" class="mobile-nav-link"><i class="fas fa-film fa-fw"></i>فیلم</a></li>
+         <li><a href="series-news.html" class="mobile-nav-link"><i class="fas fa-tv fa-fw"></i>سریال</a></li>
+         <li><a href="gaming-news.html" class="mobile-nav-link"><i class="fas fa-gamepad fa-fw"></i>گیم</a></li>
+         <li><a href="reviews.html" class="mobile-nav-link"><i class="fas fa-star-half-alt fa-fw"></i>نقد و بررسی</a></li>
+         <li><a href="trailers.html" class="mobile-nav-link"><i class="fas fa-play-circle fa-fw"></i>تریلرها</a></li>
+         <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle fa-fw"></i>درباره ما</a></li>
+         <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope fa-fw"></i>تماس</a></li>
+     </ul>
+     <div class="mobile-user-actions">
+          <a href="login.html" class="login-button" id="mobile-auth-link">
+             <i class="fas fa-user-circle" style="margin-left: 0.5rem;"></i> ورود/ثبت نام
+         </a>
+     </div>
+ </div>
+
+<main>
+    <section class="hero-section">
+          <div class="hero-background" style="background-image: url('hero-background-cinematic.jpg');" id="hero-bg"></div> <div class="hero-content" data-scroll-reveal>
+              <h1>جهان سرگرمی در دستان شما</h1> <p>عمیق‌ترین تحلیل‌ها، داغ‌ترین اخبار و جدیدترین تریلرهای دنیای فیلم، سریال و بازی‌های ویدیویی را در هامووی دنبال کنید.</p>
+              <a href="#latest-news" class="hero-cta-button" data-magnetic>کاوش را آغاز کنید <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i></a> </div>
+     </section>
+
+      <div class="shape-divider">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+      </div>
+
+      <section class="container" id="latest-news"> <div class="featured-news-banner" data-scroll-reveal>
+              <div class="featured-news-image">
+                  <img src="game-news1.jpg" alt="خبر ویژه" loading="lazy"> </div>
+              <div class="featured-news-content">
+                  <span class="news-card-category gaming">گیم</span>
+                  <h3 class="news-card-title"><a href="#">تحلیل عمیق گیم‌پلی GTA VI: نوآوری‌ها و انتظارات</a></h3>
+                  <p class="news-card-excerpt">پس از انتشار تریلر جدید، نگاهی می‌اندازیم به جزئیات گیم‌پلی فاش شده از GTA VI و آنچه این بازی را متمایز می‌کند...</p>
+                  <div class="news-card-meta">
+                      <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۳۰ فروردین ۱۴۰۴</span>
+                      <span class="news-card-author"><i class="far fa-user"></i> محمد کریمی</span>
+                  </div>
+                   <a href="#" class="hero-cta-button" style="padding: 0.6rem 1.5rem; font-size: 0.9rem; margin-top: 1.5rem; align-self: flex-start;" data-magnetic>ادامه مطلب</a> </div>
+          </div>
+      </section>
+
+
+     <section class="latest-news container">
+         <h2 class="section-title" data-scroll-reveal>تازه ترین ها</h2> <div class="category-filters" data-scroll-reveal>
+              <button class="filter-button active" data-magnetic>همه</button>
+              <button class="filter-button" data-magnetic><i class="fas fa-film fa-xs" style="margin-left: 5px;"></i>فیلم</button>
+              <button class="filter-button" data-magnetic><i class="fas fa-tv fa-xs" style="margin-left: 5px;"></i>سریال</button>
+              <button class="filter-button" data-magnetic><i class="fas fa-gamepad fa-xs" style="margin-left: 5px;"></i>گیم</button>
+              <button class="filter-button" data-magnetic><i class="fas fa-star fa-xs" style="margin-left: 5px;"></i>نقد</button>
+          </div>
+
+
+        <div class="news-grid">
+            <article class="news-card" data-scroll-reveal style="--card-index: 1;">
+                  <a href="#" class="news-card-image-link">
+                      <img src="movie-news1.jpg" alt="خبر جدید فیلم" class="news-card-image" loading="lazy">
+                  </a>
+                 <div class="news-card-content">
+                     <span class="news-card-category movie">فیلم</span>
+                     <h3 class="news-card-title"><a href="#">«دنیای ژوراسیک: سلطنت» و بازگشت نوستالژیک</a></h3>
+                     <p class="news-card-excerpt">تریلر جدید بازگشت شخصیت‌های اصلی فیلم اول را تایید کرد.</p>
+                     <div class="news-card-meta">
+                         <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۲ اردیبهشت ۱۴۰۴</span>
+                         <span class="news-card-author"><i class="far fa-user"></i> علی محمدی</span>
+                     </div>
+                 </div>
+             </article>
+
+            <article class="news-card" data-scroll-reveal style="--card-index: 2;">
+                  <a href="#" class="news-card-image-link">
+                      <img src="tv-news1.jpg" alt="خبر جدید سریال" class="news-card-image" loading="lazy">
+                  </a>
+                 <div class="news-card-content">
+                     <span class="news-card-category tv">سریال</span>
+                     <h3 class="news-card-title"><a href="#">«هوس اژدها» رکورد HBO را شکست</a></h3>
+                     <p class="news-card-excerpt">فصل دوم سریال با استقبال بی‌نظیر بینندگان مواجه شد.</p>
+                     <div class="news-card-meta">
+                         <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۱ اردیبهشت ۱۴۰۴</span>
+                         <span class="news-card-author"><i class="far fa-user"></i> زهرا رضایی</span>
+                     </div>
+                 </div>
+             </article>
+
+              <article class="news-card" data-scroll-reveal style="--card-index: 3;">
+                   <a href="#" class="news-card-image-link">
+                     <img src="movie-news2.jpg" alt="خبر فیلم جدید" class="news-card-image" loading="lazy">
+                   </a>
+                  <div class="news-card-content">
+                      <span class="news-card-category movie">فیلم</span>
+                      <h3 class="news-card-title"><a href="#">بازیگر فیلم جدید تارانتینو مشخص شد</a></h3>
+                      <p class="news-card-excerpt">گزارش‌ها از انتخاب بازیگر اصلی آخرین فیلم این کارگردان خبر می‌دهند.</p>
+                      <div class="news-card-meta">
+                          <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۳ اردیبهشت ۱۴۰۴</span>
+                          <span class="news-card-author"><i class="far fa-user"></i> سارا احمدی</span>
+                      </div>
+                  </div>
+              </article>
+
+               <article class="news-card" data-scroll-reveal style="--card-index: 4;">
+                   <a href="#" class="news-card-image-link">
+                     <img src="game-news2.jpg" alt="خبر گیم جدید" class="news-card-image" loading="lazy">
+                   </a>
+                  <div class="news-card-content">
+                      <span class="news-card-category gaming">گیم</span>
+                      <h3 class="news-card-title"><a href="#">آپدیت بزرگ Cyberpunk 2077 در راه است</a></h3>
+                      <p class="news-card-excerpt">جزئیات آپدیت بعدی شامل محتوای داستانی جدید منتشر شد.</p>
+                      <div class="news-card-meta">
+                          <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۲ اردیبهشت ۱۴۰۴</span>
+                          <span class="news-card-author"><i class="far fa-user"></i> رضا قاسمی</span>
+                      </div>
+                  </div>
+              </article>
+
+              <article class="news-card" data-scroll-reveal style="--card-index: 5;">
+                    <a href="#" class="news-card-image-link">
+                      <img src="tv-news2.jpg" alt="خبر سریال جدید" class="news-card-image" loading="lazy">
+                    </a>
+                   <div class="news-card-content">
+                       <span class="news-card-category tv">سریال</span>
+                       <h3 class="news-card-title"><a href="#">The Last of Us برای فصل سوم تمدید شد</a></h3>
+                       <p class="news-card-excerpt">شبکه HBO رسما ساخت فصل سوم این سریال محبوب را تایید کرد.</p>
+                       <div class="news-card-meta">
+                           <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۱ اردیبهشت ۱۴۰۴</span>
+                           <span class="news-card-author"><i class="far fa-user"></i> مریم حسینی</span>
+                       </div>
+                   </div>
+               </article>
+
+               <article class="news-card" data-scroll-reveal style="--card-index: 6;">
+                    <a href="#" class="news-card-image-link">
+                      <img src="movie-news3.jpg" alt="نقد فیلم جدید" class="news-card-image" loading="lazy"> </a>
+                   <div class="news-card-content">
+                       <span class="news-card-category movie">نقد فیلم</span> <h3 class="news-card-title"><a href="#">نقد فیلم "تل‌ماسه: بخش دو" - حماسه‌ای شن‌زار</a></h3>
+                       <p class="news-card-excerpt">بررسی عمیق جدیدترین ساخته دنی ویلنوو و نقاط قوت و ضعف آن.</p>
+                       <div class="news-card-meta">
+                           <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۴ اردیبهشت ۱۴۰۴</span>
+                           <span class="news-card-author"><i class="far fa-user"></i> حسام مرتضوی</span>
+                       </div>
+                   </div>
+               </article>
+
+        </div>
+
+        <a href="all-news.html" class="view-all-button" data-scroll-reveal data-magnetic>مشاهده همه اخبار</a>
+    </section>
+
+     <section class="latest-trailers container" data-scroll-reveal>
+          <h2 class="section-title" data-scroll-reveal>آخرین تریلرها</h2>
+          <div class="trailer-grid">
+                <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 1;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb1.jpg" alt="تریلر ۱" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">تریلر نهایی فیلم Dune: Part Two</h3> </a>
+                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 2;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb2.jpg" alt="تریلر ۲" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">اولین نگاه به گیم‌پلی Star Wars Outlaws</h3> </a>
+                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 3;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb3.jpg" alt="تریلر ۳" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">تریلر رسمی فصل چهارم The Boys</h3> </a>
+                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 4;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb4.jpg" alt="تریلر ۴" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">معرفی بازی جدید Fable</h3> </a>
+          </div>
+     </section>
+
+
+    </main>
+
+<footer>
+    <div class="footer-container container">
+          <div class="footer-section footer-section-about" data-scroll-reveal>
+              <h3>هامووی 🎬</h3>
+              <p>هامووی، پنجره شما به جهان بی‌انتهای سرگرمی. با ما در جریان داغ‌ترین اخبار فیلم، سریال و گیم باشید، تحلیل‌های عمیق را بخوانید و از محتوای اختصاصی لذت ببرید.</p>
+              <div class="footer-social-icons">
+                  <a href="https://www.instagram.com/hamvimoe/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام هامووی" data-magnetic><i class="fab fa-instagram"></i></a>
+                  <a href="https://t.me/Hamoviefilmdo" target="_blank" rel="noopener noreferrer" aria-label="تلگرام هامووی" data-magnetic><i class="fab fa-telegram"></i></a>
+                  <a href="javascript:void(0);" aria-label="یوتیوب هامووی (بزودی)" data-magnetic><i class="fab fa-youtube"></i></a>
+                  <a href="javascript:void(0);" aria-label="توییتر هامووی (بزودی)" data-magnetic><i class="fab fa-twitter"></i></a>
+                  <a href="javascript:void(0);" aria-label="دیسکورد هامووی (بزودی)" data-magnetic><i class="fab fa-discord"></i></a> </div>
+          </div>
+
+          <div class="footer-section footer-section-links" data-scroll-reveal>
+              <h3>بخش‌های سایت</h3> <ul>
+                   <li><a href="index.html"><i class="fas fa-home fa-fw"></i> صفحه اصلی</a></li>
+                   <li><a href="movies-news.html"><i class="fas fa-film fa-fw"></i> فیلم‌ها</a></li>
+                   <li><a href="series-news.html"><i class="fas fa-tv fa-fw"></i> سریال‌ها</a></li>
+                   <li><a href="gaming-news.html"><i class="fas fa-gamepad fa-fw"></i> بازی‌ها</a></li>
+                   <li><a href="reviews.html"><i class="fas fa-star-half-alt fa-fw"></i> نقد و بررسی</a></li>
+                   <li><a href="trailers.html"><i class="fas fa-play-circle fa-fw"></i> تریلرها</a></li>
+              </ul>
+          </div>
+
+           <div class="footer-section footer-section-info" data-scroll-reveal> <h3>اطلاعات بیشتر</h3>
+                <ul>
+                     <li><a href="about.html"><i class="fas fa-info-circle fa-fw"></i> درباره ما</a></li>
+                     <li><a href="contact.html"><i class="fas fa-envelope fa-fw"></i> تماس با ما</a></li>
+                     <li><a href="privacy.html"><i class="fas fa-shield-alt fa-fw"></i> حریم خصوصی</a></li>
+                     <li><a href="terms.html"><i class="fas fa-file-contract fa-fw"></i> شرایط استفاده</a></li>
+                     <li><a href="faq.html"><i class="fas fa-question-circle fa-fw"></i> سوالات متداول</a></li>
+                </ul>
+           </div>
+
+
+          <div class="footer-section footer-section-newsletter" data-scroll-reveal>
+              <h3>خبرنامه اختصاصی</h3>
+              <p>عضو خبرنامه شوید و بهترین‌ها را از دست ندهید:</p>
+              <form class="newsletter-form" id="newsletter-form">
+                  <input type="email" placeholder="آدرس ایمیل شما..." required name="email" aria-label="Email for newsletter">
+                  <button type="submit" data-magnetic>عضویت <i class="fas fa-arrow-left" style="margin-right: 5px;"></i></button>
+              </form>
+               <p id="newsletter-feedback"></p>
+          </div>
+
+      </div>
+      <div class="footer-bottom">
+          <p>© <span id="current-year"></span> هامووی - تمامی حقوق محفوظ است | قدرت گرفته از عشق به سرگرمی <i class="fas fa-heart"></i></p>
+      </div>
+  </footer>
+
+<div class="controls">
+    <button class="control-button theme-toggle" id="theme-toggle-button" title="تغییر حالت نمایش" aria-label="تغییر حالت نمایش" data-magnetic>
+        <i class="fas fa-adjust"></i> </button>
+    <button class="control-button scroll-top" id="scroll-top-button" title="بازگشت به بالا" aria-label="بازگشت به بالا" data-magnetic>
+        <i class="fas fa-chevron-up"></i> </button>
+</div>
+
+<script>
+    //<![CDATA[ // Wrap script to prevent XML parsing errors if inline
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Elements Cache ---
+        const cache = {
+            body: document.body,
+            header: document.getElementById('main-header'),
+            themeToggle: document.getElementById('theme-toggle-button'),
+            scrollTop: document.getElementById('scroll-top-button'),
+            hamburgerMenu: document.getElementById('hamburger-menu'),
+            mobileMenu: document.getElementById('mobile-menu'),
+            searchInput: document.getElementById('search-input'),
+            searchResultsList: document.getElementById('search-results-list'),
+            searchForm: document.getElementById('search-form'),
+            mobileSearchInput: document.getElementById('mobile-search-input'),
+            mobileSearchResultsList: document.getElementById('mobile-search-results-list'),
+            mobileSearchForm: document.getElementById('mobile-search-form'),
+            navLinks: document.querySelectorAll('nav ul li a.nav-link'),
+            mobileNavLinks: document.querySelectorAll('.mobile-menu ul li a'), // Select all 'a' in mobile menu list
+            loginButtonHeader: document.getElementById('login-button-header'),
+            userMenuHeader: document.getElementById('user-menu-header'),
+            userAvatarHeader: document.getElementById('user-avatar-header'),
+            userAvatarContainer: document.getElementById('user-avatar-container'),
+            userDropdownMenu: document.getElementById('user-dropdown-menu'),
+            logoutButton: document.getElementById('logout-button'),
+            mobileAuthLink: document.getElementById('mobile-auth-link'),
+            currentYearSpan: document.getElementById('current-year'),
+            newsletterForm: document.getElementById('newsletter-form'),
+            newsletterFeedback: document.getElementById('newsletter-feedback'),
+            scrollRevealElements: document.querySelectorAll('[data-scroll-reveal]'),
+            progressBar: document.getElementById('reading-progress-bar'),
+            heroBg: document.getElementById('hero-bg'),
+            magneticElements: document.querySelectorAll('[data-magnetic]')
+        };
+
+        // --- State ---
+        let lastScrollY = window.pageYOffset;
+        let isUserMenuOpen = false;
+        let isMobile = window.innerWidth <= 992; // Use 992px breakpoint for mobile logic
+
+        // --- Search Index (Keep as is or expand) ---
+         const pageIndex = [ /* ... same as before ... */ { title: "هامووی 🎬 | مرجع اخبار فیلم، سریال و گیم", url: "index.html" }, { title: "اخبار فیلم | هامووی 🎬", url: "movies-news.html" }, { title: "اخبار سریال | هامووی 🎬", url: "series-news.html" }, { title: "اخبار گیم | هامووی 🎬", url: "gaming-news.html" }, { title: "نقد و بررسی | هامووی 🎬", url: "reviews.html" }, { title: "تریلرها | هامووی 🎬", url: "trailers.html" }, { title: "درباره ما | هامووی 🎬", url: "about.html" }, { title: "تماس با ما | هامووی 🎬", url: "contact.html" }, { title: "هامووی 🎬 | ورود", url: "login.html" }, { title: "پروفایل کاربری | هامووی 🎬", url: "profile.html" } ];
+
+
+        // --- Utility Functions ---
+        const debounce = (func, wait) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => func.apply(this, a), wait); } };
+        const throttle = (func, limit) => { let iT; return (...a) => { if (!iT) { func.apply(this, a); iT = 1; setTimeout(() => iT = 0, limit); } } };
+
+        // --- Core Functions ---
+        const applyTheme = (theme) => {
+            const isDark = theme === 'dark';
+            cache.body.classList.toggle('dark-mode', !isDark);
+            if (cache.themeToggle) cache.themeToggle.querySelector('i').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#080808' : '#fefefe');
+            localStorage.setItem('theme', theme);
+        };
+        const toggleTheme = () => {
+            const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        };
+
+        const handleScroll = throttle(() => {
+            const scrollY = window.pageYOffset;
+            const winH = window.innerHeight;
+            const docH = document.documentElement.scrollHeight;
+
+            if (cache.progressBar) cache.progressBar.style.width = `${Math.min((scrollY / (docH - winH)) * 100, 100)}%`;
+            if (cache.scrollTop) cache.scrollTop.classList.toggle('visible', scrollY > winH * 0.5);
+            if (!isMobile && cache.header) cache.header.classList.toggle('shrink', scrollY > 50);
+            else if (cache.header) cache.header.classList.remove('shrink');
+
+            if (cache.heroBg && scrollY < winH) cache.heroBg.style.transform = `translateY(${scrollY * 0.25}px)`; // Parallax
+
+            lastScrollY = scrollY;
+        }, 16); // Approx 60fps
+
+        const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const toggleMobileMenu = () => {
+            const isActive = cache.mobileMenu.classList.toggle('active');
+            cache.hamburgerMenu.classList.toggle('active', isActive);
+            cache.hamburgerMenu.setAttribute('aria-expanded', isActive);
+            cache.body.style.overflow = isActive ? 'hidden' : '';
+            if (!isActive && cache.mobileSearchInput) { cache.mobileSearchInput.value = ''; if(cache.mobileSearchResultsList) { cache.mobileSearchResultsList.innerHTML = ''; cache.mobileSearchResultsList.classList.remove('active'); } }
+        };
+
+        const setActiveNavLink = () => {
+            const path = window.location.pathname.split('/').pop() || 'index.html';
+            cache.navLinks?.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === path); });
+            // Mobile link active state might need adjustment based on final structure
+        };
+
+        const handleSearch = (term, listEl) => {
+             if (!listEl) return;
+             listEl.innerHTML = '';
+             if (term.length > 1) {
+                 const results = pageIndex.filter(p => p.title.toLowerCase().includes(term));
+                 if (results.length > 0) {
+                     listEl.innerHTML = results.slice(0, 6).map(r => `<li><a href="${r.url}"><i class="fas fa-search fa-xs" style="opacity: 0.5; margin-left: 8px;"></i>${r.title.replace(new RegExp(term, 'gi'), '<strong>$&</strong>')}</a></li>`).join('');
+                     listEl.classList.add('active');
+                 } else {
+                      listEl.innerHTML = `<li class="no-result" style="padding: 0.8rem 1.4rem; opacity: 0.7; text-align: center;">موردی یافت نشد</li>`;
+                      listEl.classList.add('active');
+                 }
+             } else { listEl.classList.remove('active'); }
+         };
+        const debouncedDesktopSearch = debounce(() => handleSearch(cache.searchInput.value.toLowerCase().trim(), cache.searchResultsList), 300);
+        const debouncedMobileSearch = debounce(() => handleSearch(cache.mobileSearchInput.value.toLowerCase().trim(), cache.mobileSearchResultsList), 300);
+
+
+        const handleOutsideClick = (event) => {
+            if (cache.searchForm && !cache.searchForm.contains(event.target)) cache.searchResultsList?.classList.remove('active');
+            if (cache.mobileSearchForm && !cache.mobileSearchForm.contains(event.target)) cache.mobileSearchResultsList?.classList.remove('active');
+            if (cache.userMenuHeader?.classList.contains('active') && !cache.userMenuHeader.contains(event.target)) toggleUserDropdown(false); // Close dropdown
+            if (cache.mobileMenu?.classList.contains('active') && !cache.mobileMenu.contains(event.target) && !cache.hamburgerMenu.contains(event.target)) toggleMobileMenu();
+        };
+
+         const updateLoginStatusUI = () => {
+            const user = JSON.parse(localStorage.getItem('user') || '{}');
+            const isLoggedIn = !!user.name; // Check if user object has a name
+
+            if (cache.loginButtonHeader) cache.loginButtonHeader.style.display = isLoggedIn ? 'none' : 'inline-flex';
+            if (cache.userMenuHeader) cache.userMenuHeader.classList.toggle('active', isLoggedIn);
+
+            if (isLoggedIn) {
+                if(cache.userAvatarHeader) {
+                    cache.userAvatarHeader.src = user.profile || 'default-avatar.png';
+                    cache.userAvatarHeader.alt = `آواتار ${user.name}`;
+                }
+                if (cache.mobileAuthLink) { // Update mobile link to profile
+                    cache.mobileAuthLink.href = 'profile.html';
+                    cache.mobileAuthLink.innerHTML = `<img src="${user.profile || 'default-avatar.png'}" alt="پروفایل" style="width: 28px; height: 28px; border-radius: 50%; margin-left: 0.8rem; vertical-align: middle;"> ${user.name}`;
+                    cache.mobileAuthLink.className = 'mobile-nav-link'; // Use nav link styles
+                    // Reset potential button styles
+                    cache.mobileAuthLink.style.cssText = '';
+                    cache.mobileAuthLink.style.textAlign = 'right';
+                    cache.mobileAuthLink.style.display = 'flex'; // Ensure flex for image alignment
+                    cache.mobileAuthLink.style.alignItems = 'center';
+                 }
+
+            } else { // User is logged out
+                if (cache.mobileAuthLink) { // Update mobile link to login
+                    cache.mobileAuthLink.href = 'login.html';
+                    cache.mobileAuthLink.innerHTML = `<i class="fas fa-user-circle" style="margin-left: 0.5rem;"></i> ورود/ثبت نام`;
+                    cache.mobileAuthLink.className = 'mobile-login-button'; // Re-apply button class
+                    // Re-apply potential button styles if needed (might be handled by class)
+                     cache.mobileAuthLink.style.cssText = ''; // Reset inline styles first
+                     cache.mobileAuthLink.style.textAlign = 'center'; // Set required styles
+                 }
+            }
+         };
+
+
+        const toggleUserDropdown = (forceState = null) => {
+            isUserMenuOpen = forceState !== null ? forceState : !isUserMenuOpen;
+            cache.userDropdownMenu?.classList.toggle('show', isUserMenuOpen);
+            cache.userAvatarContainer?.setAttribute('aria-expanded', isUserMenuOpen);
+        };
+
+        const logoutUser = () => {
+            localStorage.removeItem('user'); localStorage.removeItem('rememberedEmail'); updateLoginStatusUI();
+            toggleUserDropdown(false); window.location.reload();
+        };
+
+        const handleNewsletterSubmit = (event) => {
+             event.preventDefault();
+             const emailInput = cache.newsletterForm?.querySelector('input[type="email"]');
+             if (!emailInput || !cache.newsletterFeedback) return;
+             const emailValue = emailInput.value;
+             cache.newsletterFeedback.textContent = ''; cache.newsletterFeedback.style.color = 'inherit';
+
+             if (!emailValue || !/^\S+@\S+\.\S+$/.test(emailValue)) {
+                 cache.newsletterFeedback.textContent = 'لطفا یک ایمیل معتبر وارد کنید.';
+                 cache.newsletterFeedback.style.color = 'var(--secondary-color)'; return;
+             }
+             cache.newsletterFeedback.textContent = 'در حال ارسال...'; cache.newsletterFeedback.style.opacity = '0.7';
+             setTimeout(() => {
+                 cache.newsletterFeedback.textContent = `ایمیل ${emailValue} با موفقیت ثبت شد!`;
+                 cache.newsletterFeedback.style.color = 'var(--accent-color)'; cache.newsletterFeedback.style.opacity = '1';
+                 emailInput.value = ''; setTimeout(() => { cache.newsletterFeedback.textContent = ''; }, 5000);
+             }, 1000);
+         };
+
+
+        // --- Scroll Reveal ---
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -70px 0px' });
+        cache.scrollRevealElements?.forEach(el => { revealObserver.observe(el); });
+
+        // --- Magnetic Effect ---
+        const initMagneticEffect = () => {
+            if (isMobile || !('ontouchstart' in window)) { // Only on non-touch desktop
+                cache.magneticElements?.forEach(el => {
+                    const strength = 0.4; const area = 100; let boundMove, boundLeave;
+
+                    boundMove = (e) => {
+                        const rect = el.getBoundingClientRect();
+                        const cX = rect.left + rect.width / 2, cY = rect.top + rect.height / 2;
+                        const dX = e.clientX - cX, dY = e.clientY - cY;
+                        const dist = Math.sqrt(dX * dX + dY * dY);
+                        el.style.transform = dist < area ? `translate(${dX * strength}px, ${dY * strength}px)` : 'translate(0, 0)';
+                    };
+                    boundLeave = () => { el.style.transform = 'translate(0, 0)'; };
+
+                    el.removeEventListener('mousemove', el._boundMove); // Remove previous listener if exists
+                    el.removeEventListener('mouseleave', el._boundLeave);
+                    el.addEventListener('mousemove', boundMove);
+                    el.addEventListener('mouseleave', boundLeave);
+                    el._boundMove = boundMove; // Store references for removal
+                    el._boundLeave = boundLeave;
+                });
+            } else { // Remove listeners on mobile/touch
+                 cache.magneticElements?.forEach(el => {
+                     if(el._boundMove) el.removeEventListener('mousemove', el._boundMove);
+                     if(el._boundLeave) el.removeEventListener('mouseleave', el._boundLeave);
+                     el.style.transform = 'translate(0, 0)'; // Reset any leftover transform
+                 });
+            }
+         };
+
+        // --- Initialization ---
+        const init = () => {
+            isMobile = window.innerWidth <= 992;
+            if (cache.currentYearSpan) cache.currentYearSpan.textContent = new Date().getFullYear();
+            const preferredTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(preferredTheme);
+            setActiveNavLink();
+            updateLoginStatusUI();
+            initMagneticEffect();
+            handleScroll(); // Initial call to set positions
+
+            // --- Event Listeners ---
+            cache.themeToggle?.addEventListener('click', toggleTheme);
+            cache.scrollTop?.addEventListener('click', scrollToTop);
+            cache.hamburgerMenu?.addEventListener('click', toggleMobileMenu);
+            cache.searchInput?.addEventListener('input', debouncedDesktopSearch);
+            cache.searchInput?.addEventListener('focus', () => cache.searchResultsList?.classList.add('active'));
+            cache.searchForm?.addEventListener('submit', (e) => e.preventDefault());
+            cache.mobileSearchInput?.addEventListener('input', debouncedMobileSearch);
+            cache.mobileSearchInput?.addEventListener('focus', () => cache.mobileSearchResultsList?.classList.add('active'));
+            cache.mobileSearchForm?.addEventListener('submit', (e) => e.preventDefault());
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            document.addEventListener('click', handleOutsideClick);
+            cache.userAvatarContainer?.addEventListener('click', () => toggleUserDropdown());
+            cache.logoutButton?.addEventListener('click', logoutUser);
+            cache.newsletterForm?.addEventListener('submit', handleNewsletterSubmit);
+            window.addEventListener('resize', debounce(() => { isMobile = window.innerWidth <= 992; initMagneticEffect(); }, 250));
+
+            // Close mobile menu on link click
+             cache.mobileMenu?.addEventListener('click', (e) => {
+                  const targetLink = e.target.closest('a');
+                  if (targetLink && !targetLink.closest('#mobile-search-form-container')) { // Close if any link clicked except inside search
+                       setTimeout(toggleMobileMenu, 150);
+                  }
+              });
+
+        };
+
+        init(); // Run Initialization
+    });
+    //]]>
+</script>
+</body>
+</html>
