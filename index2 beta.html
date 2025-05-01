@@ -3,1575 +3,1939 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="هامووی - کاوش در جهان بی‌کران سرگرمی. آخرین اخبار، تحلیل‌های عمیق و تریلرهای داغ فیلم، سریال و گیم.">
-    <meta name="theme-color" content="#080808">
-    <meta name="keywords" content="فیلم, سریال, گیم, اخبار فیلم, اخبار سریال, اخبار گیم, نقد فیلم, تریلر">
-    <meta name="author" content="هامووی">
-    <meta property="og:title" content="هامووی 🎬 | کاوش در جهان سرگرمی">
-    <meta property="og:description" content="هامووی - کاوش در جهان بی‌کران سرگرمی. آخرین اخبار، تحلیل‌های عمیق و تریلرهای داغ فیلم، سریال و گیم.">
-    <meta property="og:image" content="og-image.jpg">
-    <meta property="og:url" content="https://hamovie.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>هامووی 🎬 | کاوش در جهان سرگرمی</title>
-    
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Preconnect to external domains -->
+    <meta name="description" content="هامووی - مرجع تخصصی فیلم، سریال و بازی. اخبار، نقد و بررسی و جدیدترین تریلرها.">
+    <!-- Improved Theme Color -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f8f8">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0b">
+    <title>هامووی | مرجع تخصصی فیلم، سریال و بازی</title>
+    <!-- Assume favicon is in the img folder -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Assuming favicon is also in img folder -->
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="logo.png" as="image">
-    <link rel="preload" href="hero-background-cinematic.jpg" as="image">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
     <style>
         /* ========================= Root Variables ========================= */
         :root {
+            /* --- Colors --- */
+            /* Core Theme (Dark Mode Default) */
             --primary-color: #e50914;
             --primary-color-rgb: 229, 9, 20;
-            --primary-gradient: linear-gradient(45deg, #e50914, #ff4b4f);
-            --secondary-color: #f05053;
-            --secondary-color-rgb: 240, 80, 83;
-            --dark-background: #080808;
-            --light-background: #fefefe;
-            --card-bg-dark: rgba(255, 255, 255, 0.03);
-            --card-bg-light: #ffffff;
-            --text-color-dark: #ededed;
-            --text-color-light: #121212;
-            --text-muted-dark: rgba(237, 237, 237, 0.55);
-            --text-muted-light: rgba(18, 18, 18, 0.55);
-            --accent-color: #ffc300;
-            --accent-color-rgb: 255, 195, 0;
-            --accent-gradient: linear-gradient(45deg, #ffc300, #ffd65c);
-            --border-color-dark: rgba(255, 255, 255, 0.08);
-            --border-color-light: rgba(0, 0, 0, 0.06);
-            --glass-bg-dark: rgba(18, 18, 18, 0.6);
-            --glass-bg-light: rgba(255, 255, 255, 0.6);
-            --glass-border-dark: rgba(255, 255, 255, 0.15);
-            --glass-border-light: rgba(0, 0, 0, 0.1);
-            --transition-speed: 0.4s;
-            --transition-fast: 0.25s;
-            --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
-            --border-radius-lg: 18px;
-            --border-radius-md: 14px;
-            --border-radius-sm: 10px;
-            --border-radius-pill: 50px;
-            --box-shadow-light: 0 6px 25px rgba(0, 0, 0, 0.08);
-            --box-shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.4);
-            --box-shadow-hover-dark: 0 12px 35px rgba(0, 0, 0, 0.45);
-            --box-shadow-hover-light: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --header-height-desktop: 75px;
-            --header-height-mobile: 65px;
-            --header-shrink-height: 65px;
-            --content-padding-desktop: 35px;
-            --content-padding-mobile: 15px;
-            --container-width: 1400px;
-            --font-sans: 'Vazirmatn', 'Montserrat', system-ui, -apple-system, sans-serif;
-            --font-display: 'Bebas Neue', var(--font-sans);
-            
-            /* New variables for enhanced features */
-            --scrollbar-width: 8px;
-            --scrollbar-track: rgba(255, 255, 255, 0.1);
-            --scrollbar-thumb: rgba(255, 255, 255, 0.3);
-            --selection-bg: rgba(229, 9, 20, 0.2);
-            --selection-color: #e50914;
-            --focus-ring: 0 0 0 3px rgba(229, 9, 20, 0.4);
+            --secondary-color: #ff6650; /* Slightly softer secondary */
+            --secondary-color-rgb: 255, 102, 80;
+            --accent-color: #ffd000; /* Slightly richer yellow */
+            --accent-color-rgb: 255, 208, 0;
+
+            /* Backgrounds */
+            --bg-dark-primary: #0b0b0b; /* Slightly darker */
+            --bg-dark-secondary: #141414;
+            --bg-dark-card: #1a1a1a;
+            --bg-dark-footer: #080808;
+
+            /* Text */
+            --text-dark-primary: #f5f5f5; /* Slightly off-white */
+            --text-dark-secondary: #b3b3b3; /* Muted */
+            --text-dark-tertiary: #808080; /* More muted */
+
+            /* Borders & Shadows */
+            --border-dark-primary: rgba(255, 255, 255, 0.1);
+            --border-dark-secondary: rgba(255, 255, 255, 0.05);
+            --shadow-dark-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+            --shadow-dark-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --shadow-dark-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-primary-glow: 0 0 15px rgba(var(--primary-color-rgb), 0.3);
+
+            /* --- Layout & Styling --- */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px; /* Default */
+            --border-radius-lg: 12px;
+            --border-radius-pill: 9999px;
+
+            --header-height-desktop: 70px; /* Adjusted */
+            --header-height-mobile: 60px; /* Adjusted */
+            --header-shrink-height: 55px;
+
+            --container-max-width: 1320px; /* Increased */
+            --container-padding-desktop: 24px;
+            --container-padding-mobile: 16px;
+
+            /* --- Typography --- */
+            --font-primary: 'Vazirmatn', 'Montserrat', sans-serif;
+            --font-logo: 'Bebas Neue', cursive;
+            --font-weight-light: 300;
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-black: 900;
+            --line-height-base: 1.65;
+            --line-height-heading: 1.3;
+
+            /* --- Transitions --- */
+            --transition-fast: 0.15s ease-out;
+            --transition-normal: 0.3s ease-out;
+            --transition-slow: 0.5s ease-out;
+
+            /* --- Specific Component Colors --- */
+            --game-color: #4cc9f0;
+            --game-color-rgb: 76, 201, 240; /* Added RGB for badge */
+            --movie-color: #f72585;
+            --tv-color: #7209b7;
+            --review-color: #4361ee;
         }
+
+        /* ========================= Light Mode Variables ========================= */
+        html:not(.dark-mode) { /* Styles when NOT in dark mode */
+            /* Backgrounds */
+            --bg-light-primary: #f8f8f8;
+            --bg-light-secondary: #ffffff;
+            --bg-light-card: #ffffff;
+            --bg-light-footer: #f0f0f0;
+
+            /* Text */
+            --text-light-primary: #222222;
+            --text-light-secondary: #555555;
+            --text-light-tertiary: #888888;
+
+            /* Borders & Shadows */
+            --border-light-primary: rgba(0, 0, 0, 0.1);
+            --border-light-secondary: rgba(0, 0, 0, 0.05);
+            --shadow-light-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-light-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+            --shadow-light-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
 
         /* ========================= Global Styles ========================= */
-        *, *::before, *::after { 
-            margin: 0; 
-            padding: 0; 
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        ::selection {
-            background: var(--selection-bg);
-            color: var(--selection-color);
-        }
-
-        :focus-visible {
-            outline: none;
-            box-shadow: var(--focus-ring);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: var(--scrollbar-width);
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--scrollbar-track);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--scrollbar-thumb);
-            border-radius: var(--scrollbar-width);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.4);
         }
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
-            text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+            /* Set initial theme based on preference if needed */
         }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-            
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        @keyframes auroraBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        html.dark-mode { color-scheme: dark; }
+        html:not(.dark-mode) { color-scheme: light; }
 
         body {
-            background-color: var(--dark-background);
-            color: var(--text-color-dark);
-            font-family: var(--font-sans);
-            transition: background-color var(--transition-speed) var(--transition-smooth),
-                      color var(--transition-speed) var(--transition-smooth);
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-regular);
+            line-height: var(--line-height-base);
+            background-color: var(--bg-dark-primary);
+            color: var(--text-dark-primary);
+            transition: background-color var(--transition-normal), color var(--transition-normal);
             overflow-x: hidden;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            font-weight: 400;
-            line-height: 1.8;
-            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        body:not(.dark-mode) {
+            background-color: var(--bg-light-primary);
+            color: var(--text-light-primary);
         }
 
-        /* Aurora Background Effect */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(135deg, 
-                rgba(var(--primary-color-rgb), 0.05),
-                rgba(var(--accent-color-rgb), 0.03),
-                rgba(108, 92, 231, 0.05));
-            background-size: 400% 400%;
-            animation: auroraBackground 30s ease infinite;
-            z-index: -1;
-            opacity: 0.5;
-            transition: opacity var(--transition-speed) var(--transition-smooth);
+        main {
+            flex-grow: 1; /* Ensure footer stays at bottom */
         }
 
-        body.dark-mode::before {
-             /* Different gradient or just opacity for light mode */
-             background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.04), rgba(var(--accent-color-rgb), 0.05), rgba(0, 184, 148, 0.04));
-             opacity: 0.4;
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
         }
-
-        body.dark-mode { /* Light Mode Styles */
-            background-color: var(--light-background); color: var(--text-color-light);
-            /* Other light mode variables */
-             --card-bg-dark: var(--card-bg-light); --border-color-dark: var(--border-color-light);
-             --box-shadow-dark: var(--box-shadow-light); --box-shadow-hover-dark: var(--box-shadow-hover-light);
-             --footer-bg-dark: var(--footer-bg-light); --text-color-dark: var(--text-color-light);
-             --text-muted-dark: var(--text-muted-light); --glass-bg-dark: var(--glass-bg-light);
-             --glass-border-dark: var(--glass-border-light);
+        a:hover {
+            color: var(--accent-color);
         }
-
-        a { color: var(--primary-color); text-decoration: none; transition: color var(--transition-fast) ease, opacity var(--transition-fast) ease; }
-        a:hover { color: var(--accent-color); opacity: 0.85; }
-        body.dark-mode a:hover { color: var(--secondary-color); }
-        img, svg { max-width: 100%; height: auto; vertical-align: middle; }
-        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 var(--content-padding-desktop); width: 100%; }
-        main { padding-top: calc(var(--header-height-desktop) + 2rem); padding-bottom: 4rem; flex-grow: 1; }
-        main > section { margin-bottom: 5rem; }
-        main > section:last-of-type { margin-bottom: 0; }
-
-        .reading-progress-bar {
-            position: fixed; top: 0; left: 0; right: auto; width: 0%; height: 5px;
-            background-image: var(--accent-gradient); /* Accent color for progress */
-            z-index: 1001; transition: width 0.1s linear; border-radius: 0 3px 3px 0;
-            box-shadow: 0 0 10px rgba(var(--accent-color-rgb), 0.5); /* Glow effect */
+        body:not(.dark-mode) a:hover {
+            color: var(--primary-color);
+        }
+        /* Accessibility: Focus Styles */
+        a:focus-visible,
+        button:focus-visible,
+        input[type="email"]:focus-visible,
+        .swiper-button-next:focus-visible,
+        .swiper-button-prev:focus-visible,
+        .swiper-pagination-bullet:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(var(--accent-color-rgb), 0.3);
+            border-radius: var(--border-radius-sm);
+        }
+        body:not(.dark-mode) a:focus-visible,
+        body:not(.dark-mode) button:focus-visible,
+        body:not(.dark-mode) input[type="email"]:focus-visible {
+            outline-color: var(--primary-color);
+             box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.2);
         }
 
 
-        /* ========================= Header Styles (Redesigned Layout) ========================= */
-        header {
-            background-color: var(--glass-bg-dark); /* Glass effect base */
-            position: sticky; top: 0; z-index: 1000;
-            backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-            box-shadow: 0 3px 20px rgba(0,0,0,0.2); /* Softer shadow */
-            height: var(--header-height-desktop);
-            transition: height var(--transition-speed) var(--transition-smooth), background-color var(--transition-speed) var(--transition-smooth), box-shadow var(--transition-speed) var(--transition-smooth);
-            border-bottom: 1px solid var(--glass-border-dark);
-        }
-        header.shrink {
-            height: var(--header-shrink-height); background-color: var(--glass-bg-dark); /* Keep glass effect */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); /* Increase blur */
-        }
-        body.dark-mode header { background-color: var(--glass-bg-light); border-bottom: 1px solid var(--glass-border-light); box-shadow: 0 3px 20px rgba(0,0,0,0.06); }
-        body.dark-mode header.shrink { background-color: var(--glass-bg-light); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-
-        .header-content { display: flex; justify-content: space-between; align-items: center; height: 100%; gap: 1.5rem; }
-        .logo-container { display: flex; align-items: center; gap: 0.8rem; flex-shrink: 0; /* Prevent shrinking */}
-        .logo { width: 80px; /* Slightly larger logo */ transition: transform 0.4s var(--transition-smooth); }
-        .logo:hover { transform: scale(1.1) rotate(-8deg); }
-        .site-title {
-            color: var(--text-color-dark); font-family: var(--font-display); font-size: 1.4rem;
-            letter-spacing: 1.5px; transition: color var(--transition-speed) var(--transition-smooth);
-            opacity: 1; font-weight: 400; white-space: nowrap;
-        }
-        body.dark-mode .site-title { color: var(--text-color-light); }
-        .site-title:hover { color: var(--primary-color); }
-
-        /* Centered Navigation */
-        nav { flex-grow: 1; display: flex; justify-content: center; }
-        nav ul { list-style: none; display: flex; gap: 1rem; align-items: center;}
-        nav li a {
-            display: block; font-weight: 500; font-size: 1.05rem; /* Slightly larger */
-            padding: 0.6rem 1.2rem; border-radius: var(--border-radius-sm);
-            color: var(--text-muted-dark); transition: all var(--transition-fast) ease;
-            position: relative; overflow: visible; /* Allow pseudo-element */
-        }
-         body.dark-mode nav li a { color: var(--text-muted-light); }
-         /* Underline animation */
-         nav li a::after {
-              content: ''; position: absolute; bottom: -2px; left: 10%; right: 10%; /* Centered */
-              height: 2px; background-color: var(--accent-color);
-              transform: scaleX(0); transform-origin: center;
-              transition: transform var(--transition-speed) var(--transition-smooth);
-          }
-         nav li a:hover::after, nav li a.active::after { transform: scaleX(1); }
-         nav li a:hover { color: var(--text-color-dark); /* Full color on hover */ background-color: transparent; transform: none; } /* Remove other hover effects */
-         body.dark-mode nav li a:hover { color: var(--text-color-light); }
-         nav li a.active { color: var(--text-color-dark); font-weight: 600; background-color: transparent; }
-         body.dark-mode nav li a.active { color: var(--text-color-light); }
-
-
-        /* Header Actions (Left side in RTL) */
-        .header-actions { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
-
-        /* Search */
-        .search-form { display: flex; align-items: center; position: relative; }
-        .search-input {
-            padding: 0.7rem 1.2rem; padding-right: 3rem; border-radius: var(--border-radius-pill);
-            border: 1px solid var(--glass-border-dark); /* Use glass border */
-            background-color: rgba(255, 255, 255, 0.05); /* Slightly visible background */
-            color: var(--text-color-dark); font-family: inherit; font-size: 0.9rem;
-            transition: all var(--transition-speed) var(--transition-smooth);
-            width: 48px; cursor: pointer; text-align: right; opacity: 0.8;
-        }
-        body.dark-mode .search-input { background-color: rgba(0, 0, 0, 0.03); border: 1px solid var(--glass-border-light); color: var(--text-color-light); }
-        .search-input:focus, .search-form:hover .search-input {
-            outline: none; border-color: var(--primary-color); width: 280px; cursor: text; opacity: 1;
-            background-color: rgba(255, 255, 255, 0.08); box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.1);
-        }
-        body.dark-mode .search-input:focus, body.dark-mode .search-form:hover .search-input { background-color: rgba(0, 0, 0, 0.04); border-color: var(--primary-color); box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.1);}
-        .search-form::before {
-            /* Icon styling remains similar */
-             content: '\f002'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute;
-             right: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted-dark);
-             transition: all var(--transition-speed) var(--transition-smooth); pointer-events: none;
-             font-size: 1rem; opacity: 0.8;
-        }
-        body.dark-mode .search-form::before { color: var(--text-muted-light); }
-        .search-form:hover::before, .search-input:focus ~ .search-form::before /* Still won't work */ { color: var(--primary-color); opacity: 1; }
-
-        .search-results-list {
-            /* Styling largely the same, maybe adjust background */
-            position: absolute; top: calc(100% + 12px); left: auto; right: 0;
-            background-color: var(--glass-bg-dark); /* Glass effect */
-            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border-dark); color: var(--text-color-dark);
-            border-radius: var(--border-radius-md); box-shadow: var(--box-shadow-dark);
-            list-style: none; padding: 0.8rem 0; margin: 0; z-index: 1001; width: 320px; /* Wider */
-            max-height: 400px; overflow-y: auto; display: none; opacity: 0;
-            transform: translateY(15px) scale(0.97); transition: all var(--transition-speed) var(--transition-smooth);
-            transform-origin: top right;
-        }
-         body.dark-mode .search-results-list { background-color: var(--glass-bg-light); border: 1px solid var(--glass-border-light); color: var(--text-color-light); box-shadow: var(--box-shadow-light); }
-         /* Result items */
-         .search-results-list li a {
-              display: flex; align-items: center; gap: 0.8rem; /* Icon and text */
-              padding: 0.8rem 1.4rem; text-align: right; transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease;
-              font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-              color: var(--text-muted-dark); border-bottom: 1px solid var(--glass-border-dark);
-              body.dark-mode & { color: var(--text-muted-light); border-bottom: 1px solid var(--glass-border-light); }
-          }
-          .search-results-list li a strong { font-weight: 600; color: var(--accent-color); } /* Highlight */
-          .search-results-list li a:hover { background-color: rgba(var(--primary-color-rgb), 0.15); color: var(--primary-color); }
-          body.dark-mode .search-results-list li a:hover { background-color: rgba(var(--primary-color-rgb), 0.1); }
-          .search-results-list li:last-child a { border-bottom: none; }
-          .search-results-list.active { display: block; opacity: 1; transform: translateY(0) scale(1); }
-
-
-        /* Login / User */
-        .login-button {
-            /* Style mostly the same, ensure magnetic works */
-            display: inline-flex; align-items: center; gap: 0.6rem; color: #fff; font-weight: 600;
-            font-size: 0.95rem; padding: 0.75rem 1.6rem; border-radius: var(--border-radius-pill);
-            transition: all var(--transition-speed) var(--transition-smooth); background-image: var(--primary-gradient);
-            border: none; white-space: nowrap; box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.4); cursor: pointer;
-        }
-        .login-button:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 7px 18px rgba(var(--primary-color-rgb), 0.5); filter: brightness(1.15); }
-        .login-button i { font-size: 1.1rem; }
-
-        .user-menu { display: none; &.active { display: flex; align-items: center; gap: 0.8rem; position: relative; } }
-        .user-avatar { position: relative; cursor: pointer; }
-        .user-avatar img {
-            width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--accent-color);
-            object-fit: cover; transition: all var(--transition-speed) var(--transition-smooth);
-        }
-        .user-avatar:hover img { transform: scale(1.15) rotate(12deg); box-shadow: 0 0 25px rgba(var(--accent-color-rgb), 0.7); }
-        .user-dropdown {
-            /* Use glass effect from header */
-            position: absolute; top: calc(100% + 18px); /* More space */ left: 0;
-            background-color: var(--glass-bg-dark); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border-dark); border-radius: var(--border-radius-md);
-            box-shadow: var(--box-shadow-dark); padding: 0.9rem 0; z-index: 1001;
-            min-width: 170px; display: none; opacity: 0; transform: translateY(15px) scale(0.95);
-            transform-origin: top left; transition: all var(--transition-speed) var(--transition-smooth);
-        }
-        .user-dropdown.show { display: block; opacity: 1; transform: translateY(0) scale(1); }
-        body.dark-mode .user-dropdown { background-color: var(--glass-bg-light); border: 1px solid var(--glass-border-light); box-shadow: var(--box-shadow-light); }
-        .user-dropdown a, .user-dropdown button {
-            display: flex; align-items: center; gap: 0.9rem; width: 100%; padding: 0.9rem 1.4rem;
-            text-align: right; font-size: 1rem; color: var(--text-color-dark);
-            body.dark-mode & { color: var(--text-color-light); } background: none; border: none; cursor: pointer;
-            transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease, padding-right var(--transition-fast) ease;
-        }
-        .user-dropdown a i, .user-dropdown button i { font-size: 0.9em; opacity: 0.75; width: 18px; text-align: center; }
-        .user-dropdown a:hover, .user-dropdown button:hover {
-            background-color: rgba(var(--primary-color-rgb), 0.18); color: var(--primary-color); padding-right: 1.7rem;
-        }
-         body.dark-mode .user-dropdown a:hover, body.dark-mode .user-dropdown button:hover { background-color: rgba(var(--primary-color-rgb), 0.12); color: var(--primary-color); }
-
-
-        /* --- Hamburger Menu --- */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 28px;
-            height: 20px;
-            cursor: pointer;
-            position: relative;
-            z-index: 1002;
-            transition: transform var(--transition-speed) var(--transition-smooth);
-            will-change: transform;
-        }
-
-        .hamburger span {
-            display: block;
+        .container {
+            max-width: var(--container-max-width);
             width: 100%;
-            height: 2px;
-            background-color: var(--text-color-dark);
-            border-radius: var(--border-radius-pill);
-            transition: transform var(--transition-speed) var(--transition-smooth),
-                        opacity var(--transition-speed) var(--transition-smooth),
-                        background-color var(--transition-speed) var(--transition-smooth);
-            transform-origin: center;
-            will-change: transform, opacity;
+            margin: 0 auto;
+            padding-left: var(--container-padding-desktop);
+            padding-right: var(--container-padding-desktop);
+        }
+        @media (max-width: 768px) {
+            .container {
+                 padding-left: var(--container-padding-mobile);
+                 padding-right: var(--container-padding-mobile);
+            }
         }
 
-        body.dark-mode .hamburger span {
-            background-color: var(--text-color-light);
+        img, svg {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          vertical-align: middle;
+        }
+        /* Lazy loading placeholder background */
+        img[loading="lazy"] {
+            background-color: rgba(128, 128, 128, 0.1); /* Light gray placeholder */
         }
 
-        .hamburger.active {
-            transform: rotate(180deg);
+        section {
+            padding-top: clamp(3rem, 6vw, 5rem); /* Responsive padding */
+            padding-bottom: clamp(3rem, 6vw, 5rem);
+            position: relative;
         }
 
-        .hamburger.active span:first-child {
-            transform: translateY(9px) rotate(45deg);
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1.25rem; /* Consistent margin */
+            line-height: var(--line-height-heading);
+            color: inherit;
         }
+        h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: var(--font-weight-black); }
+        h2 { font-size: clamp(1.7rem, 4vw, 2.2rem); }
+        h3 { font-size: clamp(1.3rem, 3.5vw, 1.6rem); }
+        h4 { font-size: 1.125rem; } /* ~text-lg */
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-            transform: scale(0);
+        p {
+            margin-bottom: 1.25rem;
+            max-width: 68ch; /* Slightly wider for readability */
+            color: var(--text-dark-secondary);
         }
-
-        .hamburger.active span:last-child {
-            transform: translateY(-9px) rotate(-45deg);
+        body:not(.dark-mode) p {
+             color: var(--text-light-secondary);
         }
+        /* Specific container for centered text */
+        .text-container {
+             max-width: 850px;
+             margin-left: auto;
+             margin-right: auto;
+         }
+         .text-center { text-align: center; }
+         .text-center p, .text-center h1, .text-center h2, .text-center h3 {
+             margin-left: auto;
+             margin-right: auto;
+         }
 
-        /* Enhanced Mobile Navigation */
-        .mobile-nav {
-            position: fixed;
+        /* ========================= Header Styles (Optimized) ========================= */
+        .site-header {
+            background-color: rgba(11, 11, 11, 0.85); /* Adjusted alpha */
+            position: sticky;
             top: 0;
-            right: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--glass-bg-dark);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            z-index: 1001;
-            padding: calc(var(--header-height-desktop) + 2rem) 2rem 2rem;
-            display: none;
-            opacity: 0;
-            transform: translateX(100%);
-            transition: transform var(--transition-speed) var(--transition-smooth),
-                        opacity var(--transition-speed) var(--transition-smooth);
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+            z-index: 1000;
+            backdrop-filter: blur(10px); /* Standard blur */
+            box-shadow: var(--shadow-dark-sm);
+            height: var(--header-height-desktop);
+            transition: height var(--transition-normal), background-color var(--transition-normal), box-shadow var(--transition-normal);
+            border-bottom: 1px solid var(--border-dark-secondary);
+        }
+        .site-header.shrink {
+            height: var(--header-shrink-height);
+            background-color: rgba(11, 11, 11, 0.95); /* Darker on shrink */
+            box-shadow: var(--shadow-dark-md); /* More shadow when shrunk */
+        }
+        body:not(.dark-mode) .site-header {
+            background-color: rgba(248, 248, 248, 0.85);
+            box-shadow: var(--shadow-light-sm);
+            border-bottom-color: var(--border-light-secondary);
+        }
+        body:not(.dark-mode) .site-header.shrink {
+             background-color: rgba(248, 248, 248, 0.95);
+            box-shadow: var(--shadow-light-md);
         }
 
-        body.dark-mode .mobile-nav {
-            background-color: var(--glass-bg-light);
-        }
-
-        .mobile-nav.active {
-            display: block;
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .mobile-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .header-content {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
         }
 
-        .mobile-nav li a {
+        /* Logo */
+        .logo-container { display: flex; align-items: center; gap: 0.8rem; }
+        .logo {
+     width: auto; /* اجازه دهید ارتفاع اندازه را کنترل کند */
+     /* مقادیر ارتفاع 2 برابر شده‌اند */
+     height: clamp(60px, 8vh, 80px); /* ارتفاع جدید */
+     transition: transform var(--transition-fast);
+     /* ویژگی color حذف شده، به تصویر تکیه می‌شود */
+
+             /* Removed color property, rely on image */
+         }
+        .logo:hover { transform: scale(1.05); }
+        .site-title {
+            color: var(--text-dark-primary);
+            font-family: var(--font-logo);
+            font-size: clamp(1.5rem, 4vw, 1.8rem); /* Responsive title */
+            letter-spacing: 1.5px;
+            transition: color var(--transition-fast);
+            font-weight: var(--font-weight-regular); /* Bebas Neue is already bold */
+            margin: 0;
+            opacity: 0.95;
+        }
+        body:not(.dark-mode) .site-title { color: var(--text-light-primary); }
+        .site-title:hover { color: var(--accent-color); opacity: 1; }
+        body:not(.dark-mode) .site-title:hover { color: var(--primary-color); }
+
+        /* Desktop Navigation */
+        .main-navigation { display: none; }
+        @media (min-width: 992px) {
+            .main-navigation { display: flex; align-items: center; }
+            .main-navigation ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+            .main-navigation li a {
+                display: block;
+                font-weight: var(--font-weight-medium);
+                font-size: 0.95rem;
+                padding: 0.5rem 1rem;
+                border-radius: var(--border-radius-sm);
+                transition: background-color var(--transition-fast), color var(--transition-fast);
+                position: relative;
+                overflow: hidden;
+                color: var(--text-dark-secondary);
+            }
+            body:not(.dark-mode) .main-navigation li a { color: var(--text-light-secondary); }
+            .main-navigation li a:hover,
+            .main-navigation li a.active {
+                color: var(--text-dark-primary);
+                background-color: rgba(255, 255, 255, 0.07);
+            }
+            body:not(.dark-mode) .main-navigation li a:hover,
+            body:not(.dark-mode) .main-navigation li a.active {
+                color: var(--text-light-primary);
+                background-color: rgba(0, 0, 0, 0.04);
+            }
+            /* Underline effect */
+            .main-navigation li a::after {
+                content: ''; position: absolute;
+                bottom: 4px; right: 1rem; left: 1rem; height: 2px;
+                background-color: var(--accent-color);
+                transform: scaleX(0);
+                transition: transform var(--transition-normal);
+                transform-origin: center;
+            }
+            body:not(.dark-mode) .main-navigation li a::after { background-color: var(--primary-color); }
+            .main-navigation li a:hover::after,
+            .main-navigation li a.active::after { transform: scaleX(1); }
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: flex; flex-direction: column; cursor: pointer; gap: 5px;
+            padding: 0.6rem; background: transparent; border: none;
+            margin-left: 0.5rem; z-index: 1002;
+        }
+        @media (min-width: 992px) { .hamburger-menu { display: none; } }
+        .hamburger-menu div {
+            width: 22px; height: 2.5px; background-color: var(--text-dark-primary);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add easing */
+            border-radius: 2px; transform-origin: center;
+        }
+        body:not(.dark-mode) .hamburger-menu div { background-color: var(--text-light-primary); }
+        /* Hamburger active state */
+        .hamburger-menu.active .hamburger-line-top { transform: rotate(-45deg) translate(-5px, 5.5px); }
+        .hamburger-menu.active .hamburger-line-middle { opacity: 0; transform: scale(0); }
+        .hamburger-menu.active .hamburger-line-bottom { transform: rotate(45deg) translate(-5px, -5.5px); }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: block; position: fixed; top: 0; right: 0; bottom: 0;
+            width: min(300px, 85vw); /* Responsive width */
+            background-color: #181818; /* Darker than header */
+            box-shadow: -6px 0 20px rgba(0, 0, 0, 0.25);
+            z-index: 1001;
+            padding: calc(var(--header-height-mobile) + 1.5rem) 0 2rem 0;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth ease out */
+            overflow-y: auto; border-left: 1px solid var(--border-dark-secondary);
+        }
+        body:not(.dark-mode) .mobile-menu {
+            background-color: var(--bg-light-secondary);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--border-light-secondary);
+        }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+        .mobile-menu a {
+            display: block; padding: 1rem 1.75rem; text-align: right;
+            border-bottom: 1px solid var(--border-dark-secondary);
+            font-size: 1rem; font-weight: var(--font-weight-medium);
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+            color: var(--text-dark-secondary); /* Muted color */
+        }
+        body:not(.dark-mode) .mobile-menu a {
+            border-bottom-color: var(--border-light-secondary);
+             color: var(--text-light-secondary);
+        }
+        .mobile-menu li:last-child a { border-bottom: none; }
+        .mobile-menu a:hover, .mobile-menu a.active {
+            background-color: rgba(var(--primary-color-rgb), 0.1);
+            color: var(--primary-color); /* Primary color text */
+            border-right: 3px solid var(--primary-color); /* Active indicator */
+            padding-right: calc(1.75rem - 3px); /* Adjust padding for border */
+        }
+         body:not(.dark-mode) .mobile-menu a:hover,
+         body:not(.dark-mode) .mobile-menu a.active {
+            background-color: rgba(var(--primary-color-rgb), 0.05);
+         }
+
+        /* Mobile Menu Backdrop */
+        .mobile-menu-backdrop {
+             position: fixed; inset: 0;
+             background-color: rgba(0, 0, 0, 0.6);
+             z-index: 1000;
+             opacity: 0; visibility: hidden;
+             transition: opacity var(--transition-normal), visibility 0s var(--transition-normal);
+             backdrop-filter: blur(4px);
+         }
+         .mobile-menu-backdrop.active {
+             opacity: 1; visibility: visible;
+             transition: opacity var(--transition-normal), visibility 0s;
+         }
+
+        /* ========================= Preloader ========================= */
+        .preloader {
+            position: fixed; inset: 0; z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            background: var(--bg-dark-primary); /* Match body background */
+            transition: opacity 0.6s ease-in-out, visibility 0s 0.6s;
+            opacity: 1; visibility: visible;
+        }
+        .preloader.fade-out { opacity: 0; visibility: hidden; }
+        /* Using a simpler, cleaner spinner */
+        .spinner {
+            width: 50px; height: 50px;
+            border: 5px solid rgba(var(--primary-color-rgb), 0.3);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+
+        /* ========================= Hero Section ========================= */
+        .hero-section {
+            position: relative;
+            min-height: 95vh; /* Slightly taller */
+            background-attachment: fixed;
+            background-position: center center; /* Ensure center */
+            background-repeat: no-repeat;
+            background-size: cover;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--text-color-dark);
-            border-radius: var(--border-radius-md);
-            transition: all var(--transition-speed) var(--transition-smooth);
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glass-border-dark);
+            padding-top: var(--header-height-desktop);
+            padding-bottom: 6rem;
+            color: #ffffff; /* Ensure white text on overlay */
         }
-
-        body.dark-mode .mobile-nav li a {
-            color: var(--text-color-light);
-            background-color: rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--glass-border-light);
-        }
-
-        .mobile-nav li a i {
-            font-size: 1.4rem;
-            opacity: 0.8;
-            transition: transform var(--transition-speed) var(--transition-smooth);
-        }
-
-        .mobile-nav li a:hover {
-            background-color: rgba(var(--primary-color-rgb), 0.15);
-            color: var(--primary-color);
-            transform: translateX(8px);
-        }
-
-        body.dark-mode .mobile-nav li a:hover {
-            background-color: rgba(var(--primary-color-rgb), 0.1);
-        }
-
-        .mobile-nav li a:hover i {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-
-        .mobile-nav li a.active {
-            background-color: var(--primary-color);
-            color: #fff;
-            border-color: var(--primary-color);
-        }
-
-        .mobile-nav li a.active i {
-            opacity: 1;
-        }
-
-        /* Mobile Search */
-        .mobile-search {
-            margin: 2rem 0;
-        }
-
-        .mobile-search .search-form {
-            width: 100%;
-        }
-
-        .mobile-search .search-input {
-            width: 100%;
-            padding: 1rem 3rem 1rem 1.2rem;
-            font-size: 1.1rem;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        body.dark-mode .mobile-search .search-input {
-            background-color: rgba(0, 0, 0, 0.03);
-        }
-
-        .mobile-search .search-input:focus {
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-
-        body.dark-mode .mobile-search .search-input:focus {
-            background-color: rgba(0, 0, 0, 0.04);
-        }
-
-        .mobile-search .search-results-list {
-            position: static;
-            width: 100%;
-            margin-top: 1rem;
-            max-height: none;
-            transform: none;
-            transition: opacity var(--transition-speed) var(--transition-smooth);
-        }
-
-        /* Mobile User Actions */
-        .mobile-user-actions {
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .mobile-user-actions .login-button {
-            width: 100%;
-            justify-content: center;
-            font-size: 1.1rem;
-            padding: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            :root {
-                --header-height-desktop: 70px;
-                --header-shrink-height: 60px;
-            }
-
-            .site-title {
-                font-size: 1.2rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .header-actions {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --header-height-desktop: 60px;
-                --header-shrink-height: 50px;
-            }
-
-            .logo {
-                width: 60px;
-            }
-
-            .site-title {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .site-title {
-                display: none;
-            }
-        }
-
-        /* Prevent scrolling when mobile nav is open */
-        body.nav-open {
-            overflow: hidden;
-        }
-
-        /* Enhanced focus styles for accessibility */
-        .hamburger:focus-visible {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 4px;
-            border-radius: 4px;
-        }
-
-        .mobile-nav a:focus-visible {
-            outline: 2px solid var(--primary-color);
-            outline-offset: -2px;
-        }
-
-        /* Add smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: var(--header-height-desktop);
-        }
-
-
-        /* ========================= Hero Section Styles ========================= */
-        @keyframes gradientPulse { /* More subtle gradient animation */
-          0% { background-position: 10% 0%; }
-          50% { background-position: 91% 100%; }
-          100% { background-position: 10% 0%; }
-        }
-        .hero-section {
-            position: relative; height: 80vh; min-height: 500px; max-height: 850px;
-            display: flex; align-items: flex-end; justify-content: center; text-align: center;
-            color: #fff; overflow: hidden; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-            margin-bottom: 0;
-        }
-        .hero-background {
-             position: absolute; top: 0; left: 0; width: 100%; height: 110%; /* Extra for parallax */
-             background-size: cover; background-position: center center; z-index: 0;
-             transition: transform 0.1s linear, filter 1s ease-out; filter: brightness(0.9); /* Slightly dim */
-        }
-        .hero-section:hover .hero-background { filter: brightness(1); } /* Brighten on hover */
-
-        .hero-section::before { /* Animated Overlay */
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(165deg, rgba(var(--primary-color-rgb), 0.1), rgba(10, 10, 10, 0.7) 60%, rgba(8, 8, 8, 0.9) 90%);
-            background-size: 150% 150%; /* Smaller size for pulse */
-            /* animation: gradientPulse 20s ease infinite alternate; */ /* Optional pulse */
+        .hero-gradient-overlay {
+            position: absolute; inset: 0;
+            /* Use background-color for solid end, gradient for transition */
+             background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(11, 11, 11, 0.7) 50%, var(--bg-dark-primary) 100%);
             z-index: 1;
         }
         .hero-content {
-            position: relative; z-index: 2; padding: 3.5rem 1.5rem; max-width: 950px;
-            margin-bottom: 4rem;
+            position: relative; z-index: 2;
+            max-width: 65%; /* Slightly narrower */
+            animation: fadeInUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
+            opacity: 0; transform: translateY(40px);
         }
-        .hero-content h1 {
-            font-family: var(--font-display); font-size: clamp(3.2rem, 8vw, 6rem); margin-bottom: 1.2rem;
-            color: #fff; text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); letter-spacing: 2.5px;
-            line-height: 1.1; font-weight: 400;
+        .hero-title {
+            font-weight: var(--font-weight-black);
+            margin-bottom: 1.5rem; line-height: 1.25;
+            color: #fff; /* Explicit white */
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Enhance readability */
         }
-        .hero-content p {
-            font-size: clamp(1.1rem, 3vw, 1.4rem); color: rgba(255, 255, 255, 0.95); margin-bottom: 3rem;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); max-width: 750px; margin-left: auto; margin-right: auto;
+        .hero-subtitle {
+            font-weight: var(--font-weight-light);
+            margin-bottom: 2.5rem; opacity: 0.9;
+            max-width: 600px; color: #e0e0e0; /* Lighter gray */
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
         }
-        .hero-cta-button {
-            display: inline-block; color: #111; font-weight: 700; font-size: 1.15rem;
-            padding: 1rem 3rem; border-radius: var(--border-radius-pill); transition: all var(--transition-speed) var(--transition-smooth);
-            background-image: var(--accent-gradient); border: none; box-shadow: 0 6px 18px rgba(var(--accent-color-rgb), 0.45);
-            cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
+        .hero-button {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            font-weight: var(--font-weight-bold);
+            padding: 0.9rem 2.2rem;
+            border-radius: var(--border-radius-pill);
+            color: var(--text-dark-primary);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            transition: all var(--transition-normal);
+            box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.3);
+            border: none; cursor: pointer;
         }
-         .hero-cta-button:hover { transform: translateY(-6px) scale(1.1); box-shadow: 0 9px 25px rgba(var(--accent-color-rgb), 0.55); filter: brightness(1.1); }
-         .hero-cta-button i { transition: transform 0.25s ease-out; display: inline-block; }
-         .hero-cta-button:hover i { transform: translateX(-5px) rotate(-15deg); }
+        .hero-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(var(--secondary-color-rgb), 0.4);
+            color: #fff;
+        }
+        .hero-button i { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+        .hero-button:hover i { animation: bounceArrow 0.7s ease-out infinite; }
 
-        /* Shape Divider */
-        .shape-divider { position: relative; width: 100%; overflow: hidden; line-height: 0; transform: translateY(-1px); margin-bottom: 5rem; }
-        .shape-divider svg { position: relative; display: block; width: calc(100% + 1.3px); height: 100px; } /* Taller divider */
-        .shape-divider .shape-fill { fill: var(--dark-background); transition: fill var(--transition-speed) var(--transition-smooth); }
-        body.dark-mode .shape-divider .shape-fill { fill: var(--light-background); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes bounceArrow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
-
-        /* ========================= Featured News Banner ========================= */
-        .featured-news-banner {
-             display: flex;
-             align-items: center;
-             background-color: var(--card-bg-dark);
-             border-radius: var(--border-radius-lg);
-             overflow: hidden;
-             margin-bottom: 3.5rem; /* Space before grid */
-             box-shadow: var(--box-shadow-dark);
-             border: 1px solid var(--border-color-dark);
-             min-height: 350px; /* Ensure min height */
-             opacity: 0; transform: translateY(40px); /* Scroll reveal */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 85vh; background-attachment: scroll;
+                padding-top: calc(var(--header-height-mobile) + 2rem);
+                text-align: center;
+            }
+            .hero-content { max-width: 95%; margin-left: auto; margin-right: auto; }
+            .hero-subtitle { max-width: 100%; }
+            .hero-button { padding: 0.8rem 1.9rem; }
         }
-         body.dark-mode .featured-news-banner { background-color: var(--card-bg-light); border: 1px solid var(--border-color-light); box-shadow: var(--box-shadow-light); }
 
-         .featured-news-image {
-             width: 50%; /* Image takes half */
-             flex-shrink: 0;
-             align-self: stretch; /* Stretch to full height */
-             overflow: hidden;
+        /* Wave Separator CSS is removed */
+
+        /* ========================= Marquee Section ========================= */
+        .marquee-section {
+            padding: 1rem 0; overflow: hidden;
+            background: linear-gradient(90deg, #222, #333, #222); /* Simpler dark gradient */
+            color: var(--text-dark-secondary);
+            border-top: 1px solid var(--border-dark-secondary);
+            border-bottom: 1px solid var(--border-dark-secondary);
+            /* Add margin-top since wave separator is gone */
+            /* margin-top: -1px; remove overlap if wave was present */
+        }
+        body:not(.dark-mode) .marquee-section {
+             background: linear-gradient(90deg, #eee, #f5f5f5, #eee);
+             color: var(--text-light-secondary);
+             border-color: var(--border-light-secondary);
+        }
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            width: 100%; overflow: hidden;
+        }
+        .marquee-content {
+            display: flex; white-space: nowrap;
+            animation: marquee 50s linear infinite; /* Slightly slower */
+            width: max-content; will-change: transform;
+        }
+        .marquee-item {
+            display: inline-flex; align-items: center; padding: 0 2.5rem; gap: 0.8rem;
+        }
+        .marquee-item span { font-size: 0.9rem; opacity: 0.9; }
+        .marquee-item .label { font-weight: var(--font-weight-semibold); opacity: 1; margin-left: 0.5rem; color: var(--text-dark-primary); }
+         body:not(.dark-mode) .marquee-item .label { color: var(--text-light-primary); }
+        .marquee-item .separator { opacity: 0.6; }
+        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+
+
+        /* ========================= Section Heading Helper ========================= */
+        .section-heading {
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+            margin-bottom: 3rem; /* Increased spacing */
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-dark-secondary);
+            padding-bottom: 1.25rem;
+        }
+         body:not(.dark-mode) .section-heading {
+             border-bottom-color: var(--border-light-secondary);
          }
-         .featured-news-image img {
-             width: 100%; height: 100%;
-             object-fit: cover;
-             transition: transform 0.6s var(--transition-smooth);
-         }
-          .featured-news-banner:hover .featured-news-image img { transform: scale(1.08); }
-
-         .featured-news-content {
-             padding: 2.5rem 3rem;
-             flex-grow: 1;
-         }
-          .featured-news-content .news-card-category { margin-bottom: 1.2rem; /* More space */}
-          .featured-news-content .news-card-title { font-size: 1.8rem; line-height: 1.3; margin-bottom: 1rem; }
-          .featured-news-content .news-card-excerpt { font-size: 1.05rem; margin-bottom: 1.8rem; }
-          .featured-news-content .news-card-meta { border-top: none; padding-top: 0; opacity: 0.8; }
-
-
-        /* ========================= Latest News & Filters ========================= */
-        .latest-news { margin-top: 0; }
-        .category-filters {
-            display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;
-        }
-        .filter-button {
-            padding: 0.7rem 1.8rem; border-radius: var(--border-radius-pill);
-            border: 1px solid var(--border-color-dark); background-color: transparent;
-            color: var(--text-muted-dark); font-size: 0.95rem; font-weight: 500; cursor: pointer;
-            transition: all var(--transition-fast) ease; backdrop-filter: blur(5px);
-        }
-        body.dark-mode .filter-button { border: 1px solid var(--border-color-light); color: var(--text-muted-light); }
-        .filter-button:hover, .filter-button.active {
-            background-color: var(--primary-color); color: #fff; border-color: var(--primary-color);
-            transform: translateY(-3px) scale(1.03); box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.25);
-        }
-        body.dark-mode .filter-button:hover, body.dark-mode .filter-button.active { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
-
         .section-title {
-            font-family: var(--font-display); font-size: 3rem; margin-bottom: 3rem; font-weight: 400;
-            color: var(--text-color-dark); position: relative; display: block; text-align: center;
-            padding-bottom: 1.2rem; letter-spacing: 1.8px;
+            font-size: clamp(1.6rem, 4vw, 2rem); /* Adjusted size */
+            font-weight: var(--font-weight-bold);
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0;
         }
-        body.dark-mode .section-title { color: var(--text-color-light); }
-        .section-title::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 120px; height: 5px; background-image: var(--primary-gradient); border-radius: 3px;
+        .section-title::after { display: none; } /* Remove old underline */
+         .section-link {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            color: var(--accent-color);
+            transition: color var(--transition-fast), background-color var(--transition-fast);
+            font-size: 0.9rem; font-weight: var(--font-weight-medium);
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--border-radius-pill);
+         }
+         .section-link:hover {
+             color: var(--bg-dark-primary); /* Dark text on hover */
+             background-color: var(--accent-color);
+         }
+         body:not(.dark-mode) .section-link {
+            color: var(--primary-color);
+         }
+         body:not(.dark-mode) .section-link:hover {
+             color: #fff; /* White text on hover */
+             background-color: var(--primary-color);
+         }
+         .section-link i { font-size: 0.9em; transition: transform 0.2s ease-out; }
+         .section-link:hover i { transform: translateX(-4px); }
+
+        /* ========================= Featured News Section (Swiper) ========================= */
+        .featured-section {
+            padding-top: 3rem; padding-bottom: 3rem;
+            /* Removed background gradient for cleaner look */
         }
-
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 2.5rem; }
-
-        .news-card { /* Standard Cards */
-            background-color: var(--card-bg-dark); border-radius: var(--border-radius-lg); overflow: hidden;
-            box-shadow: var(--box-shadow-dark); transition: all var(--transition-speed) var(--transition-smooth);
-            display: flex; flex-direction: column; border: 1px solid var(--border-color-dark);
-            height: 100%; opacity: 0; transform: translateY(40px) rotateX(-5deg); /* 3D reveal */
+        .featured-swiper {
+            overflow: hidden;
+            border-radius: var(--border-radius-lg); /* Larger radius */
+            box-shadow: var(--shadow-dark-lg);
             position: relative;
         }
-         .news-card::before { /* Hover overlay */
-            content: ""; position: absolute; inset: 0;
-             background: linear-gradient(170deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
-             body.dark-mode & { background: linear-gradient(170deg, rgba(0,0,0,0.04), rgba(0,0,0,0)); }
-             opacity: 0; border-radius: inherit; pointer-events: none;
-             transition: opacity var(--transition-speed) var(--transition-smooth); z-index: 1;
+        body:not(.dark-mode) .featured-swiper { box-shadow: var(--shadow-light-lg); }
+
+        .featured-swiper .swiper-slide { position: relative; height: clamp(450px, 60vh, 550px); color: #fff; }
+        .featured-swiper .swiper-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); } /* Slightly darken image */
+        .featured-swiper .slide-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, transparent 80%); } /* Adjusted gradient */
+        .featured-swiper .slide-content {
+            position: absolute; bottom: 0; right: 0;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            width: 100%; max-width: 75%; z-index: 10;
+            opacity: 0; transform: translateY(25px);
+            transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
+        }
+        .featured-swiper .swiper-slide-active .slide-content { opacity: 1; transform: translateY(0); }
+        .featured-swiper .slide-title {
+             font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: var(--font-weight-bold);
+             margin-bottom: 0.75rem; line-height: 1.3; text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+        }
+        .featured-swiper .slide-description {
+            font-size: clamp(0.9rem, 2.5vw, 1rem); opacity: 0.9;
+            margin-bottom: 1.5rem; line-height: 1.6;
+            max-width: 55ch; /* Limit width */
+         }
+        .featured-swiper .slide-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .featured-swiper .meta-info { opacity: 0.8; }
+        .featured-swiper .meta-link {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            color: var(--accent-color); font-weight: var(--font-weight-semibold);
+            transition: color var(--transition-fast), transform var(--transition-fast);
+            padding: 0.3rem 0; /* Add padding for click area */
+        }
+        .featured-swiper .meta-link:hover { color: var(--secondary-color); transform: translateX(-4px); }
+        .featured-swiper .meta-link i { font-size: 0.9em; }
+        /* Swiper Controls */
+        .featured-swiper .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.5); opacity: 1;
+            transition: opacity var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+            width: 10px; height: 10px; margin: 0 5px !important; /* Ensure spacing */
+         }
+        .featured-swiper .swiper-pagination-bullet-active {
+             background: var(--accent-color); transform: scale(1.2);
+        }
+        .featured-swiper .swiper-button-next,
+        .featured-swiper .swiper-button-prev {
+            color: white; background: rgba(var(--bg-dark-primary-rgb, 11, 11, 11), 0.4);
+            width: 48px; height: 48px; border-radius: 50%;
+            backdrop-filter: blur(5px); transition: all var(--transition-normal);
+            opacity: 0.8; top: 50%; transform: translateY(-50%);
+        }
+        .featured-swiper .swiper-button-next:hover,
+        .featured-swiper .swiper-button-prev:hover {
+             background: rgba(var(--primary-color-rgb), 0.7);
+             transform: translateY(-50%) scale(1.08); opacity: 1;
+        }
+        .featured-swiper .swiper-button-next::after,
+        .featured-swiper .swiper-button-prev::after { font-size: 1.2rem; font-weight: bold; }
+        @media (max-width: 768px) {
+            .featured-swiper .slide-content { max-width: 95%; padding: 1.5rem; }
+            .featured-swiper .slide-description { display: none; }
+            .featured-swiper .swiper-button-next,
+            .featured-swiper .swiper-button-prev { display: none; }
+            .featured-swiper { border-radius: var(--border-radius-md); }
+            .featured-swiper .swiper-pagination { bottom: 10px !important; } /* Adjust pagination pos */
+        }
+
+
+        /* ========================= Category Badges ========================= */
+        .category-badge {
+            display: inline-block;
+            font-size: 0.7rem; font-weight: var(--font-weight-semibold);
+            padding: 0.35rem 0.9rem; border-radius: var(--border-radius-pill);
+            color: #fff; margin-bottom: 1rem;
+            text-transform: uppercase; letter-spacing: 0.8px; line-height: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            /* Ensure contrast */
+            mix-blend-mode: normal; /* Avoid issues on complex backgrounds */
+        }
+        .badge-game { background-color: var(--game-color); color: #000; } /* Dark text for contrast */
+        .badge-movie { background-color: var(--movie-color); }
+        .badge-tv { background-color: var(--tv-color); }
+        .badge-review { background-color: var(--review-color); }
+        /* Badge on Card Image */
+        .card-image-container .category-badge {
+             position: absolute; top: 1rem; right: 1rem; z-index: 5;
+             background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+             backdrop-filter: blur(3px);
+             color: #fff; /* Ensure white text */
+             box-shadow: none; /* Remove shadow on overlay */
+             margin-bottom: 0;
+         }
+         /* Override specific colors if needed on overlay */
+         .card-image-container .badge-game { background-color: rgba(var(--game-color-rgb), 0.8); color: #000;}
+
+
+        /* ========================= Grid Container ========================= */
+        .grid-container {
+             display: grid; gap: clamp(1.5rem, 4vw, 2rem); /* Responsive gap */
+         }
+        /* Default to 1 column */
+        .grid-cols-1 { grid-template-columns: 1fr; }
+        /* Medium screens: 2 columns */
+        @media (min-width: 640px) { /* sm */
+            .grid-cols-sm-2 { grid-template-columns: repeat(2, 1fr); }
+        }
+        /* Large screens: 3 columns */
+        @media (min-width: 992px) { /* lg */
+            .grid-cols-lg-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+        /* X-Large screens: 4 columns */
+        @media (min-width: 1280px) { /* xl */
+            .grid-cols-xl-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* ========================= Generic Card Base ========================= */
+        .card-base {
+             border-radius: var(--border-radius-md);
+             overflow: hidden;
+             background: var(--bg-dark-card);
+             box-shadow: var(--shadow-dark-md);
+             transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+             border: 1px solid var(--border-dark-primary);
+             display: flex;
+             flex-direction: column;
+         }
+         body:not(.dark-mode) .card-base {
+             background: var(--bg-light-card);
+             box-shadow: var(--shadow-light-md);
+             border-color: var(--border-light-primary);
+         }
+         .card-base:hover {
+             transform: translateY(-6px);
+             box-shadow: var(--shadow-dark-lg);
+         }
+         body:not(.dark-mode) .card-base:hover {
+              box-shadow: var(--shadow-light-lg);
+         }
+         .card-image-container { position: relative; overflow: hidden; }
+         .card-image { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; } /* Fixed aspect ratio */
+         .card-content { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
+         .card-title {
+             font-weight: var(--font-weight-semibold);
+             font-size: 1.15rem; margin-bottom: 0.6rem; line-height: 1.4;
+             color: var(--text-dark-primary);
+         }
+         body:not(.dark-mode) .card-title { color: var(--text-light-primary); }
+          .card-title a { color: inherit; }
+          .card-title a:hover { color: var(--accent-color); }
+          body:not(.dark-mode) .card-title a:hover { color: var(--primary-color); }
+
+         .card-meta-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 0.75rem; font-size: 0.85rem; color: var(--text-dark-tertiary); }
+          body:not(.dark-mode) .card-meta-info { color: var(--text-light-tertiary); }
+
+
+        /* ========================= Now Playing Section ========================= */
+        .now-playing-section .section-title i.fa-circle {
+             font-size: 0.7em; /* Relative size */
+             color: var(--primary-color);
+             margin-right: 0.6rem;
+             animation: pulse-live 1.7s infinite ease-in-out;
+             vertical-align: middle; display: inline-block;
+        }
+        @keyframes pulse-live { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+
+        .now-playing-card .card-image { height: 12rem; aspect-ratio: auto; } /* Override aspect ratio if needed */
+        .status-badge {
+             position: absolute; top: 0.75rem; left: 0.75rem; color: white;
+             font-size: 0.7rem; font-weight: bold; padding: 0.35rem 0.65rem;
+             border-radius: var(--border-radius-sm); line-height: 1; text-transform: uppercase;
+             box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+         }
+        .badge-live { background-color: var(--primary-color); }
+        .badge-soon { background-color: var(--tv-color); }
+        .badge-new-ep { background-color: var(--review-color); }
+        .badge-renewed { background-color: #16a34a; } /* Green */
+
+        .now-playing-card .genre, .now-playing-card .episode-info { font-size: 0.8rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .now-playing-card .imdb-rating {
+             background-color: var(--accent-color); color: var(--bg-dark-primary); /* Dark text on accent */
+             font-size: 0.75rem; font-weight: var(--font-weight-bold); padding: 0.3rem 0.6rem;
+             border-radius: var(--border-radius-sm); white-space: nowrap;
+         }
+         body:not(.dark-mode) .now-playing-card .imdb-rating {
+              background-color: var(--primary-color); color: #fff; /* Light mode accent */
+         }
+        .now-playing-card .progress-section { margin-bottom: 1rem; }
+        .now-playing-card .progress-label { display: block; font-size: 0.8rem; color: var(--text-dark-tertiary); margin-bottom: 0.4rem; }
+         body:not(.dark-mode) .now-playing-card .progress-label { color: var(--text-light-tertiary); }
+        .now-playing-card .progress-bar { height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: var(--border-radius-pill); overflow: hidden; }
+         body:not(.dark-mode) .now-playing-card .progress-bar { background: rgba(0, 0, 0, 0.08); }
+        .now-playing-card .progress-value { height: 100%; background: linear-gradient(to right, var(--secondary-color), var(--accent-color)); border-radius: var(--border-radius-pill); transform-origin: left; /* Animation applied via JS */ }
+        .now-playing-card .card-button {
+             display: flex; justify-content: center; align-items: center; gap: 0.5rem;
+             width: 100%; text-align: center; padding: 0.7rem 0; border-radius: var(--border-radius-sm);
+             color: var(--bg-dark-primary); font-weight: var(--font-weight-semibold); font-size: 0.9rem;
+             background: linear-gradient(90deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+             transition: all var(--transition-normal);
+             border: none; cursor: pointer; margin-top: auto; /* Push button to bottom */
+         }
+         body:not(.dark-mode) .now-playing-card .card-button {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+         }
+         .now-playing-card .card-button:hover {
+              transform: scale(1.03);
+              filter: brightness(1.1);
+              box-shadow: 0 4px 10px rgba(var(--secondary-color-rgb), 0.3);
           }
-        body.dark-mode .news-card { box-shadow: var(--box-shadow-light); border: 1px solid var(--border-color-light); }
-        .news-card:hover {
-            transform: translateY(-12px) scale(1.035) rotateX(0deg); box-shadow: var(--box-shadow-hover-dark);
-            background-color: rgba(255, 255, 255, 0.05);
-             body.dark-mode & { background-color: #fff; }
+
+        /* ========================= Latest News Section ========================= */
+         .latest-news-section {
+             background: linear-gradient(to bottom, rgba(var(--primary-color-rgb), 0.03), transparent 50%);
+         }
+         body:not(.dark-mode) .latest-news-section {
+             background: linear-gradient(to bottom, rgba(var(--primary-color-rgb), 0.02), transparent 50%);
+         }
+
+        .news-card { /* Inherits from card-base */
+             transform-style: preserve-3d;
+             perspective: 1000px;
         }
-         .news-card:hover::before { opacity: 1; }
-
-
-        .news-card-image-link { display: block; overflow: hidden; height: 220px; position: relative; z-index: 0; }
-        .news-card-image {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.6s var(--transition-smooth), filter 0.4s ease;
+        .news-card:hover { /* Override base hover */
+            transform: translateY(-8px) rotateX(2deg) rotateY(1deg); /* Subtle tilt */
+            box-shadow: var(--shadow-dark-lg);
         }
-         .news-card:hover .news-card-image { transform: scale(1.15); filter: saturate(1.15) brightness(1.05); }
+        body:not(.dark-mode) .news-card:hover { box-shadow: var(--shadow-light-lg); }
 
-        .news-card-content { padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; position: relative; z-index: 2; }
-        .news-card-category {
-            display: inline-block; color: white; font-size: 0.8rem; padding: 0.4rem 1.1rem;
-            border-radius: var(--border-radius-pill); margin-bottom: 1.1rem; font-weight: 600;
-            align-self: flex-start; text-transform: uppercase; letter-spacing: 0.8px; backdrop-filter: blur(3px);
+        .tilt-card-inner { /* Keep tilt inner */
+            transform: translateZ(10px); /* Reduced Z */
+            will-change: transform;
+            height: 100%; display: flex; flex-direction: column;
         }
-        .news-card-category.gaming { background: rgba(108, 92, 231, 0.85); }
-        .news-card-category.movie { background: rgba(229, 9, 20, 0.85); }
-        .news-card-category.tv { background: rgba(0, 184, 148, 0.85); }
-
-        .news-card-title {
-            font-size: 1.3rem; margin-bottom: 0.9rem; line-height: 1.5; font-weight: 600;
-            color: var(--text-color-dark); transition: color var(--transition-fast) ease;
+        .news-card .card-image { transition: transform var(--transition-slow); } /* Base transition */
+        .news-card:hover .card-image { transform: scale(1.04); } /* Subtle scale */
+        .news-card .image-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+            opacity: 0; transition: opacity var(--transition-normal); pointer-events: none;
         }
-        .news-card-title a { color: inherit; text-decoration: none; }
-        .news-card-title a:hover { color: var(--primary-color); }
-        body.dark-mode .news-card-title { color: var(--text-color-light); }
-        body.dark-mode .news-card-title a:hover { color: var(--primary-color); }
-
-        .news-card-excerpt { color: var(--text-muted-dark); font-size: 0.98rem; margin-bottom: 1.6rem; line-height: 1.75; flex-grow: 1; }
-        body.dark-mode .news-card-excerpt { color: var(--text-muted-light); }
-
-        .news-card-meta {
-            display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
-            color: var(--text-muted-dark); margin-top: auto; padding-top: 1.1rem;
-            border-top: 1px solid var(--border-color-dark); opacity: 0.85;
+        .news-card:hover .image-overlay { opacity: 1; }
+        .news-card .card-excerpt {
+             font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-dark-secondary);
+             line-height: 1.6; flex-grow: 1; /* Excerpt grows */
+             /* Clamp text to 3 lines */
+             display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+         }
+        body:not(.dark-mode) .news-card .card-excerpt { color: var(--text-light-secondary); }
+        .news-card .card-meta-info { /* Use base meta */
+            margin-top: auto; /* Push meta to bottom */
+            padding-top: 1rem; border-top: 1px solid var(--border-dark-secondary);
         }
-        body.dark-mode .news-card-meta { color: var(--text-muted-light); border-top: 1px solid var(--border-color-light); }
-        .news-card-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
-        .news-card-meta i { font-size: 0.95em; opacity: 0.8; }
+        body:not(.dark-mode) .news-card .card-meta-info { border-top-color: var(--border-light-secondary); }
 
+        .news-card .meta-link {
+             display: inline-flex; align-items: center; gap: 0.3rem;
+             color: var(--accent-color); font-weight: var(--font-weight-medium);
+             transition: color var(--transition-fast); font-size: 0.85rem;
+         }
+        .news-card .meta-link:hover { color: var(--secondary-color); }
+         body:not(.dark-mode) .news-card .meta-link { color: var(--primary-color); }
+         body:not(.dark-mode) .news-card .meta-link:hover { color: var(--secondary-color); }
+        .news-card .meta-link i { transition: transform 0.2s ease-out; font-size: 0.9em; }
+        .news-card .meta-link:hover i { transform: translateX(-3px); }
 
-        .view-all-button {
-            display: block; text-align: center; margin: 4rem auto 0; padding: 1rem 3rem; color: #fff;
-            border: none; border-radius: var(--border-radius-pill); font-weight: 600;
-            transition: all var(--transition-speed) var(--transition-smooth); max-width: 260px;
-            background-image: var(--primary-gradient); box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
-            font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.8px;
+        /* Section Button */
+        .section-view-all-button { text-align: center; margin-top: 3.5rem; }
+        .section-view-all-button .btn-primary-gradient {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-weight: var(--font-weight-bold); padding: 0.85rem 2.1rem; border-radius: var(--border-radius-pill);
+            color: var(--text-dark-primary);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            transition: all var(--transition-normal);
+            box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.25); border: none; cursor: pointer;
         }
-        .view-all-button:hover { transform: translateY(-6px) scale(1.08); box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.5); filter: brightness(1.15); color: white; }
+         body:not(.dark-mode) .section-view-all-button .btn-primary-gradient {
+             color: #fff;
+         }
+        .section-view-all-button .btn-primary-gradient:hover {
+             transform: translateY(-3px) scale(1.03);
+             box-shadow: 0 7px 20px rgba(var(--secondary-color-rgb), 0.35);
+         }
+         .section-view-all-button .btn-primary-gradient i { transition: transform 0.2s ease-out; }
+         .section-view-all-button .btn-primary-gradient:hover i { transform: translateX(-4px); }
 
         /* ========================= Latest Trailers Section ========================= */
-        .latest-trailers {
-             background-color: transparent; /* Blend with main bg */
-             border-radius: var(--border-radius-lg); padding: 0; /* Remove section padding */
-             border: none; /* Remove border */
+        .trailer-card {
+            border-radius: var(--border-radius-md); overflow: hidden;
+            box-shadow: var(--shadow-dark-md);
+            transition: all var(--transition-normal);
+            position: relative; display: block;
+        }
+        body:not(.dark-mode) .trailer-card { box-shadow: var(--shadow-light-md); }
+        .trailer-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-dark-lg);
+        }
+        body:not(.dark-mode) .trailer-card:hover { box-shadow: var(--shadow-light-lg); }
+
+        .trailer-card .card-image-container { position: relative; overflow: hidden; }
+        .trailer-card .card-image {
+            width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+            transition: transform var(--transition-slow); display: block;
+        }
+        .trailer-card:hover .card-image { transform: scale(1.06); }
+        .trailer-card .image-overlay {
+             position: absolute; inset: 0;
+             background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 75%);
+             transition: opacity var(--transition-normal); pointer-events: none;
          }
-         .trailer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; }
-         .trailer-card {
-             background-color: var(--card-bg-dark); border-radius: var(--border-radius-md); overflow: hidden;
-             box-shadow: var(--box-shadow-dark); transition: all var(--transition-speed) var(--transition-smooth);
-             position: relative; border: 1px solid var(--border-color-dark); opacity: 0; transform: translateY(40px);
+        .trailer-card .play-icon {
+            position: absolute; top: 50%; left: 50%;
+            width: 3.2rem; height: 3.2rem; /* Slightly larger */
+            border-radius: 50%;
+            background-color: rgba(var(--primary-color-rgb), 0.8);
+            display: flex; align-items: center; justify-content: center;
+            color: white; backdrop-filter: blur(4px);
+            transform: translate(-50%, -50%) scale(0.7); opacity: 0;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bounce effect */
+             z-index: 5; font-size: 1.1rem;
+             box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+        .trailer-card:hover .play-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        .trailer-card .card-content-overlay {
+             position: absolute; bottom: 0; left: 0; right: 0;
+             padding: 1rem 1.25rem; /* Increased padding */
+             z-index: 3; color: white; pointer-events: none;
+             transition: transform var(--transition-fast);
          }
-          body.dark-mode .trailer-card { background-color: var(--card-bg-light); border: 1px solid var(--border-color-light); box-shadow: var(--box-shadow-light); }
-          .trailer-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: var(--box-shadow-hover-dark); }
-          .trailer-card-thumbnail { display: block; position: relative; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0; }
-          .trailer-card-thumbnail img { width: 100%; height: 190px; object-fit: cover; transition: transform 0.5s var(--transition-smooth); }
-          .trailer-card:hover .trailer-card-thumbnail img { transform: scale(1.12); }
-          .play-icon-overlay {
-               position: absolute; inset: 0; display: flex; justify-content: center; align-items: center;
-               background-image: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-               opacity: 0; transition: opacity var(--transition-speed) var(--transition-smooth);
-           }
-          .trailer-card:hover .play-icon-overlay { opacity: 1; }
-          .play-icon-overlay i {
-               font-size: 3.5rem; color: rgba(255,255,255,0.9); text-shadow: 0 0 20px rgba(0,0,0,0.6);
-               transform: scale(0.8); transition: transform 0.3s ease-out;
-           }
-          .trailer-card:hover .play-icon-overlay i { transform: scale(1); }
-          .trailer-card-title {
-               padding: 1.2rem 1.3rem; font-size: 1.05rem; font-weight: 600;
-               color: var(--text-color-dark); text-align: right; white-space: nowrap;
-               overflow: hidden; text-overflow: ellipsis;
-           }
-           body.dark-mode .trailer-card-title { color: var(--text-color-light); }
+        .trailer-card:hover .card-content-overlay { transform: translateY(-5px); } /* Subtle lift */
+
+        .trailer-card .card-title {
+            font-weight: var(--font-weight-semibold); font-size: 1rem;
+            margin-bottom: 0.25rem; color: white; line-height: 1.3;
+             text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+         }
+        .trailer-card .card-duration { font-size: 0.8rem; color: #ddd; opacity: 0.9; }
+        /* Add icon to duration */
+        .trailer-card .card-duration i { margin-left: 0.3rem; font-size: 0.9em; }
 
 
         /* ========================= Footer Styles ========================= */
-        footer {
-            background-color: #050505; /* Darker footer */
-             color: var(--text-muted-dark); padding: 6rem 0 3rem 0; margin-top: 6rem;
-            font-size: 0.98rem; border-top: 1px solid rgba(255, 255, 255, 0.05); /* Very faint top border */
+        .site-footer {
+            background-color: var(--bg-dark-footer);
+            color: var(--text-dark-secondary);
+            padding: clamp(3rem, 6vw, 4rem) 0 clamp(1.5rem, 4vw, 2rem) 0;
+            margin-top: auto;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-dark-secondary);
             position: relative; overflow: hidden;
         }
-         body.dark-mode footer { background-color: #f5f5f5; color: var(--text-muted-light); border-top: 1px solid rgba(0, 0, 0, 0.05); }
-        footer::before { display: none; /* Remove old gradient */}
-
-        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 3.5rem; position: relative; z-index: 1; }
-        .footer-section { padding: 0 1.2rem; }
-        .footer-section h3 {
-            color: var(--accent-color); body.dark-mode & { color: var(--primary-color); }
-            font-size: 1.5rem; margin-bottom: 1.8rem; font-family: var(--font-display);
-            letter-spacing: 1.5px; text-transform: uppercase; font-weight: 400;
+        body:not(.dark-mode) .site-footer {
+            background-color: var(--bg-light-footer);
+            color: var(--text-light-secondary);
+            border-top-color: var(--border-light-secondary);
         }
-        .footer-section p, .footer-section ul { margin-bottom: 1.8rem; line-height: 2; } /* Increased line height */
-        .footer-section ul { list-style: none; padding: 0; }
-        .footer-section li { margin-bottom: 1rem; }
-        .footer-section a {
-            color: var(--text-muted-dark); body.dark-mode & { color: var(--text-muted-light); }
-            opacity: 0.85; transition: all var(--transition-fast) ease; display: inline-flex;
-            align-items: center; gap: 0.8rem;
+        /* Footer Subtle Pattern Overlay */
+        .site-footer::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 10% 90%, rgba(var(--primary-color-rgb), 0.05), transparent 50%),
+                        radial-gradient(circle at 90% 10%, rgba(var(--secondary-color-rgb), 0.03), transparent 50%);
+            pointer-events: none; z-index: 0; opacity: 0.7;
         }
-        .footer-section a:hover { opacity: 1; color: var(--accent-color); padding-right: 8px; transform: translateX(-4px); }
-         body.dark-mode .footer-section a:hover { color: var(--primary-color); }
-        .footer-section a i { font-size: 1em; opacity: 0.8; width: 18px; text-align: center;}
-
-        .footer-social-icons { display: flex; gap: 1.3rem; justify-content: start; margin-top: 2rem;}
-        .footer-social-icons a {
-            display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px;
-            border-radius: 50%; background-color: rgba(255, 255, 255, 0.08);
-             body.dark-mode & { background-color: rgba(0, 0, 0, 0.07); }
-            color: var(--text-muted-dark); body.dark-mode & { color: var(--text-muted-light); }
-            font-size: 1.3rem; transition: all var(--transition-speed) var(--transition-smooth);
-        }
-        .footer-social-icons a:hover { background-color: var(--primary-color); color: #fff; transform: scale(1.2) translateY(-5px) rotate(-15deg); box-shadow: 0 6px 15px rgba(var(--primary-color-rgb), 0.4); }
-
-        .footer-bottom { text-align: center; padding-top: 3.5rem; border-top: 1px solid var(--border-color-dark); margin-top: 3.5rem; font-size: 0.9rem; opacity: 0.6; }
-         body.dark-mode .footer-bottom { border-top-color: var(--border-color-light); }
-        .footer-bottom i.fa-heart { color: var(--primary-color); font-size: 0.85em; vertical-align: baseline; margin: 0 3px;}
-
-        /* Newsletter Form */
-        .newsletter-form { display: flex; gap: 0.5rem; position: relative; }
-        .newsletter-form input[type="email"] {
-            padding: 0.9rem 1.3rem; padding-left: 120px; border-radius: var(--border-radius-pill);
-            border: 1px solid var(--border-color-dark); background-color: rgba(255, 255, 255, 0.08);
-             body.dark-mode & { background-color: rgba(0, 0, 0, 0.06); border-color: var(--border-color-light); color: var(--text-color-light); }
-            color: var(--text-color-dark); font-size: 1rem; font-family: inherit; flex-grow: 1;
-            outline: none; transition: all var(--transition-speed) var(--transition-smooth);
-        }
-        .newsletter-form input[type="email"]:focus {
-            background-color: rgba(255, 255, 255, 0.1); border-color: var(--primary-color);
-             body.dark-mode & { background-color: rgba(0, 0, 0, 0.07); border-color: var(--primary-color); }
-            box-shadow: 0 0 18px rgba(var(--primary-color-rgb), 0.25);
-        }
-        .newsletter-form button[type="submit"] {
-            position: absolute; left: 7px; top: 50%; transform: translateY(-50%);
-            padding: 0.7rem 1.5rem; border-radius: var(--border-radius-pill); border: none;
-            background-image: var(--primary-gradient); color: #fff; font-size: 0.9rem; font-family: var(--font-sans);
-            font-weight: 600; cursor: pointer; transition: all var(--transition-speed) var(--transition-smooth);
-            box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.35); white-space: nowrap;
-        }
-        .newsletter-form button[type="submit"]:hover { filter: brightness(1.1); transform: translateY(-50%) scale(1.05); box-shadow: 0 6px 14px rgba(var(--primary-color-rgb), 0.45); }
-         #newsletter-feedback { font-size: 0.9rem; margin-top: 1rem; opacity: 0.9; transition: opacity 0.5s ease; font-weight: 500;}
-
-
-        /* ========================= Controls Styles ========================= */
-        .controls { position: fixed; bottom: 2.2rem; left: 2.2rem; display: flex; flex-direction: column; gap: 1.2rem; z-index: 1000; }
-        .control-button {
-            width: 48px; height: 48px; border-radius: 50%; border: none; background: var(--primary-gradient);
-            color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
-            transition: all var(--transition-speed) var(--transition-smooth); opacity: 0;
-            transform: scale(0.6) translateY(25px) rotate(90deg); font-size: 1.3rem;
-            box-shadow: var(--box-shadow-dark); visibility: hidden;
-        }
-        .control-button.visible { opacity: 0.95; transform: scale(1) translateY(0) rotate(0deg); visibility: visible; }
-        .control-button:hover {
-            opacity: 1; transform: scale(1.2) rotate(-20deg); background: var(--accent-gradient);
-            color: var(--dark-background); box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.5);
-        }
-         body.dark-mode .control-button { box-shadow: var(--box-shadow-light); background: var(--primary-gradient); color: #fff; }
-         body.dark-mode .control-button:hover { color: var(--text-color-light); background: var(--accent-gradient); box-shadow: 0 8px 20px rgba(var(--accent-color-rgb), 0.4); }
-
-
-        /* ========================= Scroll Reveal & Magnetic ========================= */
-        [data-scroll-reveal] { opacity: 0; transform: translateY(50px) rotateX(-10deg); transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth); transform-origin: bottom; }
-        [data-scroll-reveal].revealed { opacity: 1; transform: translateY(0) rotateX(0deg); }
-        .news-card, .trailer-card { transition-delay: calc(0.1s * var(--card-index, 0)); }
-
-        [data-magnetic] { transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy magnetic */ }
-
-
-        /* ========================= Media Queries ========================= */
-         @media (max-width: 1200px) {
-              .container { max-width: 1140px; }
-              nav ul { gap: 0.8rem; } /* Reduce nav gap */
-              nav li a { font-size: 1rem; padding: 0.6rem 1rem;}
-              .featured-news-content { padding: 2rem 2.5rem; }
-              .featured-news-content .news-card-title { font-size: 1.6rem; }
-          }
-
-        @media (max-width: 992px) {
-            .container { max-width: 960px; }
-            nav { display: none; } /* Hide desktop nav */
-            .hamburger-menu { display: flex; } /* Show hamburger */
-            .header-actions .search-form#search-form { display: none; }
-            .header-content { gap: 1rem; } /* Reduce header gap */
-             main { padding-top: calc(var(--header-height-mobile) + 1.5rem); }
-
-            .featured-news-banner { flex-direction: column; min-height: unset; }
-            .featured-news-image { width: 100%; height: 280px; } /* Image takes full width */
-            .featured-news-content { padding: 2rem; }
-
-             .news-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;}
+         body:not(.dark-mode) .site-footer::before {
+            background: radial-gradient(circle at 10% 90%, rgba(var(--primary-color-rgb), 0.03), transparent 50%),
+                        radial-gradient(circle at 90% 10%, rgba(var(--secondary-color-rgb), 0.02), transparent 50%);
          }
 
-        @media (max-width: 768px) {
-            html { font-size: 15px; }
-            .container { padding: 0 var(--content-padding-mobile); }
-             main { padding-top: calc(var(--header-height-mobile) + 1rem); padding-bottom: 2rem; }
-             main > section { margin-bottom: 3.5rem; }
-            .logo { width: 70px; } /* Adjust mobile logo size */
-            .site-title { font-size: 1.5rem; }
-            .header-actions { gap: 1rem; }
-            .login-button { padding: 0.7rem 1.2rem; font-size: 0.9rem;}
-            .user-avatar img { width: 40px; height: 40px; }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(2rem, 5vw, 3rem); /* Responsive gap */
+            position: relative; z-index: 1;
+        }
+        .footer-section { padding: 0; }
+        .footer-section h3 {
+            color: var(--accent-color);
+            font-size: 1.2rem; margin-bottom: 1.25rem;
+            font-family: var(--font-logo); letter-spacing: 1px;
+            text-transform: uppercase; font-weight: var(--font-weight-regular);
+        }
+         body:not(.dark-mode) .footer-section h3 { color: var(--primary-color); }
+        .footer-section p, .footer-section ul { margin-bottom: 1.25rem; line-height: 1.7; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 0.6rem; }
+        .footer-section a {
+            color: var(--text-dark-secondary); /* Use secondary text color */
+            transition: color var(--transition-fast);
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 2px 0; font-weight: var(--font-weight-regular);
+        }
+         body:not(.dark-mode) .footer-section a { color: var(--text-light-secondary); }
+        .footer-section a:hover { color: var(--accent-color); }
+         body:not(.dark-mode) .footer-section a:hover { color: var(--primary-color); }
+        .footer-section li a i { color: var(--text-dark-tertiary); font-size: 0.9em; width: 1.2em; text-align: center; }
+        body:not(.dark-mode) .footer-section li a i { color: var(--text-light-tertiary); }
 
-            .hero-section { height: 70vh; min-height: 450px; }
-            .hero-content { padding: 2.5rem 1rem; margin-bottom: 3rem; }
-            .hero-content h1 { font-size: clamp(2.8rem, 7vw, 4.5rem); }
-            .hero-content p { font-size: clamp(1.05rem, 3vw, 1.2rem); margin-bottom: 2.5rem;}
-            .hero-cta-button { font-size: 1.05rem; padding: 0.9rem 2.5rem; }
+        /* Social Icons */
+        .footer-social-icons { display: flex; gap: 1rem; margin-top: 1rem; }
+        @media (max-width: 768px) { .footer-social-icons { justify-content: flex-start; } } /* Align left on mobile */
+        .footer-social-icons a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 38px; height: 38px; border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--text-dark-secondary);
+            font-size: 1rem; transition: all var(--transition-normal);
+        }
+         body:not(.dark-mode) .footer-social-icons a { background-color: rgba(0, 0, 0, 0.06); color: var(--text-light-secondary); }
+        .footer-social-icons a:hover {
+            background-color: var(--primary-color); color: white;
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.3);
+        }
 
-            .shape-divider svg { height: 70px; }
-            .shape-divider { margin-bottom: 3.5rem; }
+        /* Newsletter */
+        .footer-section-newsletter .newsletter-form { display: flex; gap: 0.5rem; max-width: 100%; }
+        .footer-section-newsletter input[type="email"] {
+            padding: 0.75rem 1rem; border-radius: var(--border-radius-md);
+            border: 1px solid var(--border-dark-primary);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-dark-primary); font-size: 0.9rem; font-family: inherit; flex-grow: 1;
+            outline: none; transition: all var(--transition-fast);
+        }
+         body:not(.dark-mode) .footer-section-newsletter input[type="email"] {
+              background-color: rgba(0, 0, 0, 0.03);
+              color: var(--text-light-primary);
+              border-color: var(--border-light-primary);
+         }
+        .footer-section-newsletter input[type="email"]::placeholder { color: var(--text-dark-tertiary); opacity: 0.7; }
+        body:not(.dark-mode) .footer-section-newsletter input[type="email"]::placeholder { color: var(--text-light-tertiary); opacity: 0.7; }
+        .footer-section-newsletter input[type="email"]:focus {
+             background-color: rgba(255, 255, 255, 0.08);
+             border-color: var(--accent-color);
+             box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.2); /* Focus ring */
+        }
+         body:not(.dark-mode) .footer-section-newsletter input[type="email"]:focus {
+              background-color: rgba(0, 0, 0, 0.05);
+              border-color: var(--primary-color);
+              box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.15);
+         }
+        .footer-section-newsletter button[type="submit"] {
+            padding: 0.75rem 1.2rem; /* Adjusted padding for icon */
+            border-radius: var(--border-radius-md); border: none;
+            background-color: var(--primary-color); color: #fff; /* Ensure contrast */
+            font-size: 1rem; /* Match icon size */
+            font-family: inherit; line-height: 1;
+            cursor: pointer; transition: all var(--transition-normal); white-space: nowrap;
+        }
+        .footer-section-newsletter button[type="submit"]:hover {
+             background-color: var(--secondary-color);
+             transform: translateY(-2px);
+             box-shadow: 0 4px 10px rgba(var(--secondary-color-rgb), 0.25);
+         }
 
-            .featured-news-banner { margin-bottom: 2.5rem; }
-            .featured-news-image { height: 240px; }
-            .featured-news-content { padding: 1.5rem; }
-             .featured-news-content .news-card-title { font-size: 1.5rem; }
-             .featured-news-content .news-card-excerpt { font-size: 1rem; }
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center; padding-top: 2.5rem;
+            border-top: 1px solid var(--border-dark-secondary); margin-top: 2.5rem;
+            font-size: 0.85rem; color: var(--text-dark-tertiary); font-weight: var(--font-weight-regular);
+        }
+        body:not(.dark-mode) .footer-bottom {
+             border-top-color: var(--border-light-secondary);
+             color: var(--text-light-tertiary);
+        }
+        .footer-bottom i.fa-heart {
+             color: var(--primary-color); font-size: 0.75rem;
+             vertical-align: middle; margin: 0 3px; animation: pulse-heart 1.5s infinite ease-in-out;
+        }
+        @keyframes pulse-heart { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }
 
+        /* ========================= Controls Styles ========================= */
+        .controls {
+             position: fixed; bottom: 1.5rem; right: 1.5rem; display: flex; flex-direction: column;
+             gap: 0.75rem; z-index: 1001;
+             /* Initially hidden, made visible by JS */
+             opacity: 0; visibility: hidden; transform: translateY(20px);
+             transition: opacity var(--transition-normal), visibility 0s var(--transition-normal), transform var(--transition-normal);
+        }
+        .controls.visible {
+            opacity: 1; visibility: visible; transform: translateY(0);
+            transition: opacity var(--transition-normal), visibility 0s, transform var(--transition-normal);
+         }
 
-            .category-filters { gap: 0.7rem; margin-bottom: 2.5rem; }
-            .filter-button { padding: 0.6rem 1.4rem; font-size: 0.9rem; }
+        .control-button {
+            width: 44px; height: 44px; border-radius: 50%; border: none;
+            background: rgba(var(--primary-color-rgb), 0.8);
+            color: #fff; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all var(--transition-normal);
+            font-size: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(5px);
+            /* Ensure visibility logic is handled by parent */
+        }
+        body:not(.dark-mode) .control-button {
+            background: rgba(30, 30, 30, 0.85);
+            color: var(--text-dark-primary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+        .control-button:hover {
+             transform: scale(1.1);
+             background: var(--accent-color);
+             color: var(--bg-dark-primary);
+             box-shadow: 0 6px 15px rgba(var(--accent-color-rgb), 0.3);
+         }
+         body:not(.dark-mode) .control-button:hover {
+              background: var(--primary-color);
+              color: white;
+              box-shadow: 0 5px 12px rgba(var(--primary-color-rgb), 0.25);
+          }
 
-            .section-title { font-size: 2.4rem; margin-bottom: 2.5rem;}
-            .news-grid { gap: 1.8rem;}
-            .news-card-image-link { height: 210px; }
-
-            .trailer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-
-            .footer-container { grid-template-columns: 1fr; text-align: center; gap: 3rem;}
-            .footer-section { padding: 0; }
-            .footer-social-icons { justify-content: center; }
-             .newsletter-form input[type="email"] { padding-left: 1.3rem; }
-             .newsletter-form button[type="submit"] { position: static; transform: none; width: 100%; max-width: 320px; padding: 0.9rem 1rem; margin-top: 0.8rem;}
-            .footer-bottom { padding-top: 3rem; margin-top: 3rem; font-size: 0.88rem;}
-
-            .controls { bottom: 1.5rem; left: 1.5rem; gap: 1rem;}
-            .control-button { width: 45px; height: 45px; font-size: 1.2rem;}
+        /* ========================= Utility Classes ========================= */
+        .hidden { display: none !important; }
+        .sr-only { /* Screen reader only */
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
         }
 
     </style>
 </head>
-<body class=""> <div class="reading-progress-bar" id="reading-progress-bar"></div>
+<body class="preload"> <!-- Keep preload class for JS -->
 
-<header id="main-header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="logo.png" alt="لوگو هامووی" class="logo">
-                </a>
-                <a href="index.html" class="site-title">هامووی</a>
-            </div>
-
-            <nav>
-                <ul>
-                     <li><a href="index.html" class="nav-link">صفحه اصلی</a></li>
-                     <li><a href="movies-news.html" class="nav-link">فیلم</a></li>
-                     <li><a href="series-news.html" class="nav-link">سریال</a></li>
-                     <li><a href="gaming-news.html" class="nav-link">گیم</a></li>
-                     <li><a href="reviews.html" class="nav-link">نقد و بررسی</a></li>
-                     <li><a href="trailers.html" class="nav-link">تریلرها</a></li>
-                     <li><a href="about.html" class="nav-link">درباره ما</a></li>
-                     <li><a href="contact.html" class="nav-link">تماس</a></li>
-                 </ul>
-            </nav>
-
-            <div class="header-actions">
-                 <form class="search-form" id="search-form" role="search">
-                      <input type="search" class="search-input" placeholder="" aria-label="جستجو" id="search-input">
-                      <ul class="search-results-list" id="search-results-list"></ul>
-                  </form>
-                  <a href="login.html" class="login-button" id="login-button-header" data-magnetic>
-                      <i class="fas fa-user-circle"></i> ورود/ثبت نام
-                  </a>
-                  <div class="user-menu" id="user-menu-header">
-                      <div class="user-avatar" id="user-avatar-container" aria-haspopup="true" aria-expanded="false" aria-controls="user-dropdown-menu">
-                          <img src="default-avatar.png" alt="آواتار کاربر" id="user-avatar-header">
-                      </div>
-                      <div class="user-dropdown" id="user-dropdown-menu" role="menu">
-                          <a href="profile.html" role="menuitem"><i class="fas fa-user-edit fa-fw"></i>پروفایل</a>
-                          <button id="logout-button" role="menuitem"><i class="fas fa-sign-out-alt fa-fw"></i>خروج</button>
-                      </div>
-                  </div>
-             </div>
-
-            <button class="hamburger" id="hamburger-menu" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="mobile-menu">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-             </button>
-        </div>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div> <!-- Simpler Spinner -->
     </div>
-</header>
 
-<div class="mobile-nav" id="mobile-menu" role="dialog" aria-modal="true">
-     <div class="mobile-search">
-        <form class="search-form" id="mobile-search-form" role="search">
-            <input type="search" class="search-input" placeholder="جستجو در هامووی..." aria-label="جستجو موبایل" id="mobile-search-input">
-            <ul class="search-results-list" id="mobile-search-results-list"></ul>
-        </form>
-    </div>
-    <ul>
-         <li><a href="index.html" class="mobile-nav-link"><i class="fas fa-home fa-fw"></i>صفحه اصلی</a></li>
-         <li><a href="movies-news.html" class="mobile-nav-link"><i class="fas fa-film fa-fw"></i>فیلم</a></li>
-         <li><a href="series-news.html" class="mobile-nav-link"><i class="fas fa-tv fa-fw"></i>سریال</a></li>
-         <li><a href="gaming-news.html" class="mobile-nav-link"><i class="fas fa-gamepad fa-fw"></i>گیم</a></li>
-         <li><a href="reviews.html" class="mobile-nav-link"><i class="fas fa-star-half-alt fa-fw"></i>نقد و بررسی</a></li>
-         <li><a href="trailers.html" class="mobile-nav-link"><i class="fas fa-play-circle fa-fw"></i>تریلرها</a></li>
-         <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle fa-fw"></i>درباره ما</a></li>
-         <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope fa-fw"></i>تماس</a></li>
-     </ul>
-     <div class="mobile-user-actions">
-          <a href="login.html" class="login-button" id="mobile-auth-link">
-             <i class="fas fa-user-circle" style="margin-left: 0.5rem;"></i> ورود/ثبت نام
-         </a>
-     </div>
- </div>
-
-<main>
-    <section class="hero-section">
-          <div class="hero-background" style="background-image: url('hero-background-cinematic.jpg');" id="hero-bg"></div> <div class="hero-content" data-scroll-reveal>
-              <h1>جهان سرگرمی در دستان شما</h1> <p>عمیق‌ترین تحلیل‌ها، داغ‌ترین اخبار و جدیدترین تریلرهای دنیای فیلم، سریال و بازی‌های ویدیویی را در هامووی دنبال کنید.</p>
-              <a href="#latest-news" class="hero-cta-button" data-magnetic>کاوش را آغاز کنید <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i></a> </div>
-     </section>
-
-      <div class="shape-divider">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1200 120" preserveaspectratio="none">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-          </svg>
-      </div>
-
-      <section class="container" id="latest-news"> <div class="featured-news-banner" data-scroll-reveal>
-              <div class="featured-news-image">
-                  <img src="game-news1.jpg" alt="خبر ویژه" loading="lazy"> </div>
-              <div class="featured-news-content">
-                  <span class="news-card-category gaming">گیم</span>
-                  <h3 class="news-card-title"><a href="#">تحلیل عمیق گیم‌پلی GTA VI: نوآوری‌ها و انتظارات</a></h3>
-                  <p class="news-card-excerpt">پس از انتشار تریلر جدید، نگاهی می‌اندازیم به جزئیات گیم‌پلی فاش شده از GTA VI و آنچه این بازی را متمایز می‌کند...</p>
-                  <div class="news-card-meta">
-                      <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۳۰ فروردین ۱۴۰۴</span>
-                      <span class="news-card-author"><i class="far fa-user"></i> محمد کریمی</span>
-                  </div>
-                   <a href="#" class="hero-cta-button" style="padding: 0.6rem 1.5rem; font-size: 0.9rem; margin-top: 1.5rem; align-self: flex-start;" data-magnetic>ادامه مطلب</a> </div>
-          </div>
-      </section>
-
-
-     <section class="latest-news container">
-         <h2 class="section-title" data-scroll-reveal>تازه ترین ها</h2> <div class="category-filters" data-scroll-reveal>
-              <button class="filter-button active" data-magnetic>همه</button>
-              <button class="filter-button" data-magnetic><i class="fas fa-film fa-xs" style="margin-left: 5px;"></i>فیلم</button>
-              <button class="filter-button" data-magnetic><i class="fas fa-tv fa-xs" style="margin-left: 5px;"></i>سریال</button>
-              <button class="filter-button" data-magnetic><i class="fas fa-gamepad fa-xs" style="margin-left: 5px;"></i>گیم</button>
-              <button class="filter-button" data-magnetic><i class="fas fa-star fa-xs" style="margin-left: 5px;"></i>نقد</button>
-          </div>
-
-
-        <div class="news-grid">
-            <article class="news-card" data-scroll-reveal style="--card-index: 1;">
-                  <a href="#" class="news-card-image-link">
-                      <img src="movie-news1.jpg" alt="خبر جدید فیلم" class="news-card-image" loading="lazy">
-                  </a>
-                 <div class="news-card-content">
-                     <span class="news-card-category movie">فیلم</span>
-                     <h3 class="news-card-title"><a href="#">«دنیای ژوراسیک: سلطنت» و بازگشت نوستالژیک</a></h3>
-                     <p class="news-card-excerpt">تریلر جدید بازگشت شخصیت‌های اصلی فیلم اول را تایید کرد.</p>
-                     <div class="news-card-meta">
-                         <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۲ اردیبهشت ۱۴۰۴</span>
-                         <span class="news-card-author"><i class="far fa-user"></i> علی محمدی</span>
-                     </div>
-                 </div>
-             </article>
-
-            <article class="news-card" data-scroll-reveal style="--card-index: 2;">
-                  <a href="#" class="news-card-image-link">
-                      <img src="tv-news1.jpg" alt="خبر جدید سریال" class="news-card-image" loading="lazy">
-                  </a>
-                 <div class="news-card-content">
-                     <span class="news-card-category tv">سریال</span>
-                     <h3 class="news-card-title"><a href="#">«هوس اژدها» رکورد HBO را شکست</a></h3>
-                     <p class="news-card-excerpt">فصل دوم سریال با استقبال بی‌نظیر بینندگان مواجه شد.</p>
-                     <div class="news-card-meta">
-                         <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۱ اردیبهشت ۱۴۰۴</span>
-                         <span class="news-card-author"><i class="far fa-user"></i> زهرا رضایی</span>
-                     </div>
-                 </div>
-             </article>
-
-              <article class="news-card" data-scroll-reveal style="--card-index: 3;">
-                   <a href="#" class="news-card-image-link">
-                     <img src="movie-news2.jpg" alt="خبر فیلم جدید" class="news-card-image" loading="lazy">
-                   </a>
-                  <div class="news-card-content">
-                      <span class="news-card-category movie">فیلم</span>
-                      <h3 class="news-card-title"><a href="#">بازیگر فیلم جدید تارانتینو مشخص شد</a></h3>
-                      <p class="news-card-excerpt">گزارش‌ها از انتخاب بازیگر اصلی آخرین فیلم این کارگردان خبر می‌دهند.</p>
-                      <div class="news-card-meta">
-                          <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۳ اردیبهشت ۱۴۰۴</span>
-                          <span class="news-card-author"><i class="far fa-user"></i> سارا احمدی</span>
-                      </div>
-                  </div>
-              </article>
-
-               <article class="news-card" data-scroll-reveal style="--card-index: 4;">
-                   <a href="#" class="news-card-image-link">
-                     <img src="game-news2.jpg" alt="خبر گیم جدید" class="news-card-image" loading="lazy">
-                   </a>
-                  <div class="news-card-content">
-                      <span class="news-card-category gaming">گیم</span>
-                      <h3 class="news-card-title"><a href="#">آپدیت بزرگ Cyberpunk 2077 در راه است</a></h3>
-                      <p class="news-card-excerpt">جزئیات آپدیت بعدی شامل محتوای داستانی جدید منتشر شد.</p>
-                      <div class="news-card-meta">
-                          <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۲ اردیبهشت ۱۴۰۴</span>
-                          <span class="news-card-author"><i class="far fa-user"></i> رضا قاسمی</span>
-                      </div>
-                  </div>
-              </article>
-
-              <article class="news-card" data-scroll-reveal style="--card-index: 5;">
-                    <a href="#" class="news-card-image-link">
-                      <img src="tv-news2.jpg" alt="خبر سریال جدید" class="news-card-image" loading="lazy">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <a href="#" aria-label="صفحه اصلی هامووی">
+                        <!-- Using local image inside img folder -->
+                        <img src="logo.png" alt="لوگو هامووی" class="logo"> <!-- CHANGED: Added img/ prefix -->
                     </a>
-                   <div class="news-card-content">
-                       <span class="news-card-category tv">سریال</span>
-                       <h3 class="news-card-title"><a href="#">The Last of Us برای فصل سوم تمدید شد</a></h3>
-                       <p class="news-card-excerpt">شبکه HBO رسما ساخت فصل سوم این سریال محبوب را تایید کرد.</p>
-                       <div class="news-card-meta">
-                           <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۱ اردیبهشت ۱۴۰۴</span>
-                           <span class="news-card-author"><i class="far fa-user"></i> مریم حسینی</span>
-                       </div>
-                   </div>
-               </article>
+                    <!-- Site title can be removed if the logo is sufficient -->
+                    <!-- <a href="#" class="site-title">هامووی</a> -->
+                </div>
 
-               <article class="news-card" data-scroll-reveal style="--card-index: 6;">
-                    <a href="#" class="news-card-image-link">
-                      <img src="movie-news3.jpg" alt="نقد فیلم جدید" class="news-card-image" loading="lazy"> </a>
-                   <div class="news-card-content">
-                       <span class="news-card-category movie">نقد فیلم</span> <h3 class="news-card-title"><a href="#">نقد فیلم "تل‌ماسه: بخش دو" - حماسه‌ای شن‌زار</a></h3>
-                       <p class="news-card-excerpt">بررسی عمیق جدیدترین ساخته دنی ویلنوو و نقاط قوت و ضعف آن.</p>
-                       <div class="news-card-meta">
-                           <span class="news-card-date"><i class="far fa-calendar-alt"></i> ۴ اردیبهشت ۱۴۰۴</span>
-                           <span class="news-card-author"><i class="far fa-user"></i> حسام مرتضوی</span>
-                       </div>
-                   </div>
-               </article>
+                <nav class="main-navigation" aria-label="منوی اصلی">
+                     <ul>
+                        <li><a href="#" class="active">صفحه اصلی</a></li>
+                        <li><a href="#">فیلم‌ها</a></li>
+                        <li><a href="#">سریال‌ها</a></li>
+                        <li><a href="#">بازی‌ها</a></li>
+                        <li><a href="#">تریلرها</a></li>
+                        <li><a href="#">نقد و بررسی</a></li>
+                    </ul>
+                </nav>
 
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobile-menu">
+                     <span class="sr-only">منو</span>
+                    <div class="hamburger-line-top"></div>
+                    <div class="hamburger-line-middle"></div>
+                    <div class="hamburger-line-bottom"></div>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <a href="all-news.html" class="view-all-button" data-scroll-reveal data-magnetic>مشاهده همه اخبار</a>
-    </section>
+     <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-hidden="true">
+        <ul>
+           <li><a href="#" class="active">صفحه اصلی</a></li>
+           <li><a href="#">فیلم‌ها</a></li>
+           <li><a href="#">سریال‌ها</a></li>
+           <li><a href="#">بازی‌ها</a></li>
+           <li><a href="#">تریلرها</a></li>
+           <li><a href="#">نقد و بررسی</a></li>
+       </ul>
+   </div>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
 
-     <section class="latest-trailers container" data-scroll-reveal>
-          <h2 class="section-title" data-scroll-reveal>آخرین تریلرها</h2>
-          <div class="trailer-grid">
-                <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 1;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb1.jpg" alt="تریلر ۱" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">تریلر نهایی فیلم Dune: Part Two</h3> </a>
-                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 2;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb2.jpg" alt="تریلر ۲" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">اولین نگاه به گیم‌پلی Star Wars Outlaws</h3> </a>
-                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 3;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb3.jpg" alt="تریلر ۳" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">تریلر رسمی فصل چهارم The Boys</h3> </a>
-                 <a href="#" class="trailer-card" data-scroll-reveal style="--card-index: 4;"> <div class="trailer-card-thumbnail"> <img src="trailer-thumb4.jpg" alt="تریلر ۴" loading="lazy"> <div class="play-icon-overlay"><i class="fas fa-play-circle"></i></div> </div> <h3 class="trailer-card-title">معرفی بازی جدید Fable</h3> </a>
-          </div>
-     </section>
+    <!-- Main Content Area -->
+    <main>
 
+        <!-- Hero Section -->
+        <section class="hero-section" style="background-image: url('VI.png');"> <!-- Assumes img/game-news1.jpg exists -->
+             <!-- Optimized gradient overlay -->
+             <div class="hero-gradient-overlay"></div>
+            <div class="container">
+                 <div class="hero-content">
+                    <h1 class="hero-title">جهان سرگرمی در دستان شما</h1>
+                    <p class="hero-subtitle">عمیق‌ترین تحلیل‌ها، داغ‌ترین اخبار و جدیدترین تریلرهای دنیای فیلم، سریال و بازی‌های ویدیویی را در هامووی دنبال کنید.</p>
+                    <a href="#latest-news" class="hero-button">
+                        کاوش را آغاز کنید
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Wave Separator is REMOVED -->
+        </section>
+
+        <!-- Latest Articles Marquee -->
+        <section class="marquee-section" aria-label="آخرین مقالات">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div class="marquee-item">
+                        <span class="label">تازه‌ها:</span>
+                        <span>تحلیل گیم‌پلی GTA VI</span><span class="separator">•</span>
+                        <span>بازگشت «دنیای ژوراسیک»</span><span class="separator">•</span>
+                        <span>رکوردشکنی «خاندان اژدها»</span><span class="separator">•</span>
+                        <span>بازیگر جدید تارانتینو</span><span class="separator">•</span>
+                        <span>آپدیت Cyberpunk 2077</span><span class="separator">•</span>
+                        <span>تمدید The Last of Us</span><span class="separator">•</span>
+                        <span>نقد "تل‌ماسه: بخش دو"</span>
+                    </div>
+                     <div class="marquee-item" aria-hidden="true"> <!-- Duplicate for loop -->
+                        <span class="label">تازه‌ها:</span>
+                        <span>تحلیل گیم‌پلی GTA VI</span><span class="separator">•</span>
+                        <span>بازگشت «دنیای ژوراسیک»</span><span class="separator">•</span>
+                        <span>رکوردشکنی «خاندان اژدها»</span><span class="separator">•</span>
+                        <span>بازیگر جدید تارانتینو</span><span class="separator">•</span>
+                        <span>آپدیت Cyberpunk 2077</span><span class="separator">•</span>
+                        <span>تمدید The Last of Us</span><span class="separator">•</span>
+                        <span>نقد "تل‌ماسه: بخش دو"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured News Section (Carousel) -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title">خبر ویژه</h2>
+                    <!-- Optional: Add a link if there's a dedicated featured news page -->
+                    <!-- <a href="#" class="section-link">همه ویژه ها <i class="fas fa-arrow-left"></i></a> -->
+                </div>
+
+                <div class="swiper featured-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide" role="group" aria-label="اسلاید 1 از 3: تحلیل گیم‌پلی GTA VI">
+                            <img loading="lazy" src="VII.png" alt="تصویر خبر تحلیل GTA VI"> <!-- Assumes img/game-news1.jpg exists -->
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <span class="category-badge badge-game">گیم</span>
+                                <h3 class="slide-title">تحلیل عمیق گیم‌پلی GTA VI: نوآوری‌ها و انتظارات</h3>
+                                <p class="slide-description">نگاهی به جزئیات گیم‌پلی فاش شده از GTA VI و آنچه این بازی را متمایز می‌کند.</p>
+                                <div class="slide-meta">
+                                    <span class="meta-info">۳۰ فروردین ۱۴۰۴ | محمد کریمی</span>
+                                    <a href="#" class="meta-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide" role="group" aria-label="اسلاید 2 از 3: بازگشت دنیای ژوراسیک">
+                             <img loading="lazy" src="D.png" alt="تصویر خبر دنیای ژوراسیک"> <!-- Assumes img/movie-news1.jpg exists -->
+                             <div class="slide-overlay"></div>
+                             <div class="slide-content">
+                                 <span class="category-badge badge-movie">فیلم</span>
+                                 <h3 class="slide-title">«دنیای ژوراسیک: سلطنت» و بازگشت نوستالژیک</h3>
+                                 <p class="slide-description">تریلر جدید بازگشت شخصیت‌های اصلی را تایید کرد و هیجان طرفداران را برانگیخته است.</p>
+                                 <div class="slide-meta">
+                                     <span class="meta-info">۲ اردیبهشت ۱۴۰۴ | علی محمدی</span>
+                                     <a href="#" class="meta-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                        <!-- Slide 3 -->
+                         <div class="swiper-slide" role="group" aria-label="اسلاید 3 از 3: رکوردشکنی خاندان اژدها">
+                             <img loading="lazy" src="HBO.png" alt="تصویر خبر خاندان اژدها"> <!-- Assumes img/tv-news1.jpg exists -->
+                             <div class="slide-overlay"></div>
+                             <div class="slide-content">
+                                 <span class="category-badge badge-tv">سریال</span>
+                                 <h3 class="slide-title">«خاندان اژدها» رکورد HBO را شکست</h3>
+                                 <p class="slide-description">فصل دوم با استقبال بی‌نظیر مواجه شد و رکورد پربیننده‌ترین پخش اول را شکست.</p>
+                                 <div class="slide-meta">
+                                     <span class="meta-info">۱ اردیبهشت ۱۴۰۴ | زهرا رضایی</span>
+                                     <a href="#" class="meta-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next" aria-label="اسلاید بعدی"></div>
+                    <div class="swiper-button-prev" aria-label="اسلاید قبلی"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Now Playing Section -->
+        <section class="now-playing-section">
+            <div class="container">
+                 <div class="section-heading">
+                    <h2 class="section-title">در حال پخش <i class="fas fa-circle"></i></h2>
+                    <a href="#" class="section-link">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="grid-container grid-cols-1 grid-cols-sm-2 grid-cols-xl-4">
+                    <!-- Card 1 -->
+                    <article class="now-playing-card card-base">
+                         <div class="card-image-container">
+                            <img loading="lazy" src="HBO.png" alt="پوستر دنیای ژوراسیک: سلطنت" class="card-image"> <!-- Assumes img/movie-news1.jpg exists -->
+                            <div class="status-badge badge-live">اکران</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">دنیای ژوراسیک: سلطنت</a></h3>
+                            <div class="card-meta-info">
+                                <span class="genre">ماجراجویی، علمی تخیلی</span>
+                                <span class="imdb-rating">IMDB 7.8</span>
+                            </div>
+                            <div class="progress-section">
+                                <span class="progress-label">امتیاز کاربران: 82%</span>
+                                <div class="progress-bar"><div class="progress-value" style="width: 82%"></div></div>
+                            </div>
+                            <a href="#" class="card-button"><i class="fas fa-ticket-alt"></i> خرید بلیت</a>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="now-playing-card card-base">
+                         <div class="card-image-container">
+                             <img loading="lazy" src="TARANTENO.png" alt="پوستر آخرین فیلم تارانتینو" class="card-image"> <!-- Assumes img/movie-news2.jpg exists -->
+                             <div class="status-badge badge-soon">به زودی</div>
+                         </div>
+                         <div class="card-content">
+                             <h3 class="card-title"><a href="#">آخرین فیلم تارانتینو</a></h3>
+                             <div class="card-meta-info">
+                                 <span class="genre">درام، جنایی</span>
+                                 <span class="imdb-rating">انتظار 8.4</span>
+                             </div>
+                             <div class="progress-section">
+                                 <span class="progress-label">میزان انتظار: 95%</span>
+                                 <div class="progress-bar"><div class="progress-value" style="width: 95%"></div></div>
+                             </div>
+                             <a href="#" class="card-button"><i class="fas fa-bell"></i> یادآوری</a>
+                         </div>
+                     </article>
+                    <!-- Card 3 -->
+                    <article class="now-playing-card card-base">
+                         <div class="card-image-container">
+                            <img loading="lazy" src="img/tv-news1.jpg" alt="پوستر سریال خاندان اژدها" class="card-image"> <!-- Assumes img/tv-news1.jpg exists -->
+                            <div class="status-badge badge-new-ep">قسمت جدید</div>
+                         </div>
+                         <div class="card-content">
+                             <h3 class="card-title"><a href="#">خاندان اژدها</a></h3>
+                             <div class="card-meta-info">
+                                 <span class="episode-info">فصل 2 - قسمت 4</span>
+                                 <span class="imdb-rating">IMDB 9.2</span>
+                             </div>
+                             <div class="progress-section">
+                                 <span class="progress-label">امتیاز فصل: 89%</span>
+                                 <div class="progress-bar"><div class="progress-value" style="width: 89%"></div></div>
+                             </div>
+                             <a href="#" class="card-button"><i class="fas fa-play"></i> تماشا</a>
+                         </div>
+                     </article>
+                    <!-- Card 4 -->
+                    <article class="now-playing-card card-base">
+                         <div class="card-image-container">
+                            <img loading="lazy" src="img/tv-news2.jpg" alt="پوستر سریال The Last of Us" class="card-image"> <!-- Assumes img/tv-news2.jpg exists -->
+                            <div class="status-badge badge-renewed">تمدید</div>
+                         </div>
+                         <div class="card-content">
+                             <h3 class="card-title"><a href="#">The Last of Us</a></h3>
+                             <div class="card-meta-info">
+                                 <span class="episode-info">فصل 2 در تولید</span>
+                                 <span class="imdb-rating">IMDB 8.7</span>
+                             </div>
+                             <div class="progress-section">
+                                 <span class="progress-label">پیشرفت تولید: 65%</span>
+                                 <div class="progress-bar"><div class="progress-value" style="width: 65%"></div></div>
+                             </div>
+                             <a href="#" class="card-button"><i class="fas fa-info-circle"></i> اطلاعات</a>
+                         </div>
+                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section id="latest-news" class="latest-news-section">
+            <div class="container">
+                 <div class="section-heading">
+                    <h2 class="section-title">تازه‌ترین‌ها</h2>
+                    <a href="#" class="section-link">مشاهده آرشیو <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="grid-container grid-cols-1 grid-cols-sm-2 grid-cols-lg-3">
+                    <!-- News Card 1 -->
+                    <article class="news-card card-base tilt-card">
+                        <div class="tilt-card-inner">
+                            <a href="#" class="card-image-container" aria-label="خواندن خبر دنیای ژوراسیک">
+                                <img loading="lazy" src="3.png" alt="تصویر کوچک خبر دنیای ژوراسیک" class="card-image"> <!-- Assumes img/movie-news1.jpg exists -->
+                                <div class="image-overlay"></div>
+                                <span class="category-badge badge-movie">فیلم</span>
+                            </a>
+                            <div class="card-content">
+                                <h3 class="card-title"><a href="#">«دنیای ژوراسیک: سلطنت» و بازگشت نوستالژیک</a></h3>
+                                <p class="card-excerpt">تریلر جدید بازگشت شخصیت‌های اصلی فیلم اول را تایید کرد و هیجان طرفداران را برای دیدن دوباره دایناسورها و قهرمانان قدیمی برانگیخته است.</p>
+                                <div class="card-meta-info">
+                                    <span class="meta-info">۲ اردیبهشت ۱۴۰۴</span>
+                                    <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- News Card 2 -->
+                    <article class="news-card card-base tilt-card">
+                        <div class="tilt-card-inner">
+                           <a href="#" class="card-image-container" aria-label="خواندن خبر خاندان اژدها">
+                                <img loading="lazy" src="img/tv-news1.jpg" alt="تصویر کوچک خبر خاندان اژدها" class="card-image"> <!-- Assumes img/tv-news1.jpg exists -->
+                                <div class="image-overlay"></div>
+                                <span class="category-badge badge-tv">سریال</span>
+                            </a>
+                            <div class="card-content">
+                                <h3 class="card-title"><a href="#">«خاندان اژدها» رکورد HBO را شکست</a></h3>
+                                <p class="card-excerpt">فصل دوم سریال پیش‌درآمد «بازی تاج و تخت» با استقبال بی‌نظیر بینندگان مواجه شد و آمار بینندگان قسمت اول آن از رکوردهای قبلی شبکه عبور کرد.</p>
+                                <div class="card-meta-info">
+                                    <span class="meta-info">۱ اردیبهشت ۱۴۰۴</span>
+                                    <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- News Card 3 -->
+                    <article class="news-card card-base tilt-card">
+                        <div class="tilt-card-inner">
+                           <a href="#" class="card-image-container" aria-label="خواندن خبر فیلم تارانتینو">
+                                <img loading="lazy" src="img/movie-news2.jpg" alt="تصویر کوچک خبر فیلم تارانتینو" class="card-image"> <!-- Assumes img/movie-news2.jpg exists -->
+                                <div class="image-overlay"></div>
+                                <span class="category-badge badge-movie">فیلم</span>
+                            </a>
+                            <div class="card-content">
+                                <h3 class="card-title"><a href="#">بازیگر فیلم جدید تارانتینو مشخص شد</a></h3>
+                                <p class="card-excerpt">گزارش‌ها حاکی از آن است که کارگردان مشهور، کوئنتین تارانتینو، بازیگر اصلی آخرین فیلم سینمایی خود با عنوان «منتقد فیلم» را انتخاب کرده است.</p>
+                                <div class="card-meta-info">
+                                    <span class="meta-info">۳ اردیبهشت ۱۴۰۴</span>
+                                    <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- News Card 4 -->
+                     <article class="news-card card-base tilt-card">
+                         <div class="tilt-card-inner">
+                            <a href="#" class="card-image-container" aria-label="خواندن خبر Cyberpunk 2077">
+                                 <img loading="lazy" src="img/game-news2.jpg" alt="تصویر کوچک خبر Cyberpunk 2077" class="card-image"> <!-- Assumes img/game-news2.jpg exists -->
+                                 <div class="image-overlay"></div>
+                                 <span class="category-badge badge-game">گیم</span>
+                             </a>
+                             <div class="card-content">
+                                 <h3 class="card-title"><a href="#">آپدیت بزرگ Cyberpunk 2077 در راه است</a></h3>
+                                 <p class="card-excerpt">استودیوی CD Projekt Red جزئیات آپدیت بزرگ بعدی بازی Cyberpunk 2077 را منتشر کرد که شامل محتوای داستانی جدید و بهبودهای گیم‌پلی می‌شود.</p>
+                                 <div class="card-meta-info">
+                                     <span class="meta-info">۲ اردیبهشت ۱۴۰۴</span>
+                                     <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                     </article>
+                    <!-- News Card 5 -->
+                     <article class="news-card card-base tilt-card">
+                         <div class="tilt-card-inner">
+                            <a href="#" class="card-image-container" aria-label="خواندن خبر The Last of Us">
+                                 <img loading="lazy" src="tv" alt="تصویر کوچک خبر The Last of Us" class="card-image"> <!-- Assumes img/tv-news2.jpg exists -->
+                                 <div class="image-overlay"></div>
+                                 <span class="category-badge badge-tv">سریال</span>
+                             </a>
+                             <div class="card-content">
+                                 <h3 class="card-title"><a href="#">The Last of Us برای فصل سوم تمدید شد؟</a></h3>
+                                 <p class="card-excerpt">با وجود موفقیت چشمگیر فصل اول، شایعاتی مبنی بر تمدید زودهنگام سریال The Last of Us برای فصل سوم توسط شبکه HBO به گوش می‌رسد.</p>
+                                 <div class="card-meta-info">
+                                     <span class="meta-info">۱ اردیبهشت ۱۴۰۴</span>
+                                     <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                     </article>
+                    <!-- News Card 6 -->
+                     <article class="news-card card-base tilt-card">
+                         <div class="tilt-card-inner">
+                            <a href="#" class="card-image-container" aria-label="خواندن نقد تل‌ماسه: بخش دو">
+                                 <img loading="lazy" src="img/movie-news3.jpg" alt="تصویر کوچک نقد تل‌ماسه: بخش دو" class="card-image"> <!-- Assumes img/movie-news3.jpg exists -->
+                                 <div class="image-overlay"></div>
+                                 <span class="category-badge badge-review">نقد</span>
+                             </a>
+                             <div class="card-content">
+                                 <h3 class="card-title"><a href="#">نقد فیلم "تل‌ماسه: بخش دو" - حماسه‌ای شن‌زار</a></h3>
+                                 <p class="card-excerpt">بررسی عمیق جدیدترین ساخته دنی ویلنوو؛ آیا دنباله «تل‌ماسه» توانسته انتظارات را برآورده کند و حماسه‌ای ماندگار خلق کند؟</p>
+                                 <div class="card-meta-info">
+                                     <span class="meta-info">۴ اردیبهشت ۱۴۰۴</span>
+                                     <a href="#" class="meta-link">ادامه <i class="fas fa-arrow-left"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                     </article>
+                </div>
+
+                <div class="section-view-all-button">
+                    <a href="#" class="btn-primary-gradient">مشاهده همه اخبار <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Trailers Section -->
+        <section class="latest-trailers-section">
+            <div class="container">
+                 <div class="section-heading">
+                    <h2 class="section-title">آخرین تریلرها</h2>
+                    <a href="#" class="section-link">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                </div>
+                 <div class="grid-container grid-cols-1 grid-cols-sm-2 grid-cols-xl-4">
+                    <!-- Trailer 1 -->
+                    <a href="#" class="trailer-card" aria-label="تماشای تریلر Dune: Part Two">
+                        <div class="card-image-container">
+                            <img loading="lazy" src="img/trailer-thumb1.jpg" alt="تصویر بندانگشتی تریلر Dune: Part Two" class="card-image"> <!-- Assumes img/trailer-thumb1.jpg exists -->
+                            <div class="image-overlay"></div>
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="card-content-overlay">
+                                <h3 class="card-title">تریلر نهایی فیلم Dune: Part Two</h3>
+                                <span class="card-duration"><i class="fas fa-clock fa-xs"></i> ۲:۳۰</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Trailer 2 -->
+                     <a href="#" class="trailer-card" aria-label="تماشای تریلر Star Wars Outlaws">
+                         <div class="card-image-container">
+                             <img loading="lazy" src="img/trailer-thumb2.jpg" alt="تصویر بندانگشتی تریلر Star Wars Outlaws" class="card-image"> <!-- Assumes img/trailer-thumb2.jpg exists -->
+                             <div class="image-overlay"></div>
+                             <div class="play-icon"><i class="fas fa-play"></i></div>
+                             <div class="card-content-overlay">
+                                 <h3 class="card-title">گیم‌پلی Star Wars Outlaws</h3>
+                                 <span class="card-duration"><i class="fas fa-clock fa-xs"></i> ۴:۱۵</span>
+                             </div>
+                         </div>
+                     </a>
+                    <!-- Trailer 3 -->
+                     <a href="#" class="trailer-card" aria-label="تماشای تریلر The Boys">
+                         <div class="card-image-container">
+                             <img loading="lazy" src="img/trailer-thumb3.jpg" alt="تصویر بندانگشتی تریلر The Boys" class="card-image"> <!-- Assumes img/trailer-thumb3.jpg exists -->
+                             <div class="image-overlay"></div>
+                             <div class="play-icon"><i class="fas fa-play"></i></div>
+                             <div class="card-content-overlay">
+                                 <h3 class="card-title">تریلر فصل چهارم The Boys</h3>
+                                  <span class="card-duration"><i class="fas fa-clock fa-xs"></i> ۳:۰۸</span>
+                             </div>
+                         </div>
+                     </a>
+                    <!-- Trailer 4 -->
+                     <a href="#" class="trailer-card" aria-label="تماشای تریلر Fable">
+                         <div class="card-image-container">
+                             <img loading="lazy" src="img/trailer-thumb4.jpg" alt="تصویر بندانگشتی تریلر Fable" class="card-image"> <!-- Assumes img/trailer-thumb4.jpg exists -->
+                             <div class="image-overlay"></div>
+                             <div class="play-icon"><i class="fas fa-play"></i></div>
+                             <div class="card-content-overlay">
+                                 <h3 class="card-title">معرفی بازی جدید Fable</h3>
+                                 <span class="card-duration"><i class="fas fa-clock fa-xs"></i> ۲:۴۵</span>
+                             </div>
+                         </div>
+                     </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-<footer>
-    <div class="footer-container container">
-          <div class="footer-section footer-section-about" data-scroll-reveal>
-              <h3>هامووی 🎬</h3>
-              <p>هامووی، پنجره شما به جهان بی‌انتهای سرگرمی. با ما در جریان داغ‌ترین اخبار فیلم، سریال و گیم باشید، تحلیل‌های عمیق را بخوانید و از محتوای اختصاصی لذت ببرید.</p>
-              <div class="footer-social-icons">
-                  <a href="https://www.instagram.com/hamvimoe/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام هامووی" data-magnetic><i class="fab fa-instagram"></i></a>
-                  <a href="https://t.me/Hamoviefilmdo" target="_blank" rel="noopener noreferrer" aria-label="تلگرام هامووی" data-magnetic><i class="fab fa-telegram"></i></a>
-                  <a href="javascript:void(0);" aria-label="یوتیوب هامووی (بزودی)" data-magnetic><i class="fab fa-youtube"></i></a>
-                  <a href="javascript:void(0);" aria-label="توییتر هامووی (بزودی)" data-magnetic><i class="fab fa-twitter"></i></a>
-                  <a href="javascript:void(0);" aria-label="دیسکورد هامووی (بزودی)" data-magnetic><i class="fab fa-discord"></i></a> </div>
-          </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container container">
+            <div class="footer-section footer-section-about">
+                <h3>هامووی <span role="img" aria-label="آیکن فیلم">🎬</span></h3>
+                <p>مرجع تخصصی شما برای اخبار، نقد و بررسی فیلم، سریال و بازی. جدیدترین‌ها و بهترین‌های دنیای سرگرمی را با ما دنبال کنید.</p>
+                <div class="footer-social-icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="اینستاگرام"><i class="fab fa-instagram"></i><span class="sr-only">اینستاگرام</span></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="تلگرام"><i class="fab fa-telegram"></i><span class="sr-only">تلگرام</span></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="یوتیوب"><i class="fab fa-youtube"></i><span class="sr-only">یوتیوب</span></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="توییتر / X"><i class="fa-brands fa-x-twitter"></i><span class="sr-only">توییتر / X</span></a>
+                </div>
+            </div>
 
-          <div class="footer-section footer-section-links" data-scroll-reveal>
-              <h3>بخش‌های سایت</h3> <ul>
-                   <li><a href="index.html"><i class="fas fa-home fa-fw"></i> صفحه اصلی</a></li>
-                   <li><a href="movies-news.html"><i class="fas fa-film fa-fw"></i> فیلم‌ها</a></li>
-                   <li><a href="series-news.html"><i class="fas fa-tv fa-fw"></i> سریال‌ها</a></li>
-                   <li><a href="gaming-news.html"><i class="fas fa-gamepad fa-fw"></i> بازی‌ها</a></li>
-                   <li><a href="reviews.html"><i class="fas fa-star-half-alt fa-fw"></i> نقد و بررسی</a></li>
-                   <li><a href="trailers.html"><i class="fas fa-play-circle fa-fw"></i> تریلرها</a></li>
-              </ul>
-          </div>
-
-           <div class="footer-section footer-section-info" data-scroll-reveal> <h3>اطلاعات بیشتر</h3>
+            <div class="footer-section footer-section-links">
+                <h3>دسترسی سریع</h3>
                 <ul>
-                     <li><a href="about.html"><i class="fas fa-info-circle fa-fw"></i> درباره ما</a></li>
-                     <li><a href="contact.html"><i class="fas fa-envelope fa-fw"></i> تماس با ما</a></li>
-                     <li><a href="privacy.html"><i class="fas fa-shield-alt fa-fw"></i> حریم خصوصی</a></li>
-                     <li><a href="terms.html"><i class="fas fa-file-contract fa-fw"></i> شرایط استفاده</a></li>
-                     <li><a href="faq.html"><i class="fas fa-question-circle fa-fw"></i> سوالات متداول</a></li>
+                    <li><a href="#"><i class="fas fa-home fa-fw"></i> صفحه اصلی</a></li>
+                    <li><a href="#"><i class="fas fa-film fa-fw"></i> فیلم‌ها</a></li>
+                    <li><a href="#"><i class="fas fa-tv fa-fw"></i> سریال‌ها</a></li>
+                    <li><a href="#"><i class="fas fa-gamepad fa-fw"></i> بازی‌ها</a></li>
+                    <li><a href="#"><i class="fas fa-video fa-fw"></i> تریلرها</a></li>
+                    <li><a href="#"><i class="fas fa-star-half-alt fa-fw"></i> نقد و بررسی</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle fa-fw"></i> درباره ما</a></li>
+                    <li><a href="#"><i class="fas fa-file-contract fa-fw"></i> قوانین</a></li>
                 </ul>
-           </div>
+            </div>
 
+            <div class="footer-section footer-section-newsletter">
+                <h3>خبرنامه</h3>
+                <p>برای دریافت آخرین اخبار و تحلیل‌ها در ایمیل خود، عضو شوید:</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <label for="newsletter-email" class="sr-only">ایمیل برای خبرنامه</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="ایمیل شما..." required>
+                    <button type="submit" aria-label="عضویت در خبرنامه"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
 
-          <div class="footer-section footer-section-newsletter" data-scroll-reveal>
-              <h3>خبرنامه اختصاصی</h3>
-              <p>عضو خبرنامه شوید و بهترین‌ها را از دست ندهید:</p>
-              <form class="newsletter-form" id="newsletter-form">
-                  <input type="email" placeholder="آدرس ایمیل شما..." required name="email" aria-label="Email for newsletter">
-                  <button type="submit" data-magnetic>عضویت <i class="fas fa-arrow-left" style="margin-right: 5px;"></i></button>
-              </form>
-               <p id="newsletter-feedback"></p>
-          </div>
+        </div>
+        <div class="footer-bottom">
+             <p>© <span id="current-year"></span> هامووی. تمامی حقوق محفوظ است. با <i class="fas fa-heart"></i> توسط تیم هامووی.</p>
+        </div>
+    </footer>
 
-      </div>
-      <div class="footer-bottom">
-          <p>© <span id="current-year"></span> هامووی - تمامی حقوق محفوظ است | قدرت گرفته از عشق به سرگرمی <i class="fas fa-heart"></i></p>
-      </div>
-  </footer>
+    <!-- Controls -->
+    <div class="controls">
+        <button class="control-button theme-toggle" id="theme-toggle-button" title="تغییر تم" aria-label="تغییر حالت نمایش">
+            <i class="fas fa-moon"></i> <!-- Default icon -->
+        </button>
+        <button class="control-button scroll-top" id="scroll-top-button" title="بازگشت به بالا" aria-label="برو به بالای صفحه">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
 
-<div class="controls">
-    <button class="control-button theme-toggle" id="theme-toggle-button" title="تغییر حالت نمایش" aria-label="تغییر حالت نمایش" data-magnetic>
-        <i class="fas fa-adjust"></i> </button>
-    <button class="control-button scroll-top" id="scroll-top-button" title="بازگشت به بالا" aria-label="بازگشت به بالا" data-magnetic>
-        <i class="fas fa-chevron-up"></i> </button>
-</div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script>
+        // Wrap script in an IIFE for scope protection
+        (function() {
+            'use strict'; // Enforce stricter parsing and error handling
 
-<script>
-    //<![CDATA[ // Wrap script to prevent XML parsing errors if inline
-    document.addEventListener('DOMContentLoaded', () => {
-        // --- Elements Cache ---
-        const cache = {
-            body: document.body,
-            header: document.getElementById('main-header'),
-            themeToggle: document.getElementById('theme-toggle-button'),
-            scrollTop: document.getElementById('scroll-top-button'),
-            hamburgerMenu: document.getElementById('hamburger-menu'),
-            mobileMenu: document.getElementById('mobile-menu'),
-            searchInput: document.getElementById('search-input'),
-            searchResultsList: document.getElementById('search-results-list'),
-            searchForm: document.getElementById('search-form'),
-            mobileSearchInput: document.getElementById('mobile-search-input'),
-            mobileSearchResultsList: document.getElementById('mobile-search-results-list'),
-            mobileSearchForm: document.getElementById('mobile-search-form'),
-            navLinks: document.querySelectorAll('nav ul li a.nav-link'),
-            mobileNavLinks: document.querySelectorAll('.mobile-menu ul li a'), // Select all 'a' in mobile menu list
-            loginButtonHeader: document.getElementById('login-button-header'),
-            userMenuHeader: document.getElementById('user-menu-header'),
-            userAvatarHeader: document.getElementById('user-avatar-header'),
-            userAvatarContainer: document.getElementById('user-avatar-container'),
-            userDropdownMenu: document.getElementById('user-dropdown-menu'),
-            logoutButton: document.getElementById('logout-button'),
-            mobileAuthLink: document.getElementById('mobile-auth-link'),
-            currentYearSpan: document.getElementById('current-year'),
-            newsletterForm: document.getElementById('newsletter-form'),
-            newsletterFeedback: document.getElementById('newsletter-feedback'),
-            scrollRevealElements: document.querySelectorAll('[data-scroll-reveal]'),
-            progressBar: document.getElementById('reading-progress-bar'),
-            heroBg: document.getElementById('hero-bg'),
-            magneticElements: document.querySelectorAll('[data-magnetic]')
-        };
+            // --- Element Cache ---
+            // Cache frequently accessed DOM elements to improve performance
+            const cache = {
+                body: document.body,
+                htmlElement: document.documentElement,
+                preloader: document.querySelector('.preloader'),
+                header: document.querySelector('.site-header'),
+                hamburgerMenu: document.getElementById('hamburger-menu'),
+                mobileMenu: document.getElementById('mobile-menu'),
+                mobileMenuBackdrop: document.getElementById('mobile-menu-backdrop'),
+                mobileNavLinks: document.querySelectorAll('.mobile-menu ul li a'),
+                desktopNavLinks: document.querySelectorAll('.main-navigation ul li a'),
+                themeToggleBtn: document.getElementById('theme-toggle-button'),
+                scrollTopBtn: document.getElementById('scroll-top-button'),
+                controlsContainer: document.querySelector('.controls'),
+                currentYearSpan: document.getElementById('current-year'),
+                progressBars: document.querySelectorAll('.progress-value'),
+                tiltCards: document.querySelectorAll('.tilt-card'),
+                featuredSwiperEl: document.querySelector('.featured-swiper'),
+            };
 
-        // --- State ---
-        let lastScrollY = window.pageYOffset;
-        let isUserMenuOpen = false;
-        let isMobile = window.innerWidth <= 992; // Use 992px breakpoint for mobile logic
-
-        // --- Search Index (Keep as is or expand) ---
-         const pageIndex = [ /* ... same as before ... */ { title: "هامووی 🎬 | مرجع اخبار فیلم، سریال و گیم", url: "index.html" }, { title: "اخبار فیلم | هامووی 🎬", url: "movies-news.html" }, { title: "اخبار سریال | هامووی 🎬", url: "series-news.html" }, { title: "اخبار گیم | هامووی 🎬", url: "gaming-news.html" }, { title: "نقد و بررسی | هامووی 🎬", url: "reviews.html" }, { title: "تریلرها | هامووی 🎬", url: "trailers.html" }, { title: "درباره ما | هامووی 🎬", url: "about.html" }, { title: "تماس با ما | هامووی 🎬", url: "contact.html" }, { title: "هامووی 🎬 | ورود", url: "login.html" }, { title: "پروفایل کاربری | هامووی 🎬", url: "profile.html" } ];
-
-
-        // --- Utility Functions ---
-        const debounce = (func, wait) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => func.apply(this, a), wait); } };
-        const throttle = (func, limit) => { let iT; return (...a) => { if (!iT) { func.apply(this, a); iT = 1; setTimeout(() => iT = 0, limit); } } };
-
-        // --- Core Functions ---
-        const applyTheme = (theme) => {
-            const isDark = theme === 'dark';
-            cache.body.classList.toggle('dark-mode', !isDark);
-            if (cache.themeToggle) cache.themeToggle.querySelector('i').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-            document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#080808' : '#fefefe');
-            localStorage.setItem('theme', theme);
-        };
-        const toggleTheme = () => {
-            const current = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            applyTheme(current === 'dark' ? 'light' : 'dark');
-        };
-
-        const handleScroll = throttle(() => {
-            const scrollY = window.pageYOffset;
-            const winH = window.innerHeight;
-            const docH = document.documentElement.scrollHeight;
-
-            if (cache.progressBar) cache.progressBar.style.width = `${Math.min((scrollY / (docH - winH)) * 100, 100)}%`;
-            if (cache.scrollTop) cache.scrollTop.classList.toggle('visible', scrollY > winH * 0.5);
-            if (!isMobile && cache.header) cache.header.classList.toggle('shrink', scrollY > 50);
-            else if (cache.header) cache.header.classList.remove('shrink');
-
-            if (cache.heroBg && scrollY < winH) cache.heroBg.style.transform = `translateY(${scrollY * 0.25}px)`; // Parallax
-
-            lastScrollY = scrollY;
-        }, 16); // Approx 60fps
-
-        const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        const toggleMobileMenu = () => {
-            const isActive = cache.mobileMenu.classList.toggle('active');
-            cache.hamburgerMenu.classList.toggle('active', isActive);
-            cache.hamburgerMenu.setAttribute('aria-expanded', isActive);
-            cache.body.style.overflow = isActive ? 'hidden' : '';
-            if (!isActive && cache.mobileSearchInput) { cache.mobileSearchInput.value = ''; if(cache.mobileSearchResultsList) { cache.mobileSearchResultsList.innerHTML = ''; cache.mobileSearchResultsList.classList.remove('active'); } }
-        };
-
-        const setActiveNavLink = () => {
-            const path = window.location.pathname.split('/').pop() || 'index.html';
-            cache.navLinks?.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === path); });
-            // Mobile link active state might need adjustment based on final structure
-        };
-
-        const handleSearch = (term, listEl) => {
-             if (!listEl) return;
-             listEl.innerHTML = '';
-             if (term.length > 1) {
-                 const results = pageIndex.filter(p => p.title.toLowerCase().includes(term));
-                 if (results.length > 0) {
-                     listEl.innerHTML = results.slice(0, 6).map(r => `<li><a href="${r.url}"><i class="fas fa-search fa-xs" style="opacity: 0.5; margin-left: 8px;"></i>${r.title.replace(new RegExp(term, 'gi'), '<strong>$&</strong>')}</a></li>`).join('');
-                     listEl.classList.add('active');
-                 } else {
-                      listEl.innerHTML = `<li class="no-result" style="padding: 0.8rem 1.4rem; opacity: 0.7; text-align: center;">موردی یافت نشد</li>`;
-                      listEl.classList.add('active');
-                 }
-             } else { listEl.classList.remove('active'); }
-         };
-        const debouncedDesktopSearch = debounce(() => handleSearch(cache.searchInput.value.toLowerCase().trim(), cache.searchResultsList), 300);
-        const debouncedMobileSearch = debounce(() => handleSearch(cache.mobileSearchInput.value.toLowerCase().trim(), cache.mobileSearchResultsList), 300);
-
-
-        const handleOutsideClick = (event) => {
-            if (cache.searchForm && !cache.searchForm.contains(event.target)) cache.searchResultsList?.classList.remove('active');
-            if (cache.mobileSearchForm && !cache.mobileSearchForm.contains(event.target)) cache.mobileSearchResultsList?.classList.remove('active');
-            if (cache.userMenuHeader?.classList.contains('active') && !cache.userMenuHeader.contains(event.target)) toggleUserDropdown(false); // Close dropdown
-            if (cache.mobileMenu?.classList.contains('active') && !cache.mobileMenu.contains(event.target) && !cache.hamburgerMenu.contains(event.target)) toggleMobileMenu();
-        };
-
-         const updateLoginStatusUI = () => {
-            const user = JSON.parse(localStorage.getItem('user') || '{}');
-            const isLoggedIn = !!user.name; // Check if user object has a name
-
-            if (cache.loginButtonHeader) cache.loginButtonHeader.style.display = isLoggedIn ? 'none' : 'inline-flex';
-            if (cache.userMenuHeader) cache.userMenuHeader.classList.toggle('active', isLoggedIn);
-
-            if (isLoggedIn) {
-                if(cache.userAvatarHeader) {
-                    cache.userAvatarHeader.src = user.profile || 'default-avatar.png';
-                    cache.userAvatarHeader.alt = `آواتار ${user.name}`;
-                }
-                if (cache.mobileAuthLink) { // Update mobile link to profile
-                    cache.mobileAuthLink.href = 'profile.html';
-                    cache.mobileAuthLink.innerHTML = `<img src="${user.profile || 'default-avatar.png'}" alt="پروفایل" style="width: 28px; height: 28px; border-radius: 50%; margin-left: 0.8rem; vertical-align: middle;"> ${user.name}`;
-                    cache.mobileAuthLink.className = 'mobile-nav-link'; // Use nav link styles
-                    // Reset potential button styles
-                    cache.mobileAuthLink.style.cssText = '';
-                    cache.mobileAuthLink.style.textAlign = 'right';
-                    cache.mobileAuthLink.style.display = 'flex'; // Ensure flex for image alignment
-                    cache.mobileAuthLink.style.alignItems = 'center';
-                 }
-
-            } else { // User is logged out
-                if (cache.mobileAuthLink) { // Update mobile link to login
-                    cache.mobileAuthLink.href = 'login.html';
-                    cache.mobileAuthLink.innerHTML = `<i class="fas fa-user-circle" style="margin-left: 0.5rem;"></i> ورود/ثبت نام`;
-                    cache.mobileAuthLink.className = 'mobile-login-button'; // Re-apply button class
-                    // Re-apply potential button styles if needed (might be handled by class)
-                     cache.mobileAuthLink.style.cssText = ''; // Reset inline styles first
-                     cache.mobileAuthLink.style.textAlign = 'center'; // Set required styles
-                 }
-            }
-         };
-
-
-        const toggleUserDropdown = (forceState = null) => {
-            isUserMenuOpen = forceState !== null ? forceState : !isUserMenuOpen;
-            cache.userDropdownMenu?.classList.toggle('show', isUserMenuOpen);
-            cache.userAvatarContainer?.setAttribute('aria-expanded', isUserMenuOpen);
-        };
-
-        const logoutUser = () => {
-            localStorage.removeItem('user'); localStorage.removeItem('rememberedEmail'); updateLoginStatusUI();
-            toggleUserDropdown(false); window.location.reload();
-        };
-
-        const handleNewsletterSubmit = (event) => {
-             event.preventDefault();
-             const emailInput = cache.newsletterForm?.querySelector('input[type="email"]');
-             if (!emailInput || !cache.newsletterFeedback) return;
-             const emailValue = emailInput.value;
-             cache.newsletterFeedback.textContent = ''; cache.newsletterFeedback.style.color = 'inherit';
-
-             if (!emailValue || !/^\S+@\S+\.\S+$/.test(emailValue)) {
-                 cache.newsletterFeedback.textContent = 'لطفا یک ایمیل معتبر وارد کنید.';
-                 cache.newsletterFeedback.style.color = 'var(--secondary-color)'; return;
-             }
-             cache.newsletterFeedback.textContent = 'در حال ارسال...'; cache.newsletterFeedback.style.opacity = '0.7';
-             setTimeout(() => {
-                 cache.newsletterFeedback.textContent = `ایمیل ${emailValue} با موفقیت ثبت شد!`;
-                 cache.newsletterFeedback.style.color = 'var(--accent-color)'; cache.newsletterFeedback.style.opacity = '1';
-                 emailInput.value = ''; setTimeout(() => { cache.newsletterFeedback.textContent = ''; }, 5000);
-             }, 1000);
-         };
-
-
-        // --- Scroll Reveal ---
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -70px 0px' });
-        cache.scrollRevealElements?.forEach(el => { revealObserver.observe(el); });
-
-        // --- Magnetic Effect ---
-        const initMagneticEffect = () => {
-            if (isMobile || !('ontouchstart' in window)) { // Only on non-touch desktop
-                cache.magneticElements?.forEach(el => {
-                    const strength = 0.4; const area = 100; let boundMove, boundLeave;
-
-                    boundMove = (e) => {
-                        const rect = el.getBoundingClientRect();
-                        const cX = rect.left + rect.width / 2, cY = rect.top + rect.height / 2;
-                        const dX = e.clientX - cX, dY = e.clientY - cY;
-                        const dist = Math.sqrt(dX * dX + dY * dY);
-                        el.style.transform = dist < area ? `translate(${dX * strength}px, ${dY * strength}px)` : 'translate(0, 0)';
+            // --- Utility Functions ---
+            // Debounce function to limit the rate at which a function can fire
+            function debounce(func, wait, immediate) {
+                let timeout;
+                return function executedFunction() {
+                    const context = this;
+                    const args = arguments;
+                    const later = function() {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
                     };
-                    boundLeave = () => { el.style.transform = 'translate(0, 0)'; };
+                    const callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                };
+            }
 
-                    el.removeEventListener('mousemove', el._boundMove); // Remove previous listener if exists
-                    el.removeEventListener('mouseleave', el._boundLeave);
-                    el.addEventListener('mousemove', boundMove);
-                    el.addEventListener('mouseleave', boundLeave);
-                    el._boundMove = boundMove; // Store references for removal
-                    el._boundLeave = boundLeave;
+            // --- Core Functionality ---
+
+            // Preloader Handling
+            function handlePreloader() {
+                if (!cache.preloader) return;
+                window.addEventListener('load', () => {
+                    // Use a shorter timeout for fade-out initiation
+                    setTimeout(() => {
+                        if (cache.preloader) {
+                            cache.preloader.classList.add('fade-out');
+                        }
+                         // Remove preload class from body AFTER fade starts for smoother render
+                         if (cache.body) {
+                             cache.body.classList.remove('preload');
+                         }
+                    }, 150);
+                }, { once: true }); // Ensure the load listener runs only once
+            }
+
+            // Theme Management
+            function applyTheme(theme) {
+                const isDarkMode = theme === 'dark';
+                // Toggle classes on html and body
+                cache.htmlElement.classList.toggle('dark-mode', isDarkMode);
+                cache.body.classList.toggle('dark-mode', isDarkMode); // Body class for easier CSS targeting
+
+                // Update theme toggle button icon and aria-label
+                if (cache.themeToggleBtn) {
+                    const icon = cache.themeToggleBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    }
+                    cache.themeToggleBtn.setAttribute('aria-label', isDarkMode ? 'تغییر به حالت روشن' : 'تغییر به حالت تاریک');
+                }
+                // Update theme-color meta tags if they exist and match the scheme
+                document.querySelectorAll('meta[name="theme-color"]').forEach(tag => {
+                    if (tag.media.includes('light') && !isDarkMode) tag.content = '#f8f8f8'; // Light theme color
+                    if (tag.media.includes('dark') && isDarkMode) tag.content = '#0b0b0b'; // Dark theme color
                 });
-            } else { // Remove listeners on mobile/touch
-                 cache.magneticElements?.forEach(el => {
-                     if(el._boundMove) el.removeEventListener('mousemove', el._boundMove);
-                     if(el._boundLeave) el.removeEventListener('mouseleave', el._boundLeave);
-                     el.style.transform = 'translate(0, 0)'; // Reset any leftover transform
+            }
+
+            function setupTheme() {
+                // Prefer stored theme, fallback to system preference, default to dark
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+                applyTheme(currentTheme); // Apply the determined theme on load
+
+                // Add event listener for the theme toggle button
+                if (cache.themeToggleBtn) {
+                    cache.themeToggleBtn.addEventListener('click', () => {
+                        const newTheme = cache.htmlElement.classList.contains('dark-mode') ? 'light' : 'dark';
+                        applyTheme(newTheme);
+                        localStorage.setItem('theme', newTheme); // Save the new theme preference
+                    });
+                }
+
+                // Listen for system theme changes
+                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                     // Only change if no theme is explicitly saved by the user
+                     if (!localStorage.getItem('theme')) {
+                         applyTheme(e.matches ? 'dark' : 'light');
+                     }
                  });
             }
-         };
 
-        // --- Initialization ---
-        const init = () => {
-            isMobile = window.innerWidth <= 992;
-            if (cache.currentYearSpan) cache.currentYearSpan.textContent = new Date().getFullYear();
-            const preferredTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            applyTheme(preferredTheme);
-            setActiveNavLink();
-            updateLoginStatusUI();
-            initMagneticEffect();
-            handleScroll(); // Initial call to set positions
+            // Scroll-based Behaviors (Header Shrink, Controls Visibility)
+            function handleScroll() {
+                const scrollY = window.pageYOffset;
+                const showControlsThreshold = 150; // Show controls a bit earlier
+                const shrinkHeaderThreshold = 50;
 
-            // --- Event Listeners ---
-            cache.themeToggle?.addEventListener('click', toggleTheme);
-            cache.scrollTop?.addEventListener('click', scrollToTop);
-            cache.hamburgerMenu?.addEventListener('click', toggleMobileMenu);
-            cache.searchInput?.addEventListener('input', debouncedDesktopSearch);
-            cache.searchInput?.addEventListener('focus', () => cache.searchResultsList?.classList.add('active'));
-            cache.searchForm?.addEventListener('submit', (e) => e.preventDefault());
-            cache.mobileSearchInput?.addEventListener('input', debouncedMobileSearch);
-            cache.mobileSearchInput?.addEventListener('focus', () => cache.mobileSearchResultsList?.classList.add('active'));
-            cache.mobileSearchForm?.addEventListener('submit', (e) => e.preventDefault());
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            document.addEventListener('click', handleOutsideClick);
-            cache.userAvatarContainer?.addEventListener('click', () => toggleUserDropdown());
-            cache.logoutButton?.addEventListener('click', logoutUser);
-            cache.newsletterForm?.addEventListener('submit', handleNewsletterSubmit);
-            window.addEventListener('resize', debounce(() => { isMobile = window.innerWidth <= 992; initMagneticEffect(); }, 250));
+                // Toggle visibility of controls container
+                if (cache.controlsContainer) {
+                     cache.controlsContainer.classList.toggle('visible', scrollY > showControlsThreshold);
+                 }
+                 // Toggle shrink class on header
+                if (cache.header) {
+                    cache.header.classList.toggle('shrink', scrollY > shrinkHeaderThreshold);
+                }
+            }
 
-            // Close mobile menu on link click
-             cache.mobileMenu?.addEventListener('click', (e) => {
-                  const targetLink = e.target.closest('a');
-                  if (targetLink && !targetLink.closest('#mobile-search-form-container')) { // Close if any link clicked except inside search
-                       setTimeout(toggleMobileMenu, 150);
-                  }
-              });
+            // Mobile Menu Toggle Functionality
+            function toggleMobileMenu(show) {
+                if (!cache.mobileMenu || !cache.hamburgerMenu || !cache.mobileMenuBackdrop) return;
 
-        };
+                const isActive = typeof show === 'boolean' ? show : !cache.mobileMenu.classList.contains('active');
 
-        init(); // Run Initialization
-    });
-    //]]>
-</script>
+                cache.hamburgerMenu.classList.toggle('active', isActive);
+                cache.mobileMenu.classList.toggle('active', isActive);
+                cache.mobileMenuBackdrop.classList.toggle('active', isActive);
+                cache.body.style.overflow = isActive ? 'hidden' : ''; // Prevent body scroll when menu is open
+                cache.hamburgerMenu.setAttribute('aria-expanded', isActive.toString());
+                cache.mobileMenu.setAttribute('aria-hidden', (!isActive).toString());
+
+                // Focus management: Focus first item when opening, return focus when closing
+                if (isActive) {
+                    const firstFocusableElement = cache.mobileMenu.querySelector('a');
+                    if (firstFocusableElement) firstFocusableElement.focus();
+                } else {
+                     if (document.activeElement === cache.hamburgerMenu || cache.mobileMenu.contains(document.activeElement)) {
+                          cache.hamburgerMenu.focus();
+                     }
+                 }
+            }
+
+            function setupMobileMenu() {
+                 if (!cache.hamburgerMenu || !cache.mobileMenu || !cache.mobileMenuBackdrop) return;
+
+                 cache.hamburgerMenu.addEventListener('click', () => toggleMobileMenu());
+                 cache.mobileMenuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+
+                 // Close menu when a link is clicked
+                 cache.mobileNavLinks.forEach(link => {
+                     link.addEventListener('click', () => toggleMobileMenu(false));
+                 });
+
+                 // Close menu with Escape key
+                 document.addEventListener('keydown', (e) => {
+                     if (e.key === 'Escape' && cache.mobileMenu.classList.contains('active')) {
+                         toggleMobileMenu(false);
+                     }
+                 });
+            }
+
+            // Set Active Navigation Link based on current URL (Improved)
+            function setActiveNavLink() {
+                // Get the current path, removing trailing slashes and default filenames like index.html
+                const currentPath = window.location.pathname.replace(/\/$/, '').replace(/(\/index\.html)$/, '') || '/';
+
+                function updateLinks(links) {
+                    links.forEach(link => {
+                         const linkHref = link.getAttribute('href');
+                         // Special handling for the home link (assuming href="#" or "/" or "index.html")
+                         if (linkHref === '#' || linkHref === '/' || linkHref === './' || linkHref === 'index.html') {
+                             link.classList.toggle('active', currentPath === '/');
+                             return;
+                         }
+
+                         if (!linkHref) { // Skip links without href
+                             link.classList.remove('active');
+                             return;
+                         }
+
+                         try {
+                             // Normalize the link's path similar to the current path
+                            const linkUrl = new URL(linkHref, window.location.origin);
+                            const linkPath = linkUrl.pathname.replace(/\/$/, '').replace(/(\/index\.html)$/, '') || '/';
+                            // Check if the normalized link path matches the current path
+                             link.classList.toggle('active', linkPath === currentPath);
+                         } catch (e) {
+                            // Handle invalid URLs gracefully
+                            // console.warn(`Could not parse URL for link: ${linkHref}`, e);
+                            link.classList.remove('active');
+                         }
+                    });
+                }
+
+                 if (cache.desktopNavLinks.length > 0) updateLinks(cache.desktopNavLinks);
+                 if (cache.mobileNavLinks.length > 0) updateLinks(cache.mobileNavLinks);
+            }
+
+
+            // Initialize Swiper Slider
+            function initSwiper() {
+                if (!cache.featuredSwiperEl || typeof Swiper === 'undefined') {
+                    // console.warn('Swiper element not found or Swiper library not loaded.');
+                    return;
+                }
+                try {
+                    new Swiper(cache.featuredSwiperEl, {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        loop: true,
+                        effect: 'fade', // Fade effect is often smoother
+                        fadeEffect: { crossFade: true },
+                        autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
+                        pagination: { el: '.swiper-pagination', clickable: true },
+                        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                        a11y: { prevSlideMessage: 'اسلاید قبلی', nextSlideMessage: 'اسلاید بعدی', paginationBulletMessage: 'رفتن به اسلاید {{index}}'},
+                        keyboard: { enabled: true, onlyInViewport: true }, // Enable keyboard navigation
+                        preloadImages: false, // Don't preload all images
+                        lazy: { // Enable Swiper's lazy loading
+                            loadPrevNext: true, // Load previous/next slide images
+                        },
+                        watchSlidesProgress: true, // Needed for lazy loading
+                    });
+                } catch (e) {
+                    console.error("Error initializing Swiper:", e);
+                }
+            }
+
+            // Initialize Vanilla Tilt Effect
+            function initTilt() {
+                if (cache.tiltCards.length === 0 || typeof VanillaTilt === 'undefined') return;
+
+                // Ensure VanillaTilt is loaded before initializing
+                if (typeof VanillaTilt !== 'undefined' && VanillaTilt.init) {
+                     try {
+                        VanillaTilt.init(cache.tiltCards, {
+                            max: 3,         // Reduced max tilt
+                            speed: 600,       // Slightly slower speed
+                            glare: true,
+                            "max-glare": 0.1, // Reduced glare
+                            perspective: 1500, // Increased perspective for subtlety
+                            scale: 1.01       // Very subtle scale on hover
+                        });
+                    } catch (e) {
+                        console.error("Error initializing Vanilla Tilt:", e);
+                    }
+                } else {
+                    // console.warn('Vanilla Tilt library not loaded.');
+                 }
+            }
+
+            // Animate Progress Bars on Scroll into View
+            function initProgressBars() {
+                if (cache.progressBars.length === 0 || !('IntersectionObserver' in window)) return;
+
+                const observerOptions = { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.5 }; // Trigger slightly before fully visible
+
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const progressBar = entry.target;
+                            progressBar.style.transition = 'transform 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s'; // Smoother ease-out with delay
+                            // Correct transform origin for RTL
+                             progressBar.style.transformOrigin = 'right'; // Changed from left to right
+                            progressBar.style.transform = 'scaleX(1)';
+                            obs.unobserve(progressBar); // Stop observing once animated
+                        }
+                    });
+                }, observerOptions);
+
+                cache.progressBars.forEach(bar => {
+                    // Ensure initial state is zero width and origin is correct for RTL
+                    bar.style.transformOrigin = 'right'; // Changed from left to right
+                    bar.style.transform = 'scaleX(0)';
+                    observer.observe(bar);
+                });
+            }
+
+             // Update Current Year in Footer
+             function updateFooterYear() {
+                 if (cache.currentYearSpan) {
+                     cache.currentYearSpan.textContent = new Date().getFullYear();
+                 }
+             }
+
+            // --- Initialization ---
+            document.addEventListener('DOMContentLoaded', () => {
+                // Early setup
+                handlePreloader(); // Start preloader fade ASAP
+                setupTheme(); // Set theme early to avoid FOUC
+                updateFooterYear(); // Update year
+
+                // Component initializations
+                setupMobileMenu();
+                setActiveNavLink();
+                initSwiper();
+                initTilt();
+                initProgressBars();
+
+                // Scroll listener setup (debounced)
+                 const debouncedScrollHandler = debounce(handleScroll, 50); // Debounce scroll events
+                 window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
+                 handleScroll(); // Initial check in case page loads scrolled
+
+                // Scroll Top Button Action
+                if (cache.scrollTopBtn) {
+                    cache.scrollTopBtn.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                }
+            });
+
+        })(); // End IIFE
+    </script>
 </body>
 </html>
